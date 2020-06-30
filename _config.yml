@@ -1,7 +1,6 @@
-theme: jekyll-theme-minimal
 title: Jottings
-SEOTitle: 
-header-img:
-email:
+logo: /assets/img/logo.png
+show_downloads: false
 description: "My records"
 url: "https://hare001.github.io"
+theme: jekyll-theme-minimal
