@@ -1,6 +1,6 @@
-title: Jottings
-logo: /assets/img/logo.png
+title: WhereIsMyMind
+logo: ./assets/images/logo.png
 show_downloads: false
-description: "My records"
+description: "Aww geez..."
 url: "https://hare001.github.io"
 theme: jekyll-theme-hacker
