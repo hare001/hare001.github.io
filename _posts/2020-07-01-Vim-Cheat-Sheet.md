@@ -86,7 +86,7 @@ s - 删除当前字符, 然后进入插入模式
 S - 清空当前行, 然后进入插入模式 (同cc)
 xp - 当前字符后移
 u - 撤销
-U - restore (undo) last changed line
+U - 撤销本当前行的上次操作
 Ctrl + r - 重复
 . - 再次执行上个命令
 ```
@@ -100,10 +100,10 @@ O - 切换光标到选择区的角
 aw - 选择当前单词
 ab - 选择被 () 包裹的区域(含括号)
 aB - 选择被 {} 包裹的区域(含花括号)
-at - a block with <> tags
+at - 选择被 <> 包裹的区域(含尖括号)
 ib - 选择被 () 包裹的区域(不含括号)
 iB - 选择被 {} 包裹的区域(不含花括号)
-it - inner block with <> tags
+it - 选择被 <> 包裹的区域(不含尖括号)
 Esc - 退出可视化模式
 ```
 ### 可视化模式命令
@@ -113,8 +113,8 @@ Esc - 退出可视化模式
 y - 复制
 d - 剪切
 ~ - 大小写切换
-u - change marked text to lowercase
-U - change marked text to uppercase
+u - 将选定区域切换为小写
+U - 将选定区域切换为大写
 ```
 ### 寄存器
 ```
@@ -123,6 +123,7 @@ U - change marked text to uppercase
 "xp - 粘贴寄存器 x 中的内容
 "+y - 复制内容到系统剪贴板寄存器
 "+p - 从系统剪贴板寄存器中粘贴
+
 Tip 寄存器被存储在 ~/.viminfo 中, 在下次重启vim时仍会加载
 ```
 ### 标记
@@ -131,11 +132,11 @@ Tip 寄存器被存储在 ~/.viminfo 中, 在下次重启vim时仍会加载
 ma - 设置当前位置为标记 a
 `a - 跳转到标记 a 的位置
 y`a - 复制当前位置到标记 a 的内容
-`0 - go to the position where Vim was previously exited
-`" - go to the position when last editing this file
-`. - go to the position of the last change in this file
-`` - go to the position before the last jump
-:ju[mps] - list of jumps
+`0 - 跳转到 Vim 上一次使用文件的位置
+`" - 跳转到上一次退出文件时的位置
+`. - 跳转到当前文件最近编辑的位置
+`` - 跳转到上一次跳转前的位置
+:ju[mps] - 列出跳转位置
 Ctrl + i - go to newer position in jump list
 Ctrl + o - go to older position in jump list
 :changes - list of changes
@@ -165,18 +166,18 @@ D - 剪切, 从光标位置到行末
 d$ - 剪切, 从光标位置到行末 (同D)
 x - 剪切当前字符
 ```
-### Indent text
+### 文本缩进
 ```
->> - indent (move right) line one shiftwidth
-<< - de-indent (move left) line one shiftwidth
->% - indent a block with () or {} (cursor on brace)
->ib - indent inner block with ()
->at - indent a block with <> tags
-3== - re-indent 3 lines
-=% - re-indent a block with () or {} (cursor on brace)
-=iB - re-indent inner block with {}
-gg=G - re-indent entire buffer
-]p - paste and adjust indent to current line
+>> - 当前行增加shiftwidth宽度的缩进
+<< - 当前行减少shiftwidth宽度的缩进
+>% - 增加缩进当前光标位置被 () 或 {} 包裹的代码块(包括 (){})
+>ib - 增加缩进被 () 包裹的代码块(不包括())
+>at - 增加缩进被 <> 包裹的代码块
+3== - 重新缩进三行
+=% - 重新缩进光标位置所在处被 () 或 {} 包裹的代码块(包括 (){})
+=iB - 重新缩进被 {} 包裹的代码块(不包括 {})
+gg=G - 重新缩进全文
+]p - 粘贴并调整缩进以匹配当前行
 ```
 ### 退出
 ```
