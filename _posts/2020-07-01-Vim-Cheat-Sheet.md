@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Vim Cheat Sheet
 
 ### 全局
