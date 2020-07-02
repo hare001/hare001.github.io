@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on WhereIsMyMind</title>
+    <link>https://hare001.github.io/tags/vim/</link>
+    <description>Recent content in Vim on WhereIsMyMind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Jul 2020 17:32:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://hare001.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vim Cheat Sheet</title>
+      <link>https://hare001.github.io/2020/vim-cheat-sheet/</link>
+      <pubDate>Wed, 01 Jul 2020 17:32:10 +0800</pubDate>
+      
+      <guid>https://hare001.github.io/2020/vim-cheat-sheet/</guid>
+      <description>全局 :h[elp] 关键字 - 打开关键字帮助 :sav[eas] 文件名 - 另存为 :clo[se] - 关闭当前窗口 :ter[minal] - open a terminal window K - 打开光标所在单词的man页面 移动光标 h - 左移光标 j - 下移光标 k - 上移光标 l - 右移光标 H - 移动到当前页面顶部 M - 移动到当前页面</description>
+    </item>
+    
+  </channel>
+</rss>

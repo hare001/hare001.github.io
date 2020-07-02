@@ -1,1 +1,3 @@
 User-agent: *
+
+Sitemap: https://hare001.github.io/sitemap.xml

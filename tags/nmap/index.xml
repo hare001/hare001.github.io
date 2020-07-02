@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nmap on WhereIsMyMind</title>
+    <link>https://hare001.github.io/tags/nmap/</link>
+    <description>Recent content in Nmap on WhereIsMyMind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Jul 2020 17:27:34 +0800</lastBuildDate>
+    
+	<atom:link href="https://hare001.github.io/tags/nmap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nmap Cheat Sheet</title>
+      <link>https://hare001.github.io/2020/nmap-cheat-sheet/</link>
+      <pubDate>Wed, 01 Jul 2020 17:27:34 +0800</pubDate>
+      
+      <guid>https://hare001.github.io/2020/nmap-cheat-sheet/</guid>
+      <description>Nmap Target Selection #Scan a single IPnmap 192.168.1.1#Scan a hostnmap www.testhostname.com#Scan a range of IPsnmap 192.168.1.1-20#Scan a subnetnmap 192.168.1.0/24#Scan targets from a text filenmap -iL list-of-ips.txt Nmap Port Selection #Scan a single Portnmap -p 22 192.168.1.1#Scan a range of portsnmap -p 1-100 192.168.1.1#Scan 100 most common ports (Fast)nmap -F 192.168.1.1#Scan all 65535 portsnmap -p- 192.168.1.1 Nmap Port Scan types #Scan using TCP connectnmap -sT 192.168.1.1#Scan using TCP SYN scan (default)nmap -sS 192.168.1.1#Scan UDP portsnmap -sU -p 123,161,162 192.</description>
+    </item>
+    
+  </channel>
+</rss>
