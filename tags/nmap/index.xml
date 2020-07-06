@@ -17,7 +17,22 @@
       <pubDate>Wed, 01 Jul 2020 17:27:34 +0800</pubDate>
       
       <guid>https://hare001.github.io/2020/nmap-cheat-sheet/</guid>
+<<<<<<< HEAD
       <description>Nmap Target Selection #Scan a single IPnmap 192.168.1.1#Scan a hostnmap www.testhostname.com#Scan a range of IPsnmap 192.168.1.1-20#Scan a subnetnmap 192.168.1.0/24#Scan targets from a text filenmap -iL list-of-ips.txt Nmap Port Selection #Scan a single Portnmap -p 22 192.168.1.1#Scan a range of portsnmap -p 1-100 192.168.1.1#Scan 100 most common ports (Fast)nmap -F 192.168.1.1#Scan all 65535 portsnmap -p- 192.168.1.1 Nmap Port Scan types #Scan using TCP connectnmap -sT 192.168.1.1#Scan using TCP SYN scan (default)nmap -sS 192.168.1.1#Scan UDP portsnmap -sU -p 123,161,162 192.</description>
+=======
+      <description>&lt;h3 id=&#34;nmap-target-selection&#34;&gt;Nmap Target Selection&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#Scan a single IP
+nmap 192.168.1.1
+#Scan a host
+nmap www.testhostname.com
+#Scan a range of IPs
+nmap 192.168.1.1-20
+#Scan a subnet
+nmap 192.168.1.0/24
+#Scan targets from a text file
+nmap -iL list-of-ips.txt
+&lt;/code&gt;&lt;/pre&gt;</description>
+>>>>>>> f00a4d10143bda514c4168bf395f69705a632acc
     </item>
     
   </channel>

