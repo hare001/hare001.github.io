@@ -133,7 +133,7 @@ K - 打开光标所在单词的man页面
         <a href="https://hare001.github.io/2020/vim-cheat-sheet/">Vim Cheat Sheet</a>
     </h2>
     <div class="post-item post-meta">
-        <span><ion-icon name="today"></ion-icon>&nbsp;2020-07-01</span><span><ion-icon name="file-tray"></ion-icon>&nbsp;2729 字</span><span><ion-icon name="pricetags"></ion-icon>&nbsp;<a href="/tags/vim">Vim</a>&nbsp;<a href="/tags/cheatsheet">CheatSheet</a>&nbsp;</span>
+        <span><ion-icon name="today"></ion-icon>&nbsp;2020-07-01</span><span><ion-icon name="file-tray"></ion-icon>&nbsp;2810 字</span><span><ion-icon name="pricetags"></ion-icon>&nbsp;<a href="/tags/vim">Vim</a>&nbsp;<a href="/tags/cheatsheet">CheatSheet</a>&nbsp;</span>
     </div>
     
     
@@ -264,12 +264,12 @@ y`a - 复制当前位置到标记 a 的内容
 `. - 跳转到当前文件最近编辑的位置
 `` - 跳转到上一次跳转前的位置
 :ju[mps] - 列出跳转位置
-Ctrl + i - go to newer position in jump list
-Ctrl + o - go to older position in jump list
-:changes - list of changes
-g, - go to newer position in change list
-g; - go to older position in change list
-Ctrl + ] - jump to the tag under cursor
+Ctrl + i - 向前跳到前几次光标位置
+Ctrl + o - 向后跳到后几次光标位置
+:changes - 列出当前文件的所有改动
+g, - 跳转到改动列表里面更新的位置
+g; - 跳转到改动列表里面更旧的位置
+Ctrl + ] - 跳转到光标所在位置的 tag
 </code></pre>
 <h3 id="宏">宏</h3>
 <pre><code>qa - 录制宏 a
@@ -332,19 +332,19 @@ N - 查找上一个
 :bn[ext] or :bn - 切换到下个缓冲区
 :bp[revious] or :bp - 切换到上个缓冲区
 :bd[elete] - 关闭缓冲区
-:b# - go to a buffer by #
-:b file - go to a buffer by file
+:b# - 按数字编号跳转到缓冲
+:b file - 按文件名跳转到缓冲
 :ls - 列出所有打开的缓冲区
 :sp[lit] 文件名 - 新建缓冲区打开 filename 并水平分割窗口
 :vs[plit] 文件名 - 新缓冲区打开 filename 并垂直分割窗口
-:vert[ical] ba[ll] - edit all buffers as vertical windows
-:tab ba[ll] - edit all buffers as tabs
+:vert[ical] ba[ll] - 以垂直分割窗口编辑缓冲区
+:tab ba[ll] - 以标签页编辑缓冲区
 Ctrl + ws - 水平分割窗口
 Ctrl + wv - 垂直分割窗口
 Ctrl + ww - 在窗口间切换
 Ctrl + wq - 关闭窗口
-Ctrl + wx - exchange current window with next one
-Ctrl + w= - make all windows equal height &amp; width
+Ctrl + wx - 交换当前窗口和下一个窗口
+Ctrl + w= - 调整所有窗口等宽高
 Ctrl + wh - 切换到右侧窗口
 Ctrl + wl - 切换到左侧窗口
 Ctrl + wj - 切换到下侧窗口
@@ -362,23 +362,21 @@ gT or :tabp[revious] - 切换到上一个标签
 :tabdo command - 在所有标签中执行命令 (例如 :tabdo q 关闭所有标签)
 </code></pre>
 <h3 id="diff">Diff</h3>
-<pre><code>zf - manually define a fold up to motion
-zd - delete fold under the cursor
-za - toggle fold under the cursor
-zo - open fold under the cursor
-zc - close fold under the cursor
-zr - reduce (open) all folds by one level
-zm - fold more (close) all folds by one level
-zi - toggle folding functionality
-]c - jump to start of next change
-[c - jump to start of previous change
-do or :diffg[et] - obtain (get) difference (from other buffer)
-dp or :diffpu[t] - put difference (to other buffer)
-:diffthis - make current window part of diff
-:dif[fupdate] - update differences
-:diffo[ff] - switch off diff mode for current window
-Tip The commands for folding (e.g. za) operate on one level. To operate on all levels, use uppercase letters (e.g. zA).
-Tip To view the differences of files, one can directly start Vim in diff mode by running vimdiff in a terminal. One can even set this as git difftool.
+<pre><code>zf - 手动定义向上折叠
+zd - 删除光标下的折叠
+za - 切换光标下折叠状态
+zo - 打开光标下的折叠
+zc - 关闭光标下的折叠
+zr - 减少 (reduce) 折叠
+zm - 折起更多 (more)
+zi - 翻转 'foldenable' 的值
+]c - 跳转到下个差异点
+[c - 跳转到上个差异点
+do or :diffg[et] - 将另一窗口中差异点处的内容拉取到当前位置并进行替换操作
+dp or :diffpu[t] - 将当前差异点中的内容覆盖到另一文件中的对应位置
+:diffthis - 使当前窗口参与比较
+:dif[fupdate] -  刷新比较结果的高亮和折叠
+:diffo[ff] - 为当前窗口关闭比较模式
 </code></pre>
     </div>
 </article>
