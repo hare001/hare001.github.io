@@ -17,9 +17,6 @@
       <pubDate>Wed, 01 Jul 2020 17:32:10 +0800</pubDate>
       
       <guid>https://hare001.github.io/2020/vim-cheat-sheet/</guid>
-<<<<<<< HEAD
-      <description>全局 :h[elp] 关键字 - 打开关键字帮助 :sav[eas] 文件名 - 另存为 :clo[se] - 关闭当前窗口 :ter[minal] - open a terminal window K - 打开光标所在单词的man页面 移动光标 h - 左移光标 j - 下移光标 k - 上移光标 l - 右移光标 H - 移动到当前页面顶部 M - 移动到当前页面</description>
-=======
       <description>&lt;h3 id=&#34;全局&#34;&gt;全局&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;:h[elp] 关键字 - 打开关键字帮助
 :sav[eas] 文件名 - 另存为
@@ -27,7 +24,6 @@
 :ter[minal] - open a terminal window
 K - 打开光标所在单词的man页面
 &lt;/code&gt;&lt;/pre&gt;</description>
->>>>>>> f00a4d10143bda514c4168bf395f69705a632acc
     </item>
     
   </channel>

