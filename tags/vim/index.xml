@@ -18,7 +18,7 @@
       
       <guid>https://hare001.github.io/2020/vim-cheat-sheet/</guid>
       <description>&lt;h3 id=&#34;全局&#34;&gt;全局&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;:h[elp] 关键字 - 打开关键字帮助
+&lt;pre&gt;&lt;code class=&#34;language-wiki&#34; data-lang=&#34;wiki&#34;&gt;:h[elp] 关键字 - 打开关键字帮助
 :sav[eas] 文件名 - 另存为
 :clo[se] - 关闭当前窗口
 :ter[minal] - open a terminal window

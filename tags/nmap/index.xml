@@ -18,17 +18,17 @@
       
       <guid>https://hare001.github.io/2020/nmap-cheat-sheet/</guid>
       <description>&lt;h3 id=&#34;nmap-target-selection&#34;&gt;Nmap Target Selection&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#Scan a single IP
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#Scan a single IP&lt;/span&gt;
 nmap 192.168.1.1
-#Scan a host
+&lt;span style=&#34;color:#75715e&#34;&gt;#Scan a host&lt;/span&gt;
 nmap www.testhostname.com
-#Scan a range of IPs
+&lt;span style=&#34;color:#75715e&#34;&gt;#Scan a range of IPs&lt;/span&gt;
 nmap 192.168.1.1-20
-#Scan a subnet
+&lt;span style=&#34;color:#75715e&#34;&gt;#Scan a subnet&lt;/span&gt;
 nmap 192.168.1.0/24
-#Scan targets from a text file
+&lt;span style=&#34;color:#75715e&#34;&gt;#Scan targets from a text file&lt;/span&gt;
 nmap -iL list-of-ips.txt
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

