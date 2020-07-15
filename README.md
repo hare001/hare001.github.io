@@ -1,6 +1,6 @@
 # hare`s blog
 
-[![hare`s blog](https://github.com/hare001/Blog/workflows/hare%60s%20Blog/badge.svg?event=push)](https://hare001.github.io/)
+[![hare`s blog](https://github.com/hare001/Blog/workflows/hare%60s%20blog/badge.svg?event=push)](https://hare001.github.io/)
 [![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue)](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 [![Hugo](https://img.shields.io/badge/Power%20by-Hugo-%23ff4088)](https://gohugo.io/)
 [![theme](https://img.shields.io/badge/Theme-mogege-blueviolet)](https://github.com/Mogeko/mogege)
