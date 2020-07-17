@@ -7,14 +7,14 @@
 
 这是 hare 的个人博客，地址：**<https://hare001.github.io>**
 
-使用 Markdown 书写，用 [Hugo](https://gohugo.io/) 生成静态网页，用 [GitHub Actions](https://github.com/Mogeko/Blog/actions) 部署到 [hare001.github.io](https://github.com/hare001/hare001.github.io) 上。
+使用 Markdown 书写，用 [Hugo](https://gohugo.io/) 生成静态网页，用 [GitHub Actions](https://github.com/Mogeko/Blog/actions) 部署到 [hare001.github.io](https://github.com/hare001/hare001.github.io) 上
 
 主题使用的是 [mogege](https://github.com/Mogeko/mogege)
 
 # LICENSE
 ## 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)
 
-这是一份普通人可以理解的[许可协议](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.zh-Hans)概要 (但不是替代) 。 [免责声明](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#).
+这是一份普通人可以理解的[许可协议](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.zh-Hans)概要 (但不是替代) 。 [免责声明](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#)
 
 ### 您可以自由地：
 
