@@ -2,7 +2,7 @@
 &lt;p>Digispark 长这样：&lt;/p>
 &lt;p>&lt;img src="https://s3.amazonaws.com/digistump-resources/images/l/2520dcf84a0a3bf2257c2559d7a187db.jpg" alt="Digispark" style="zoom:50%;" />&lt;/p>
 &lt;p>简单介绍下 Digispark 这个小玩意儿：&lt;/p>
-&lt;p>Digispark USB Development Board 是一块基于 ATTiny85 微控制器的开发板，便宜小巧携带方便，某宝上十块包邮，相比于 BadUSB 的老前辈 USB Rubber Ducky 简直是便宜到家了好吗，性价比真的超高。&lt;del>绝不承认不买 Rubber Ducky 是没钱&lt;/del>&lt;/p>
+&lt;p>Digispark USB Development Board 是一块基于 ATTiny85 微控制器的开发板，便宜小巧携带方便，某宝上十块包邮，相比于 BadUSB 的老前辈 USB Rubber Ducky 简直是便宜到家了好吗，性价比真的超高。&lt;del>&lt;span class="spoiler" >绝不承认不买 Rubber Ducky 是没钱，哼！&lt;/span>&lt;/del>&lt;/p>
 &lt;p>关于 BadUSB，网上很多人都觉得只是含有有害程序的 U 盘，并以为可以通过格式化、禁止 U 盘自启动来阻止 BadUSB 的攻击。但其实它更像是没有按键的键盘，靠着烧录进去的程序来模拟人类输入，计算机是无法识别出 BadUSB 和人类正常输入的区别的。所以大家记得一定不要随便在自己或公司的电脑上插来历不明的 U 盘！&lt;/p>
 &lt;h3 id="配置-digispark-开发环境">配置 Digispark 开发环境&lt;/h3>
 &lt;p>要使用 Digispark 制作 BadUSB，首先我们要安装开发环境，在这里选择 Arduino。我的开发环境是 macOS，所以后续介绍以 macOS 为准。&lt;/p>
@@ -10,7 +10,7 @@
 &lt;p>安装好 Arduino 后，在 Preferences -&amp;gt; Additional Boards Manager URLs 处输入：&lt;/p>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-http" data-lang="http">&lt;span style="color:#960050;background-color:#1e0010">http://digistump.com/package_digistump_index.json
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来在 Tools -&amp;gt; Board -&amp;gt; Boards Manager，安装 Digistump AVR Boards 包。
-等待安装好，选择 Tools -&amp;gt; Board -&amp;gt; Digistump AVR Boards -&amp;gt; Digispark(Default - 16.5 Mhz)，此时 Arduino IDE 就可以成功识别 Digispark 开发板了。&lt;del>居然没有出现驱动方面的问题，撒花&lt;/del>&lt;/p>
+等待安装好，选择 Tools -&amp;gt; Board -&amp;gt; Digistump AVR Boards -&amp;gt; Digispark(Default - 16.5 Mhz)，此时 Arduino IDE 就可以成功识别 Digispark 开发板了。&lt;del>&lt;span class="spoiler" >居然没有出现驱动方面的问题，撒花&lt;/span>&lt;/del>&lt;/p>
 &lt;h3 id="编写一份-helloworld-吧">编写一份 helloworld 吧！&lt;/h3>
 &lt;p>既然是第一次玩 Digispark 开发板，怎么能不写一份 hello world 呢：&lt;/p>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-c" data-lang="c">&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;#34;DigiKeyboard.h&amp;#34;&lt;/span>&lt;span style="color:#75715e">
@@ -69,7 +69,7 @@ writing: 80% complete
 &amp;gt; Starting the user app ...
 running: 100% complete
 &amp;gt;&amp;gt; Micronucleus &lt;span style="color:#66d9ef">done&lt;/span>. Thank you!
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>我们将板子插入&lt;del>受害者&lt;/del>朋友的 Windows 设备上，就可以看到运行 notepad 并输出 hello world 了。&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>我们将板子插入&lt;del>&lt;span class="spoiler" >受害者&lt;/span>&lt;/del>朋友的 Windows 设备上，就可以看到运行 notepad 并输出 hello world 了。&lt;/p>
 &lt;h3 id="更进一步">更进一步&lt;/h3>
 &lt;p>现在我们可以尝试自己写一个 payload 了。&lt;/p>
 &lt;p>其实利用 BadUSB 的攻击过程，就是将 Digispark 开发板伪装成为一个 HID（Human Interface Device）。&lt;/p>
