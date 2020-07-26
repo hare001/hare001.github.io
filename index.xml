@@ -1,4 +1,180 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WhereIsMyMind</title><link>https://hare001.github.io/</link><atom:link href="https://hare001.github.io/index.xml" rel="self" type="application/rss+xml"/><description>WhereIsMyMind</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en</language><lastBuildDate>Fri, 17 Jul 2020 16:30:13 +0800</lastBuildDate><item><title>Curl Cheat Sheet</title><link>https://hare001.github.io/posts/curl-cheat-sheet/</link><pubDate>Fri, 17 Jul 2020 16:30:13 +0800</pubDate><guid>https://hare001.github.io/posts/curl-cheat-sheet/</guid><description>&lt;h3 id="options">Options&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WhereIsMyMind</title><link>https://hare001.github.io/</link><atom:link href="https://hare001.github.io/index.xml" rel="self" type="application/rss+xml"/><description>WhereIsMyMind</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en</language><lastBuildDate>Fri, 17 Jul 2020 22:30:29 +0800</lastBuildDate><item><title>Digispark BadUSB</title><link>https://hare001.github.io/posts/digispark-badusb/</link><pubDate>Fri, 17 Jul 2020 22:30:29 +0800</pubDate><guid>https://hare001.github.io/posts/digispark-badusb/</guid><description>&lt;p>最近闲着无聊，本着生命在于折腾的本质，用 Digispark 做个 BadUSB 玩玩。&lt;/p>
+&lt;p>Digispark 长这样：&lt;/p>
+&lt;p>&lt;img src="https://s3.amazonaws.com/digistump-resources/images/l/2520dcf84a0a3bf2257c2559d7a187db.jpg" alt="Digispark" style="zoom:50%;" />&lt;/p>
+&lt;p>简单介绍下 Digispark 这个小玩意儿：&lt;/p>
+&lt;p>Digispark USB Development Board 是一块基于 ATTiny85 微控制器的开发板，便宜小巧携带方便，某宝上十块包邮，相比于 BadUSB 的老前辈 USB Rubber Ducky 简直是便宜到家了好吗，性价比真的超高。&lt;span class="spoiler" > ~~绝不承认不买 Rubber Ducky 是没钱~~&lt;/span>&lt;/p>
+&lt;p>关于 BadUSB，网上很多人都觉得只是含有有害程序的 U 盘，并以为可以通过格式化、禁止 U 盘自启动来阻止 BadUSB 的攻击。但其实它更像是没有按键的键盘，靠着烧录进去的程序来模拟人类输入，计算机是无法识别出 BadUSB 和人类正常输入的区别的。所以大家记得一定不要随便在自己或公司的电脑上插来历不明的 U 盘！&lt;/p>
+&lt;h3 id="配置-digispark-开发环境">配置 Digispark 开发环境&lt;/h3>
+&lt;p>要使用 Digispark 制作 BadUSB，首先我们要安装开发环境，在这里选择 Arduino。我的开发环境是 macOS，所以后续介绍以 macOS 为准。&lt;/p>
+&lt;p>可以在 &lt;a href="https://www.arduino.cc/">Arduino&lt;/a> 官网上选择适配自己开发环境的安装版本。&lt;/p>
+&lt;p>安装好 Arduino 后，在 Preferences -&amp;gt; Additional Boards Manager URLs 处输入：&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-http" data-lang="http">&lt;span style="color:#960050;background-color:#1e0010">http://digistump.com/package_digistump_index.json
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来在 Tools -&amp;gt; Board -&amp;gt; Boards Manager，安装 Digistump AVR Boards 包。
+等待安装好，选择 Tools -&amp;gt; Board -&amp;gt; Digistump AVR Boards -&amp;gt; Digispark(Default - 16.5 Mhz)，此时 Arduino IDE 就可以成功识别 Digispark 开发板了。&lt;span class="spoiler" > ~~居然没有出现驱动方面的问题，撒花~~ &lt;/span>&lt;/p>
+&lt;h3 id="编写一份-helloworld-吧">编写一份 helloworld 吧！&lt;/h3>
+&lt;p>既然是第一次玩 Digispark 开发板，怎么能不写一份 hello world 呢：&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-c" data-lang="c">&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;#34;DigiKeyboard.h&amp;#34;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">setup&lt;/span>() {
+&lt;span style="color:#75715e">// put your setup code here, to run once:
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> DigiKeyboard.sendKeyStroke(&lt;span style="color:#ae81ff">0&lt;/span>);
+DigiKeyboard.delay(&lt;span style="color:#ae81ff">2000&lt;/span>);
+DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT); &lt;span style="color:#75715e">//GUI 键在 macOS 下是 ⌘ 键，在 Windows 下是徽标键
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> DigiKeyboard.delay(&lt;span style="color:#ae81ff">300&lt;/span>);
+DigiKeyboard.println(&lt;span style="color:#e6db74">&amp;#34;notepad&amp;#34;&lt;/span>);
+DigiKeyboard.delay(&lt;span style="color:#ae81ff">300&lt;/span>);
+DigiKeyboard.sendKeyStroke(KEY_ENTER);
+DigiKeyboard.delay(&lt;span style="color:#ae81ff">300&lt;/span>);
+DigiKeyboard.println(&lt;span style="color:#e6db74">&amp;#34;hello, world!&amp;#34;&lt;/span>);
+DigiKeyboard.delay(&lt;span style="color:#ae81ff">300&lt;/span>);
+}
+&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">loop&lt;/span>() {
+&lt;span style="color:#75715e">// put your main code here, to run repeatedly:
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>点击 Verify 验证一下代码以防出错，然后就……报错了……&lt;/p>
+&lt;p>此处 Error 信息：&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plaintext" data-lang="plaintext">fork/exec ~/Library/Arduino15/packages/arduino/tools/avr-gcc/4.8.1-arduino5/bin/avr-g++: bad CPU type in executable
+Error compiling for board Digispark (Default - 16.5mhz).
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>STFW 找到了原因：从 macOS Catalina 开始，不再支持 32 位程序，所以需要替换掉 Digispark 自带的 32 位 AVR 编译工具。&lt;/p>
+&lt;p>在 terminal 里运行：&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">cd ~/Library/Arduino15/packages/arduino/tools/avr-gcc
+mv 4.8.1-arduino5 orig.4.8.1
+ln -s /Applications/Arduino.app/Contents/Java/hardware/tools/avr 4.8.1-arduino5
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>再次验证，提示已经成功编译。&lt;/p>
+&lt;h3 id="烧录代码">烧录代码&lt;/h3>
+&lt;p>现在就可以上传代码到硬件上了，点击 Upload，在 60 秒内插入 Digispark 开发板完成上传。&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">Running Digispark Uploader...
+Plug in device now... &lt;span style="color:#f92672">(&lt;/span>will timeout in &lt;span style="color:#ae81ff">60&lt;/span> seconds&lt;span style="color:#f92672">)&lt;/span>
+&amp;gt; Please plug in the device ...
+&amp;gt; Press CTRL+C to terminate the program.
+&amp;gt; Device is found!
+connecting: 16% complete
+connecting: 22% complete
+connecting: 28% complete
+connecting: 33% complete
+&amp;gt; Device has firmware version 2.2
+&amp;gt; Device signature: 0x1e930b
+&amp;gt; Available space &lt;span style="color:#66d9ef">for&lt;/span> user applications: &lt;span style="color:#ae81ff">6522&lt;/span> bytes
+&amp;gt; Suggested sleep time between sending pages: 7ms
+&amp;gt; Whole page count: &lt;span style="color:#ae81ff">102&lt;/span> page size: &lt;span style="color:#ae81ff">64&lt;/span>
+&amp;gt; Erase &lt;span style="color:#66d9ef">function&lt;/span> sleep duration: 714ms
+parsing: 50% complete
+&amp;gt; Erasing the memory ...
+erasing: 55% complete
+erasing: 60% complete
+erasing: 65% complete
+&amp;gt; Starting to upload ...
+writing: 70% complete
+writing: 75% complete
+writing: 80% complete
+&amp;gt; Starting the user app ...
+running: 100% complete
+&amp;gt;&amp;gt; Micronucleus &lt;span style="color:#66d9ef">done&lt;/span>. Thank you!
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>我们将板子插入朋友&lt;span class="spoiler" >~~受害者~~&lt;/span>的 Windows 设备上，就可以看到运行 notepad 并输出 hello world 了。&lt;/p>
+&lt;h3 id="更进一步">更进一步&lt;/h3>
+&lt;p>现在我们可以尝试自己写一个 payload 了。&lt;/p>
+&lt;p>其实利用 BadUSB 的攻击过程，就是将 Digispark 开发板伪装成为一个 HID（Human Interface Device）。&lt;/p>
+&lt;pre>&lt;code class="language-wiki" data-lang="wiki">HID（Human Interface Device）人机接口设备类别是 Windows 最早支持的USB类别。由其名称可以了解 HID 设备是计算机直接
+与人交互的设备，例如键盘、鼠标和游戏杆等。不过 HID 设备不一定要有人机接口，只要符合 HID 类别规范，就都是 HID 设备。
+&lt;/code>&lt;/pre>&lt;p>我们可以通过添加、修改注册表项，下载执行脚本，执行命令，结束进程等达到一系列我们想要实现的结果。
+现在网上给 BadUSB 准备的脚本多为给 Rubber Ducky 准备的，还好我们可以进行转换，其实原理都是一样的，只不过实现代码不同。
+Rubber Ducky 的代码长这样：&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bat" data-lang="bat">DELAY 600
+&lt;span style="color:#75715e">REM Linux run dialog&lt;/span>
+ALT F2
+DELAY 200
+&lt;span style="color:#75715e">REM Mac OS run dialog&lt;/span>
+GUI SPACE
+DELAY 200
+&lt;span style="color:#75715e">REM On Windows this changes the input language, so press 3 times&lt;/span>
+GUI SPACE
+DELAY 200
+GUI SPACE
+DELAY 200
+GUI r
+DELAY 200
+&lt;span style="color:#75715e">REM On another OS, this could have typed &amp;#34; r&amp;#34;. Backspace 4 times.&lt;/span>
+DELETE
+REPEAT 4
+&lt;span style="color:#75715e">REM Type in URL and open page!&lt;/span>
+STRING http://example.com/
+ENTER
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>以上脚本是模拟键盘在各种操作系统上的打开指定网页的操作。&lt;/p>
+&lt;p>可以使用 &lt;a href="https://nixu-corp.github.io/">dckunio.js&lt;/a> 来在线转换，也可以使用 &lt;a href="https://github.com/mame82/duck2spark">duck2spark&lt;/a> 脚本来进行转换。&lt;/p>
+&lt;p>上面的脚本转换好了长这样：&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-c" data-lang="c">&lt;span style="color:#75715e">/*
+&lt;/span>&lt;span style="color:#75715e"> * Generated with &amp;lt;3 by Dckuino.js, an open source project !
+&lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
+&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;avr/pgmspace.h&amp;gt;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;#34;DigiKeyboard.h&amp;#34;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#66d9ef">char&lt;/span> line1[] PROGMEM &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;http://example.com/&amp;#34;&lt;/span>;
+&lt;span style="color:#66d9ef">char&lt;/span> buffer[&lt;span style="color:#ae81ff">256&lt;/span>];
+&lt;span style="color:#75715e">#define GetPsz(x) (strncpy_P(buffer, (char*)x, 256))
+&lt;/span>&lt;span style="color:#75715e">#define KEY_UP_ARROW 0x52
+&lt;/span>&lt;span style="color:#75715e">#define KEY_DOWN_ARROW 0x51
+&lt;/span>&lt;span style="color:#75715e">#define KEY_LEFT_ARROW 0x50
+&lt;/span>&lt;span style="color:#75715e">#define KEY_RIGHT_ARROW 0x4F
+&lt;/span>&lt;span style="color:#75715e">#define KEY_LEFT_GUI 0xE3
+&lt;/span>&lt;span style="color:#75715e">#define KEY_ESC 0x29
+&lt;/span>&lt;span style="color:#75715e">#define KEY_TAB 0x2B
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>
+&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">digiBegin&lt;/span>() {
+DigiKeyboard.sendKeyStroke(&lt;span style="color:#ae81ff">0&lt;/span>,&lt;span style="color:#ae81ff">0&lt;/span>);
+DigiKeyboard.delay(&lt;span style="color:#ae81ff">50&lt;/span>);
+}
+&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">digiEnd&lt;/span>() {
+&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> led&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">1&lt;/span>;
+pinMode(led, OUTPUT);
+&lt;span style="color:#66d9ef">while&lt;/span> (&lt;span style="color:#ae81ff">1&lt;/span>) {
+digitalWrite(led, &lt;span style="color:#f92672">!&lt;/span>digitalRead(led));
+DigiKeyboard.delay(&lt;span style="color:#ae81ff">1000&lt;/span>);
+}
+}
+&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">printText&lt;/span>(&lt;span style="color:#66d9ef">char&lt;/span> &lt;span style="color:#f92672">*&lt;/span>txt) {
+DigiKeyboard.print(txt);
+DigiKeyboard.update();
+}
+&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">setup&lt;/span>() {
+digiBegin();
+DigiKeyboard.delay(&lt;span style="color:#ae81ff">600&lt;/span>);
+&lt;span style="color:#75715e">// Linux run dialog
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> DigiKeyboard.sendKeyStroke(KEY_F2,MOD_ALT_LEFT);
+DigiKeyboard.delay(&lt;span style="color:#ae81ff">200&lt;/span>);
+&lt;span style="color:#75715e">// Mac OS run dialog
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> DigiKeyboard.sendKeyStroke(KEY_SPACE,MOD_GUI_LEFT);
+DigiKeyboard.delay(&lt;span style="color:#ae81ff">200&lt;/span>);
+&lt;span style="color:#75715e">// On Windows this changes the input language, so press 3 times
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> DigiKeyboard.sendKeyStroke(KEY_SPACE,MOD_GUI_LEFT);
+DigiKeyboard.delay(&lt;span style="color:#ae81ff">200&lt;/span>);
+DigiKeyboard.sendKeyStroke(KEY_SPACE,MOD_GUI_LEFT);
+DigiKeyboard.delay(&lt;span style="color:#ae81ff">200&lt;/span>);
+DigiKeyboard.sendKeyStroke(KEY_R,MOD_GUI_LEFT);
+DigiKeyboard.delay(&lt;span style="color:#ae81ff">200&lt;/span>);
+&lt;span style="color:#75715e">// On another OS, this could have typed &amp;#34; r&amp;#34;. Backspace 4 times.
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">for&lt;/span>(&lt;span style="color:#66d9ef">int&lt;/span> i &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>; i &lt;span style="color:#f92672">&amp;lt;&lt;/span> &lt;span style="color:#ae81ff">4&lt;/span>; i&lt;span style="color:#f92672">++&lt;/span>) {
+DigiKeyboard.sendKeyStroke(KEY_DELETE);
+}
+&lt;span style="color:#75715e">// Type in URL and open page!
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#75715e">// http://example.com/
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> printText(GetPsz(line1));
+DigiKeyboard.sendKeyStroke(KEY_ENTER);
+digiEnd();
+}
+&lt;span style="color:#75715e">/* Unused endless loop */&lt;/span>
+&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">loop&lt;/span>() {}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>首次烧录完，插入受攻击的设备没能正常实现功能，可能是驱动问题（部分情况耐心等待即可）、中文输入法问题（可以通过大写锁定键进行绕过）、不同操作系统快捷功能键不同，找到出现问题的步骤进行调试即可。&lt;/p>
+&lt;p>如果不会编写 Rubber Ducky 脚本或者 Digispark 脚本，可以根据自己的攻击思路在 &lt;a href="https://www.ducktoolkit.com/">DuckToolkit&lt;/a> 生成 Rubber Ducky 的 Payload，然后进行转换即可。&lt;/p>
+&lt;p>另外，Digispark 开发版元件都是直接暴露出来的，这样容易造成短路等物理损坏。可以用热缩管将开发板隔离一下，或者是 3D 打印个 U 盘的外壳来进行伪装。用这个来做 BadUSB 搞社工成本还是很低的，只要在目标公司附近摆个「扫码领 U 盘」的活动就可以了……&lt;/p>
+&lt;p>参考：&lt;/p>
+&lt;p>&lt;a href="https://www.ducktoolkit.com/">Duck Toolkit&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/hak5darren/USB-Rubber-Ducky">USB-Rubber-Ducky&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Payloads">USB-Rubber-Ducky-Payloads&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/mame82/duck2spark">duck2spark&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://nixu-corp.github.io/">dckunio.js&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/CedArctic/DigiSpark-Scripts">DigiSpark-Scripts&lt;/a>&lt;/p>
+&lt;!--&lt;span class="spoiler" > 隐藏文字 &lt;/span>-->
+&lt;!--
+&lt;div>&lt;iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > &lt;/iframe>&lt;/div>
+嵌入 BiliBili 视频 --></description></item><item><title>Curl Cheat Sheet</title><link>https://hare001.github.io/posts/curl-cheat-sheet/</link><pubDate>Fri, 17 Jul 2020 16:30:13 +0800</pubDate><guid>https://hare001.github.io/posts/curl-cheat-sheet/</guid><description>&lt;h3 id="options">Options&lt;/h3>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -o &amp;lt;file&amp;gt; &lt;span style="color:#75715e"># --output: write to file&lt;/span>
 curl -u user:pass &lt;span style="color:#75715e"># --user: Authentication&lt;/span>
 curl -v &lt;span style="color:#75715e"># --verbose&lt;/span>
