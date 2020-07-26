@@ -2,7 +2,7 @@
 &lt;p>Digispark 长这样：&lt;/p>
 &lt;p>&lt;img src="https://s3.amazonaws.com/digistump-resources/images/l/2520dcf84a0a3bf2257c2559d7a187db.jpg" alt="Digispark" style="zoom:50%;" />&lt;/p>
 &lt;p>简单介绍下 Digispark 这个小玩意儿：&lt;/p>
-&lt;p>Digispark USB Development Board 是一块基于 ATTiny85 微控制器的开发板，便宜小巧携带方便，某宝上十块包邮，相比于 BadUSB 的老前辈 USB Rubber Ducky 简直是便宜到家了好吗，性价比真的超高。&lt;span class="spoiler" > ~~绝不承认不买 Rubber Ducky 是没钱~~&lt;/span>&lt;/p>
+&lt;p>Digispark USB Development Board 是一块基于 ATTiny85 微控制器的开发板，便宜小巧携带方便，某宝上十块包邮，相比于 BadUSB 的老前辈 USB Rubber Ducky 简直是便宜到家了好吗，性价比真的超高。&lt;del>绝不承认不买 Rubber Ducky 是没钱&lt;/del>&lt;/p>
 &lt;p>关于 BadUSB，网上很多人都觉得只是含有有害程序的 U 盘，并以为可以通过格式化、禁止 U 盘自启动来阻止 BadUSB 的攻击。但其实它更像是没有按键的键盘，靠着烧录进去的程序来模拟人类输入，计算机是无法识别出 BadUSB 和人类正常输入的区别的。所以大家记得一定不要随便在自己或公司的电脑上插来历不明的 U 盘！&lt;/p></description></item><item><title>Curl Cheat Sheet</title><link>https://hare001.github.io/posts/curl-cheat-sheet/</link><pubDate>Fri, 17 Jul 2020 16:30:13 +0800</pubDate><guid>https://hare001.github.io/posts/curl-cheat-sheet/</guid><description>&lt;h3 id="options">Options&lt;/h3>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -o &amp;lt;file&amp;gt; &lt;span style="color:#75715e"># --output: write to file&lt;/span>
 curl -u user:pass &lt;span style="color:#75715e"># --user: Authentication&lt;/span>
