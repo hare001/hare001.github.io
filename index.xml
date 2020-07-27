@@ -163,7 +163,7 @@ digiEnd();
 &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">loop&lt;/span>() {}
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>首次烧录完，插入受攻击的设备没能正常实现功能，可能是驱动问题（部分情况耐心等待即可）、中文输入法问题（可以通过大写锁定键进行绕过）、不同操作系统快捷功能键不同，找到出现问题的步骤进行调试即可。&lt;/p>
 &lt;p>如果不会编写 Rubber Ducky 脚本或者 Digispark 脚本，可以根据自己的攻击思路在 &lt;a href="https://www.ducktoolkit.com/">DuckToolkit&lt;/a> 生成 Rubber Ducky 的 Payload，然后进行转换即可。&lt;/p>
-&lt;p>另外，Digispark 开发版元件都是直接暴露出来的，这样容易造成短路等物理损坏。可以用热缩管将开发板隔离一下，或者是 3D 打印个 U 盘的外壳来进行伪装。用这个来做 BadUSB 搞社工成本还是很低的，只要在目标公司附近摆个「扫码领 U 盘」的活动就可以了……&lt;/p>
+&lt;p>另外，Digispark 开发版元件都是直接暴露出来的，这样容易造成短路等物理损坏。可以用热缩管将开发板隔离一下，或者是 3D 打印个 U 盘的外壳来进行伪装。用这个来做 BadUSB 搞社工成本还是很低的，只要在目标公司附近摆个「扫码领 U 盘」的活动就可以了，毕竟人才是最脆弱的安全系统。&lt;/p>
 &lt;p>参考：&lt;/p>
 &lt;p>&lt;a href="https://www.ducktoolkit.com/">Duck Toolkit&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://github.com/hak5darren/USB-Rubber-Ducky">USB-Rubber-Ducky&lt;/a>&lt;/p>
