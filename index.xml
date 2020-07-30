@@ -7,10 +7,10 @@
 &lt;h3 id="配置-digispark-开发环境">配置 Digispark 开发环境&lt;/h3>
 &lt;p>要使用 Digispark 制作 BadUSB，首先我们要安装开发环境，在这里选择 Arduino。我的开发环境是 macOS，所以后续介绍以 macOS 为准。&lt;/p>
 &lt;p>可以在 &lt;a href="https://www.arduino.cc/">Arduino&lt;/a> 官网上选择适配自己开发环境的安装版本。&lt;/p>
-&lt;p>安装好 Arduino 后，在 Preferences -&amp;gt; Additional Boards Manager URLs 处输入：&lt;/p>
+&lt;p>安装好 Arduino 后，在 &lt;strong>Preferences&lt;/strong> -&amp;gt; &lt;strong>Additional Boards Manager URLs&lt;/strong> 处输入：&lt;/p>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-http" data-lang="http">&lt;span style="color:#960050;background-color:#1e0010">http://digistump.com/package_digistump_index.json
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来在 Tools -&amp;gt; Board -&amp;gt; Boards Manager，安装 Digistump AVR Boards 包。
-等待安装好，选择 Tools -&amp;gt; Board -&amp;gt; Digistump AVR Boards -&amp;gt; Digispark(Default - 16.5 Mhz)，此时 Arduino IDE 就可以成功识别 Digispark 开发板了。&lt;span class="spoiler" >&lt;del>居然没有出现驱动方面的问题，撒花&lt;/del>&lt;/span>&lt;/p>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来在 &lt;strong>Tools&lt;/strong> -&amp;gt; &lt;strong>Board&lt;/strong> -&amp;gt; &lt;strong>Boards Manager&lt;/strong>，安装 &lt;strong>Digistump AVR Boards&lt;/strong> 包。
+等待安装好，选择 &lt;strong>Tools&lt;/strong> -&amp;gt; &lt;strong>Board&lt;/strong> -&amp;gt; &lt;strong>Digistump AVR Boards&lt;/strong> -&amp;gt; &lt;strong>Digispark(Default - 16.5 Mhz)&lt;/strong>，此时 Arduino IDE 就可以成功识别 Digispark 开发板了。&lt;span class="spoiler" >&lt;del>居然没有出现驱动方面的问题，撒花&lt;/del>&lt;/span>&lt;/p>
 &lt;h3 id="编写一份-helloworld-吧">编写一份 helloworld 吧！&lt;/h3>
 &lt;p>既然是第一次玩 Digispark 开发板，怎么能不写一份 hello world 呢：&lt;/p>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-c" data-lang="c">&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;#34;DigiKeyboard.h&amp;#34;&lt;/span>&lt;span style="color:#75715e">
@@ -41,7 +41,7 @@ mv 4.8.1-arduino5 orig.4.8.1
 ln -s /Applications/Arduino.app/Contents/Java/hardware/tools/avr 4.8.1-arduino5
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>再次验证，提示已经成功编译。&lt;/p>
 &lt;h3 id="烧录代码">烧录代码&lt;/h3>
-&lt;p>现在就可以上传代码到硬件上了，点击 Upload，在 60 秒内插入 Digispark 开发板完成上传。&lt;/p>
+&lt;p>现在就可以上传代码到硬件上了，点击 &lt;strong>Upload&lt;/strong>，在 60 秒内插入 Digispark 开发板完成上传。&lt;/p>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">Running Digispark Uploader...
 Plug in device now... &lt;span style="color:#f92672">(&lt;/span>will timeout in &lt;span style="color:#ae81ff">60&lt;/span> seconds&lt;span style="color:#f92672">)&lt;/span>
 &amp;gt; Please plug in the device ...

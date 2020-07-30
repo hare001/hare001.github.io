@@ -5,7 +5,7 @@
 [![Hugo](https://img.shields.io/badge/Power%20by-Hugo-%23ff4088)](https://gohugo.io/)
 [![theme](https://img.shields.io/badge/Theme-mogege-blueviolet)](https://github.com/Mogeko/mogege)
 
-这是 hare 的个人博客，地址：**<https://hare001.github.io>**
+这是 hare 的个人博客，地址：**<http://hare.one>**
 
 使用 Markdown 书写，用 [Hugo](https://gohugo.io/) 生成静态网页，用 [GitHub Actions](https://github.com/Mogeko/Blog/actions) 部署到 [hare001.github.io](https://github.com/hare001/hare001.github.io) 上
 
