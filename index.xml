@@ -2,10 +2,13 @@
 &lt;p>家里的 HHKB 闲置了有一段时间，因为每次使用都要给 MacBook 插扩展坞，再连接 USB 到扩展坞上，麻烦不说，还会挡住触控板的使用，直接把 HHKB 放在 MacBook 键盘的位置吧，连线部分又会卡在屏幕上，反正就是怎么样都不爽。也考虑过用 L 型的 USB 连接线，但是桌面上还是线越少越好，所以考虑用蓝牙来解决这个问题。&lt;/p>
 &lt;h3 id="选择">选择&lt;/h3>
 &lt;p>HHKB 自己是有蓝牙版本的，叫做 HHKB BT。身边用过的朋友都说使用上很坑，原因是 Bluetooth 3.0 容易被干扰，比如说 WiFi 2.4G 信号，甚至是电脑外接 USB 3.0 都可能会造成干扰。而且电池仓换电池的供电方式也有些麻烦，所以这个选项直接 pass 掉。&lt;/p>
+&lt;p>&lt;span class="spoiler" > 注1：现在已经有新款的 HHKB Hybrid Types 了，使用的 Bluetooth 4.2，同样支持蓝牙双模&lt;/span>
+&lt;br>
+&lt;span class="spoiler" >&lt;del> 注2：有信仰的兄弟可以冲冲冲，我继续搞我的魔改&lt;/del>&lt;/span>&lt;/p>
 &lt;p>&lt;img src="\Pictures\hhkb-ble0.png" alt="hhkb-ble0" style="zoom:80%;" />&lt;/p>
 &lt;center>HHKB BT&lt;/center>
 &lt;p>直到我看到了这篇 &lt;a href="https://www.chiphell.com/thread-2026980-1-1.html">HHKB 的正确使用方式&lt;/a>，我觉得找到了我需要的解决方案。&lt;/p>
-&lt;p>这个叫做 YDKB 的解决方案是由 @yangdigi 开发的主控芯片，通过替换 HHKB 原厂的主控芯片，就可以使它变成蓝牙双模 + 有线的版本。而且 YDKB 的&lt;a href="http://help.ydkb.io/doku.php?id=start">文档&lt;/a>写得巨详细，我喜欢。&lt;/p>
+&lt;p>这个叫做 YDKB 的解决方案是由 @yangdigi 开发的主控芯片，通过替换 HHKB 原厂的主控芯片，就可以使它变成蓝牙双模 + 有线的版本。而且 YDKB 的 &lt;a href="http://help.ydkb.io/doku.php?id=start">文档&lt;/a> 写得巨详细，我喜欢。&lt;/p>
 &lt;h3 id="开搞">开搞&lt;/h3>
 &lt;p>话不多说，赶紧在淘宝上下单了改装套件，我自己选择了改装主控芯片 + 锂电池 2500mAh 的版本，不过锂电池也可以自己购置，只需要大小满足要求即可。&lt;/p>
 &lt;p>&lt;img src="\Pictures\hhkb-ble1.jpg" alt="hhkb-ble1" style="zoom:25%;" />&lt;/p>
@@ -32,9 +35,28 @@
 2 `--------------------------
 1 `--------------------------
 0 `--------------------------
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>除了常规的键位，我还设置了几个符合我使用习惯的按键。&lt;/p>
-&lt;p>&lt;strong>Esc 键&lt;/strong>：跟 shift 一起按就是 ~ 键，这个比 HHKB 自己在右上角的 ~ 更符合使用习惯。&lt;/p>
-&lt;p>&lt;strong>数字 3 键&lt;/strong>：单独按就是正常的 3 键，与其他键一起使用时就是瞬时开启 L2。&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>下面是我的 Keymap，可以用来参考。&lt;/p>
+&lt;h4 id="colemak-keyboard-layout">Colemak Keyboard Layout&lt;/h4>
+&lt;p>&lt;img src="\Pictures\hhkb-ble6.jpg" alt="hhkb-ble6" style="zoom:25%;" />&lt;/p>
+&lt;center>Layer0&lt;/center>
+最近了解了一下键盘布局，对 Colemak 这种键盘布局很感兴趣，想要尝试切换一下布局试试。
+未能熟练使用前可能不常用，所以暂时将 Colemak 布局放在最底层，最低程度降低对其他层的影响。
+&lt;p>想要了解 Colemak 布局的话可以看这里：&lt;a href="https://colemak.com">Colemak.com&lt;/a>&lt;/p>
+&lt;p>这时候就凸显了 HHKB Pro 2 无刻版的好处，键盘自在心中。&lt;span class="spoiler" >&lt;del>所谓键上无码，心中有码&lt;/del>&lt;/span>&lt;/p>
+&lt;h4 id="qwerty-keyboard-layout">QWERTY Keyboard Layout&lt;/h4>
+&lt;p>&lt;img src="\Pictures\hhkb-ble7.jpg" alt="hhkb-ble7" style="zoom:25%;" />&lt;/p>
+&lt;center>Layer1&lt;/center>
+这一层不必多说，就是常用的 QWERTY 布局。
+&lt;p>不一样的细节：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Esc 键&lt;/strong>：跟 shift 一起按就是 ~ 键，这个比 HHKB 自己在右上角的 ~ 更符合使用习惯。&lt;/li>
+&lt;li>&lt;strong>数字 3 键&lt;/strong>：单独按就是正常的 3 键，与其他键一起使用时就是瞬时开启 Layer2。&lt;/li>
+&lt;li>&lt;strong>数字 4 键&lt;/strong>：单独按就是正常的 4 键，与 Alt 键一起按就是 F4 键，因为偶尔需要切换到 Windows 下操作。&lt;/li>
+&lt;/ul>
+&lt;p>接下来这一层是配合&lt;strong>数字 3 键&lt;/strong>使用的：&lt;/p>
+&lt;h4 id="tricks-keys-layout">Tricks Keys Layout&lt;/h4>
+&lt;p>&lt;img src="\Pictures\hhkb-ble8.jpg" alt="hhkb-ble8" style="zoom:25%;" />&lt;/p>
+&lt;center>Layer2&lt;/center>
 &lt;ul>
 &lt;li>
 &lt;p>3 + hjkl 的键位设置为左下上右，Vim 用户都懂。&lt;/p>
@@ -46,13 +68,25 @@
 &lt;p>, . 键的位置改成了 - 和 +，macOS 自带的输入法只能用 - 和 + 翻页，现在可以一直在主键盘区操作，不用小指去找。&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>数字 4 键&lt;/strong>：单独按就是正常的 4 键，与 Alt 键一起按就是 F4 键，因为偶尔需要切换到 Windows 下操作。&lt;/p>
+&lt;h4 id="function-keys-layout">Function Keys Layout&lt;/h4>
+&lt;p>&lt;img src="\Pictures\hhkb-ble9.jpg" alt="hhkb-ble9" style="zoom:25%;" />&lt;/p>
+&lt;center>Layer3&lt;/center>
+&lt;p>我将原本 HHKB fn 的按键改成了瞬时切换到 Layer3，除了实现原本 fn 键的功能，还添加了一些杂七杂八的控制按键。&lt;/p>
+&lt;p>不得不感叹一下，仅仅用了四层就将 60 键的 HHKB 扩展了这么多功能，YDKB 大法好！&lt;/p>
+&lt;p>上面的 Keymap 在我的 &lt;a href="https://github.com/hare001/HHKB-Keymap">GitHub&lt;/a> 仓库里可以直接下载固件。&lt;/p>
+&lt;p>或者是直接访问 &lt;a href="http://ydkb.io/?hhkb_ble-0#H4sIAAAAAAAAA+1US25bMQy80CzEP3UWI/e/Rod6SWM4SVGgLeJFIYNPlsSROEPydrvJgmRKH1vHLjgCCVVsqIGrAnVwm8f0BTdJiEMbwQ0C8JhgkALKH13pY9ANWzChh0ssR4q7wBwWsIQVrGEbvs4WL1a4nbnDA57wGu+GbwQv4JWKMASfGIhEFIKLGzkYSEUaPZKXMYZEFrKRG7VQglIUI3IU0WXPeqEatenUCy1oRRva0YFONKNu9MZe2IJNUgzbsYMeO7ELu7E34+f7Fnkw45fRryJpY+PYPLaO7WP3WDIkMhSJKGf0JbVCJsWGxPmSdZKkgzZYgzQ4gzIYRFCSTIgbsc64BBy99tGFazqKDHS8CljD5ki3Rj2KTannijcBB/7vCiiTLw/6yf2Yl+HzcYl15pOoJ4Z8T96vxy8wP55gblyTR7LlA9XD3yejR4Iri05OPe5HfXn57wVwsfonQf7LE4eZt39HoPQqppGw5q4WY2HGZExn8YxlhmewUkfLYJ3Nvzp2MjW1bMraWbBrqpbuVGIyTF/F55x5NZa17prXFaxlljyzd9rDdIgBe+8RuO8Q8upReelzdYyeVlf9Jiuj4P60jhqBn43/9FD7qYE+RTY8y4n71vjsb/2GOn3yt/5n5JsYefkBAis58SAKAAA=">我的分享&lt;/a> 在我的配置文件基础上进行修改。&lt;/p>
+&lt;h3 id="tips">Tips&lt;/h3>
+&lt;p>我想把 HHKB 放到 MacBook 上使用，为了避免误触，需要在 HHKB 接入 MacBook 的时候自动禁用内置键盘。&lt;/p>
+&lt;p>这里需要使用 karabiner 实现。&lt;/p>
+&lt;p>像下图这样配置 karabiner 即可实现 HHKB 蓝牙接入时禁用内置键盘的功能。&lt;/p>
+&lt;p>&lt;img src="\Pictures\karabiner.png" alt="karabiner" style="zoom:25%;" />
+另外，可能还需要在系统配置里调整下 fn 功能键的作用，不然可能会在某些需要 fn 快捷键的情况下却调整了亮度声音。
+勾选 &lt;strong>Use F1,F2,etc. keys as standard function keys on external keyboards&amp;hellip;&lt;/strong> 选项。
+&lt;img src="\Pictures\keyboardsetting.png" alt="keyboardsetting" style="zoom:25%;" />&lt;/p>
+&lt;p>到这里我们就可以愉快的码字敲代码了，关于电量究竟能用多久等我用光一次再说。🤣&lt;/p>
 &lt;p>最后配一张完工图。&lt;/p>
 &lt;p>&lt;img src="\Pictures\hhkb-ble5.jpg" alt="hhkb-ble5" style="zoom:25%;" />&lt;/p>
 &lt;center>完工图&lt;/center>
-&lt;p>如果要把 HHKB 放到 MacBook 上，为了避免误触，需要在 HHKB 接入 MacBook 的时候自动禁用内置键盘。&lt;/p>
-&lt;p>使用 karabiner 实现。&lt;/p>
-&lt;p>待续&lt;/p>
 &lt;!--&lt;span class="spoiler" > 隐藏文字 &lt;/span>-->
 &lt;!--
 &lt;div>&lt;iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > &lt;/iframe>&lt;/div>
