@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WhereIsMyMind</title><link>https://hare001.github.io/</link><atom:link href="https://hare001.github.io/index.xml" rel="self" type="application/rss+xml"/><description>WhereIsMyMind</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en</language><lastBuildDate>Sun, 26 Jul 2020 22:30:29 +0800</lastBuildDate><item><title>Digispark BadUSB</title><link>https://hare001.github.io/posts/digispark-badusb/</link><pubDate>Sun, 26 Jul 2020 22:30:29 +0800</pubDate><guid>https://hare001.github.io/posts/digispark-badusb/</guid><description>&lt;p>最近闲着无聊，本着生命在于折腾的本质，用 Digispark 做个 BadUSB 玩玩。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WhereIsMyMind</title><link>https://hare001.github.io/</link><atom:link href="https://hare001.github.io/index.xml" rel="self" type="application/rss+xml"/><description>WhereIsMyMind</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en</language><lastBuildDate>Thu, 30 Jul 2020 18:07:43 +0800</lastBuildDate><item><title>YDKB HHKB BLE Mod</title><link>https://hare001.github.io/posts/ydkb-hhkb-ble-mod/</link><pubDate>Thu, 30 Jul 2020 18:07:43 +0800</pubDate><guid>https://hare001.github.io/posts/ydkb-hhkb-ble-mod/</guid><description>&lt;h3 id="前因">前因&lt;/h3>
+&lt;p>家里的 HHKB 闲置了有一段时间，因为每次使用都要给 MacBook 插扩展坞，再连接 USB 到扩展坞上，麻烦不说，还会挡住触控板的使用，直接把 HHKB 放在 MacBook 键盘的位置吧，连线部分又会卡在屏幕上，反正就是怎么样都不爽。也考虑过用 L 型的 USB 连接线，但是桌面上还是线越少越好，所以考虑用蓝牙来解决这个问题。&lt;/p>
+&lt;h3 id="选择">选择&lt;/h3>
+&lt;p>HHKB 自己是有蓝牙版本的，叫做 HHKB BT。身边用过的朋友都说使用上很坑，原因是 Bluetooth 3.0 容易被干扰，比如说 WiFi 2.4G 信号，甚至是电脑外接 USB 3.0 都可能会造成干扰。而且电池仓换电池的供电方式也有些麻烦，所以这个选项直接 pass 掉。&lt;/p>
+&lt;p>&lt;img src="\Pictures\hhkb-ble0.png" alt="hhkb-ble0" style="zoom:80%;" />&lt;/p>
+&lt;center>HHKB BT&lt;/center>
+&lt;p>直到我看到了这篇 &lt;a href="https://www.chiphell.com/thread-2026980-1-1.html">HHKB 的正确使用方式&lt;/a>，我觉得找到了我需要的解决方案。&lt;/p>
+&lt;p>这个叫做 YDKB 的解决方案是由 @yangdigi 开发的主控芯片，通过替换 HHKB 原厂的主控芯片，就可以使它变成蓝牙双模 + 有线的版本。而且 YDKB 的&lt;a href="http://help.ydkb.io/doku.php?id=start">文档&lt;/a>写得巨详细，我喜欢。&lt;/p>
+&lt;h3 id="开搞">开搞&lt;/h3>
+&lt;p>话不多说，赶紧在淘宝上下单了改装套件，我自己选择了改装主控芯片 + 锂电池 2500mAh 的版本，不过锂电池也可以自己购置，只需要大小满足要求即可。&lt;/p>
+&lt;p>&lt;img src="\Pictures\hhkb-ble1.jpg" alt="hhkb-ble1" style="zoom:25%;" />&lt;/p>
+&lt;center>主控芯片&lt;/center>
+&lt;p>安装过程很简单，一共只需要拧下四颗螺丝，替换原厂主控，安装锂电池就 ok 了。随 YDKB 主控模块还附带了三支可插拔的 LED，需要注意的是 LED 的光线只能透过白色版本的 HHKB，黑色的是透不过外壳的。不过这个只是作为提示用，并不是必须安装的选项，不安装的话，也会在 USB 接口的位置闪烁来提示，但没有这样直观。&lt;/p>
+&lt;p>&lt;img src="\Pictures\hhkb-ble2.jpg" alt="hhkb-ble2" style="zoom:25%;" />&lt;/p>
+&lt;center>电池和附赠胶条&lt;/center>
+&lt;p>锂电池用附赠的双面胶条贴在键盘外壳内壁靠近的位置就可以，垫上一层泡泡纸防止键盘短接。我在这里出现了一个小插曲：电池的触点不严，导致无法供电。刚好手头也没有电烙铁，跟店家说了下就给我补发了新的电池。&lt;span class="spoiler" >&lt;del>店家说从开始卖一共就三块电池出过问题，我中奖了。&lt;/del>&lt;/span>&lt;/p>
+&lt;p>&lt;img src="\Pictures\hhkb-ble3.jpg" alt="hhkb-ble3" style="zoom:25%;" />&lt;/p>
+&lt;center>原装主控和 HHKB BLE MOD 对比&lt;/center>
+&lt;p>YDKB 主控上有一个朝内的 USB 接口，这里可以装一个 U 盘，不过只能在连接了 USB 线的时候可以读取。我找到了一个几年前的 Kingston 8GB U 盘，也是你继续发光发热的时候了，去掉了外壳就插在了这里。对齐了 LED 就可以合上盖子拧螺丝了。到这里就替换完了。&lt;/p>
+&lt;p>&lt;img src="\Pictures\hhkb-ble4.jpg" alt="hhkb-ble4" style="zoom:25%;" />&lt;/p>
+&lt;center>装好 LED 和内置 U 盘&lt;/center>
+&lt;p>打开开关盖子，原本有六个开关的地方只有一个开关了，打开即可。&lt;/p>
+&lt;p>原本六个开关的功能，现在可以通过刷固件进行，YDKB 支持 8 层自定义按键设置 + LEDmap 设置，烧写固件也很方便，全部都可以通过 &lt;a href="http://ydkb.io">ydkb.io&lt;/a> 搞定。&lt;/p>
+&lt;h3 id="keymap">Keymap&lt;/h3>
+&lt;p>之前说 YDKB 支持 8 层自定义按键，这 8 层其实是像下面这样叠在一起的，每次按键，从 L7 开始往下找开启的层，如果该层打开，则使用该层的键位，如果键位为 TRNS，则继续向下查找，直到找到按键或到最底层。&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plaintext" data-lang="plaintext">7 / ESC / F1 / F2 / F3 ....
+: /-----/-----/-----/-----
+: / TAB / Q / W / E ....
+: /-----/-----/-----/-----
+: /LCtrl/ A / S / D ....
+: / : : : :
+2 `--------------------------
+1 `--------------------------
+0 `--------------------------
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>除了常规的键位，我还设置了几个符合我使用习惯的按键。&lt;/p>
+&lt;p>&lt;strong>Esc 键&lt;/strong>：跟 shift 一起按就是 ~ 键，这个比 HHKB 自己在右上角的 ~ 更符合使用习惯。&lt;/p>
+&lt;p>&lt;strong>数字 3 键&lt;/strong>：单独按就是正常的 3 键，与其他键一起使用时就是瞬时开启 L2。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>3 + hjkl 的键位设置为左下上右，Vim 用户都懂。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>3 + u 键的位置设置为 CapsLock，在 macOS 下用来快速切换中英输入法，免得用小指去找 Fn。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>, . 键的位置改成了 - 和 +，macOS 自带的输入法只能用 - 和 + 翻页，现在可以一直在主键盘区操作，不用小指去找。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>数字 4 键&lt;/strong>：单独按就是正常的 4 键，与 Alt 键一起按就是 F4 键，因为偶尔需要切换到 Windows 下操作。&lt;/p>
+&lt;p>最后配一张完工图。&lt;/p>
+&lt;p>&lt;img src="\Pictures\hhkb-ble5.jpg" alt="hhkb-ble5" style="zoom:25%;" />&lt;/p>
+&lt;center>完工图&lt;/center>
+&lt;p>如果要把 HHKB 放到 MacBook 上，为了避免误触，需要在 HHKB 接入 MacBook 的时候自动禁用内置键盘。&lt;/p>
+&lt;p>使用 karabiner 实现。&lt;/p>
+&lt;p>待续&lt;/p>
+&lt;!--&lt;span class="spoiler" > 隐藏文字 &lt;/span>-->
+&lt;!--
+&lt;div>&lt;iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > &lt;/iframe>&lt;/div>
+嵌入 BiliBili 视频 --></description></item><item><title>Digispark BadUSB</title><link>https://hare001.github.io/posts/digispark-badusb/</link><pubDate>Sun, 26 Jul 2020 22:30:29 +0800</pubDate><guid>https://hare001.github.io/posts/digispark-badusb/</guid><description>&lt;p>最近闲着无聊，本着生命在于折腾的本质，用 Digispark 做个 BadUSB 玩玩。&lt;/p>
 &lt;p>Digispark 长这样：&lt;/p>
 &lt;p>&lt;img src="https://s3.amazonaws.com/digistump-resources/images/l/2520dcf84a0a3bf2257c2559d7a187db.jpg" alt="Digispark" style="zoom:50%;" />&lt;/p>
 &lt;p>简单介绍下 Digispark 这个小玩意儿：&lt;/p>

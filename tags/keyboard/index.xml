@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Keyboard on WhereIsMyMind</title><link>https://hare001.github.io/tags/keyboard/</link><description>Recent content in Keyboard on WhereIsMyMind</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 30 Jul 2020 18:07:43 +0800</lastBuildDate><atom:link href="https://hare001.github.io/tags/keyboard/index.xml" rel="self" type="application/rss+xml"/><item><title>YDKB HHKB BLE Mod</title><link>https://hare001.github.io/posts/ydkb-hhkb-ble-mod/</link><pubDate>Thu, 30 Jul 2020 18:07:43 +0800</pubDate><guid>https://hare001.github.io/posts/ydkb-hhkb-ble-mod/</guid><description>&lt;h3 id="前因">前因&lt;/h3>
+&lt;p>家里的 HHKB 闲置了有一段时间，因为每次使用都要给 MacBook 插扩展坞，再连接 USB 到扩展坞上，麻烦不说，还会挡住触控板的使用，直接把 HHKB 放在 MacBook 键盘的位置吧，连线部分又会卡在屏幕上，反正就是怎么样都不爽。也考虑过用 L 型的 USB 连接线，但是桌面上还是线越少越好，所以考虑用蓝牙来解决这个问题。&lt;/p>
+&lt;h3 id="选择">选择&lt;/h3>
+&lt;p>HHKB 自己是有蓝牙版本的，叫做 HHKB BT。身边用过的朋友都说使用上很坑，原因是 Bluetooth 3.0 容易被干扰，比如说 WiFi 2.4G 信号，甚至是电脑外接 USB 3.0 都可能会造成干扰。而且电池仓换电池的供电方式也有些麻烦，所以这个选项直接 pass 掉。&lt;/p>
+&lt;p>&lt;img src="\Pictures\hhkb-ble0.png" alt="hhkb-ble0" style="zoom:80%;" />&lt;/p>
+&lt;center>HHKB BT&lt;/center>
+&lt;p>直到我看到了这篇 &lt;a href="https://www.chiphell.com/thread-2026980-1-1.html">HHKB 的正确使用方式&lt;/a>，我觉得找到了我需要的解决方案。&lt;/p>
+&lt;p>这个叫做 YDKB 的解决方案是由 @yangdigi 开发的主控芯片，通过替换 HHKB 原厂的主控芯片，就可以使它变成蓝牙双模 + 有线的版本。而且 YDKB 的&lt;a href="http://help.ydkb.io/doku.php?id=start">文档&lt;/a>写得巨详细，我喜欢。&lt;/p></description></item></channel></rss>
