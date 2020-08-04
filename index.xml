@@ -37,14 +37,14 @@
 0 `--------------------------
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>下面是我的 Keymap，可以用来参考。&lt;/p>
 &lt;h4 id="colemak-keyboard-layout">Colemak Keyboard Layout&lt;/h4>
-&lt;p>&lt;img src="\Pictures\hhkb-ble6.jpg" alt="hhkb-ble6" style="zoom:25%;" />&lt;/p>
+&lt;p>&lt;img src="\Pictures\hhkb-ble6.png" alt="hhkb-ble6" style="zoom:100%;" />&lt;/p>
 &lt;center>Layer0&lt;/center>
 最近了解了一下键盘布局，对 Colemak 这种键盘布局很感兴趣，想要尝试切换一下布局试试。
 未能熟练使用前可能不常用，所以暂时将 Colemak 布局放在最底层，最低程度降低对其他层的影响。
 &lt;p>想要了解 Colemak 布局的话可以看这里：&lt;a href="https://colemak.com">Colemak.com&lt;/a>&lt;/p>
 &lt;p>这时候就凸显了 HHKB Pro 2 无刻版的好处，键盘自在心中。&lt;span class="spoiler" >&lt;del>所谓键上无码，心中有码&lt;/del>&lt;/span>&lt;/p>
 &lt;h4 id="qwerty-keyboard-layout">QWERTY Keyboard Layout&lt;/h4>
-&lt;p>&lt;img src="\Pictures\hhkb-ble7.jpg" alt="hhkb-ble7" style="zoom:25%;" />&lt;/p>
+&lt;p>&lt;img src="\Pictures\hhkb-ble7.png" alt="hhkb-ble7" style="zoom:100%;" />&lt;/p>
 &lt;center>Layer1&lt;/center>
 这一层不必多说，就是常用的 QWERTY 布局。
 &lt;p>不一样的细节：&lt;/p>
@@ -55,7 +55,7 @@
 &lt;/ul>
 &lt;p>接下来这一层是配合&lt;strong>数字 3 键&lt;/strong>使用的：&lt;/p>
 &lt;h4 id="tricks-keys-layout">Tricks Keys Layout&lt;/h4>
-&lt;p>&lt;img src="\Pictures\hhkb-ble8.jpg" alt="hhkb-ble8" style="zoom:25%;" />&lt;/p>
+&lt;p>&lt;img src="\Pictures\hhkb-ble8.png" alt="hhkb-ble8" style="zoom:100%;" />&lt;/p>
 &lt;center>Layer2&lt;/center>
 &lt;ul>
 &lt;li>
@@ -69,7 +69,7 @@
 &lt;/li>
 &lt;/ul>
 &lt;h4 id="function-keys-layout">Function Keys Layout&lt;/h4>
-&lt;p>&lt;img src="\Pictures\hhkb-ble9.jpg" alt="hhkb-ble9" style="zoom:25%;" />&lt;/p>
+&lt;p>&lt;img src="\Pictures\hhkb-ble9.png" alt="hhkb-ble9" style="zoom:100%;" />&lt;/p>
 &lt;center>Layer3&lt;/center>
 &lt;p>我将原本 HHKB fn 的按键改成了瞬时切换到 Layer3，除了实现原本 fn 键的功能，还添加了一些杂七杂八的控制按键。&lt;/p>
 &lt;p>不得不感叹一下，仅仅用了四层就将 60 键的 HHKB 扩展了这么多功能，YDKB 大法好！&lt;/p>
