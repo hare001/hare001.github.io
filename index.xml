@@ -97,7 +97,7 @@
 &lt;p>Digispark USB Development Board 是一块基于 ATTiny85 微控制器的开发板，便宜小巧携带方便，某宝上十块包邮，相比于 BadUSB 的老前辈 USB Rubber Ducky 简直是便宜到家了好吗，性价比真的超高。&lt;span class="spoiler" >&lt;del>绝不承认不买 Rubber Ducky 是没钱，哼！&lt;/del>&lt;/span>&lt;/p>
 &lt;p>关于 BadUSB，网上很多人都觉得只是含有有害程序的 U 盘，并以为可以通过格式化、禁止 U 盘自启动来阻止 BadUSB 的攻击。但其实它更像是没有按键的键盘，靠着烧录进去的程序来模拟人类输入，计算机是无法识别出 BadUSB 和人类正常输入的区别的。所以大家记得一定不要随便在自己或公司的电脑上插来历不明的 U 盘！&lt;/p>
 &lt;h3 id="配置-digispark-开发环境">配置 Digispark 开发环境&lt;/h3>
-&lt;p>要使用 Digispark 制作 BadUSB，首先我们要安装开发环境，在这里选择 Arduino。我的开发环境是 macOS，所以后续介绍以 macOS 为准。&lt;/p>
+&lt;p>要使用 Digispark 制作 BadUSB，首先要安装开发环境，在这里选择 Arduino。我的开发环境是 macOS，所以后续介绍以 macOS 为准。&lt;/p>
 &lt;p>可以在 &lt;a href="https://www.arduino.cc/">Arduino&lt;/a> 官网上选择适配自己开发环境的安装版本。&lt;/p>
 &lt;p>安装好 Arduino 后，在 &lt;strong>Preferences&lt;/strong> -&amp;gt; &lt;strong>Additional Boards Manager URLs&lt;/strong> 处输入：&lt;/p>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-http" data-lang="http">&lt;span style="color:#960050;background-color:#1e0010">http://digistump.com/package_digistump_index.json
@@ -161,13 +161,13 @@ writing: 80% complete
 &amp;gt; Starting the user app ...
 running: 100% complete
 &amp;gt;&amp;gt; Micronucleus &lt;span style="color:#66d9ef">done&lt;/span>. Thank you!
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>我们将板子插入&lt;span class="spoiler" >&lt;del>受害者&lt;/del>&lt;/span>朋友的 Windows 设备上，就可以看到运行 notepad 并输出 hello world 了。&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>将板子插入&lt;span class="spoiler" >&lt;del>受害者&lt;/del>&lt;/span>朋友的 Windows 设备上，就可以看到运行 notepad 并输出 hello world 了。&lt;/p>
 &lt;h3 id="更进一步">更进一步&lt;/h3>
-&lt;p>现在我们可以尝试自己写一个 payload 了。&lt;/p>
+&lt;p>现在可以尝试自己写一个 payload 了。&lt;/p>
 &lt;p>其实利用 BadUSB 的攻击过程，就是将 Digispark 开发板伪装成为一个 HID（Human Interface Device）。&lt;/p>
 &lt;pre>&lt;code class="language-wiki" data-lang="wiki">HID（Human Interface Device）人机接口设备类别是 Windows 最早支持的USB类别。由其名称可以了解 HID 设备是计算机直接
 与人交互的设备，例如键盘、鼠标和游戏杆等。不过 HID 设备不一定要有人机接口，只要符合 HID 类别规范，就都是 HID 设备。
-&lt;/code>&lt;/pre>&lt;p>我们可以通过添加、修改注册表项，下载执行脚本，执行命令，结束进程等达到一系列我们想要实现的结果。
+&lt;/code>&lt;/pre>&lt;p>可以通过添加、修改注册表项，下载执行脚本，执行命令，结束进程等达到一系列我们想要实现的结果。
 现在网上给 BadUSB 准备的脚本多为给 Rubber Ducky 准备的，还好我们可以进行转换，其实原理都是一样的，只不过实现代码不同。
 Rubber Ducky 的代码长这样：&lt;/p>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bat" data-lang="bat">DELAY 600
