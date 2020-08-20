@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on WhereIsMyMind</title><link>https://hare.one/posts/</link><description>Recent content in Posts on WhereIsMyMind</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 30 Jul 2020 18:07:43 +0800</lastBuildDate><atom:link href="https://hare.one/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>YDKB HHKB BLE Mod</title><link>https://hare.one/posts/ydkb-hhkb-ble-mod/</link><pubDate>Thu, 30 Jul 2020 18:07:43 +0800</pubDate><guid>https://hare.one/posts/ydkb-hhkb-ble-mod/</guid><description>&lt;h3 id="前因">前因&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on WhereIsMyMind</title><link>https://hare.one/posts/</link><description>Recent content in Posts on WhereIsMyMind</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 20 Aug 2020 20:48:53 +0800</lastBuildDate><atom:link href="https://hare.one/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Understand English part1</title><link>https://hare.one/posts/how-to-understand-english-part1/</link><pubDate>Thu, 20 Aug 2020 20:48:53 +0800</pubDate><guid>https://hare.one/posts/how-to-understand-english-part1/</guid><description>&lt;h1 id="搞懂英语一">搞懂英语（一）&lt;/h1>
+&lt;blockquote>
+&lt;p>记录我自己的英语学习，并将学习笔记整理成 Markdown&lt;/p>
+&lt;/blockquote>
+&lt;p>虽然从小就开始学英语，但英语语法一直是比较头疼的一项，原因主要是英语的动词在句子中的功能要比汉语多很多，并且存在着 &lt;strong>时态&lt;/strong> 这种汉语里几乎不需要考虑的东西。&lt;/p>
+&lt;p>但现在拉起视角俯瞰一下英语的语法，会有种豁然开朗的感觉。语法并不应该是死记硬背的，而应该是通过理解英语逻辑来记忆的。现在就来重塑一下英语的语法体系/核心框架吧。&lt;/p>
+&lt;p>首先要先明白：&lt;/p>
+&lt;blockquote>
+&lt;p>学习英语语法是为了 &lt;strong>造句&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;p>将长句子拆开成短句，直到拆倒不能再拆，否则句意会不完整，这时的短句子，就是&lt;strong>简单句&lt;/strong>。&lt;/p></description></item><item><title>YDKB HHKB BLE Mod</title><link>https://hare.one/posts/ydkb-hhkb-ble-mod/</link><pubDate>Thu, 30 Jul 2020 18:07:43 +0800</pubDate><guid>https://hare.one/posts/ydkb-hhkb-ble-mod/</guid><description>&lt;h3 id="前因">前因&lt;/h3>
 &lt;p>家里的 HHKB 闲置了有一段时间，因为每次使用都要给 MacBook 插扩展坞，再连接 USB 到扩展坞上，麻烦不说，还会挡住触控板的使用，直接把 HHKB 放在 MacBook 键盘的位置吧，连线部分又会卡在屏幕上，反正就是怎么样都不爽。也考虑过用 L 型的 USB 连接线，但是桌面上还是线越少越好，所以考虑用蓝牙来解决这个问题。&lt;/p>
 &lt;h3 id="选择">选择&lt;/h3>
 &lt;p>HHKB 自己是有蓝牙版本的，叫做 HHKB BT。身边用过的朋友都说使用上很坑，原因是 Bluetooth 3.0 容易被干扰，比如说 WiFi 2.4G 信号，甚至是电脑外接 USB 3.0 都可能会造成干扰。而且电池仓换电池的供电方式也有些麻烦，所以这个选项直接 pass 掉。&lt;/p>

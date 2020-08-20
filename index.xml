@@ -1,4 +1,218 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WhereIsMyMind</title><link>https://hare.one/</link><atom:link href="https://hare.one/index.xml" rel="self" type="application/rss+xml"/><description>WhereIsMyMind</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en</language><lastBuildDate>Thu, 30 Jul 2020 18:07:43 +0800</lastBuildDate><item><title>YDKB HHKB BLE Mod</title><link>https://hare.one/posts/ydkb-hhkb-ble-mod/</link><pubDate>Thu, 30 Jul 2020 18:07:43 +0800</pubDate><guid>https://hare.one/posts/ydkb-hhkb-ble-mod/</guid><description>&lt;h3 id="前因">前因&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WhereIsMyMind</title><link>https://hare.one/</link><atom:link href="https://hare.one/index.xml" rel="self" type="application/rss+xml"/><description>WhereIsMyMind</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en</language><lastBuildDate>Thu, 20 Aug 2020 20:48:53 +0800</lastBuildDate><item><title>How to Understand English part1</title><link>https://hare.one/posts/how-to-understand-english-part1/</link><pubDate>Thu, 20 Aug 2020 20:48:53 +0800</pubDate><guid>https://hare.one/posts/how-to-understand-english-part1/</guid><description>&lt;h1 id="搞懂英语一">搞懂英语（一）&lt;/h1>
+&lt;blockquote>
+&lt;p>记录我自己的英语学习，并将学习笔记整理成 Markdown&lt;/p>
+&lt;/blockquote>
+&lt;p>虽然从小就开始学英语，但英语语法一直是比较头疼的一项，原因主要是英语的动词在句子中的功能要比汉语多很多，并且存在着 &lt;strong>时态&lt;/strong> 这种汉语里几乎不需要考虑的东西。&lt;/p>
+&lt;p>但现在拉起视角俯瞰一下英语的语法，会有种豁然开朗的感觉。语法并不应该是死记硬背的，而应该是通过理解英语逻辑来记忆的。现在就来重塑一下英语的语法体系/核心框架吧。&lt;/p>
+&lt;p>首先要先明白：&lt;/p>
+&lt;blockquote>
+&lt;p>学习英语语法是为了 &lt;strong>造句&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;p>将长句子拆开成短句，直到拆倒不能再拆，否则句意会不完整，这时的短句子，就是&lt;strong>简单句&lt;/strong>。&lt;/p>
+&lt;h2 id="简单句-simple-sentences">简单句 Simple Sentences&lt;/h2>
+&lt;p>英语的句子，主要的句子成分是：&lt;strong>“什么”“怎么样”&lt;/strong>，几乎所有的句子结构都是：&lt;/p>
+&lt;blockquote>
+&lt;p>主语 Subject + 谓语 Predicate&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;strong>谓语&lt;/strong>用来描述人或物的**“动作”**（广义）/ 发生了什么事&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="有哪些动作">有哪些动作？&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>可以独立完成的动作 &lt;strong>不及物动词&lt;/strong> Intransitive Verbs&lt;/p>
+&lt;blockquote>
+&lt;p>主语 + 不及物动词&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;li>
+&lt;p>有一个动作的承受者 &lt;strong>单及物动词&lt;/strong> Monotransitive Verbs&lt;/p>
+&lt;blockquote>
+&lt;p>主语 + 单及物动词 + 宾语&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;li>
+&lt;p>有两个动作的承受者 &lt;strong>双及物动词&lt;/strong> Ditransitive Verbs&lt;/p>
+&lt;blockquote>
+&lt;p>主语 + 双及物动词 + 间接宾语 + 直接宾语&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;li>
+&lt;p>只有一个动作的承受者（不同于 2）&lt;strong>复杂及物动词&lt;/strong> Complex-Transitive&lt;/p>
+&lt;blockquote>
+&lt;p>主语 + 复杂及物动词 + 宾语 + 宾语补足语&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;li>
+&lt;p>不是个动作 &lt;strong>（连）系动词&lt;/strong> Linking Verbs&lt;/p>
+&lt;blockquote>
+&lt;p>主语 + 系动词 + 主语补足语（表语）&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;/ol>
+&lt;p>另外英语还有：&lt;strong>定语&lt;/strong> Attributive &lt;strong>状语&lt;/strong> Adverbial &lt;strong>同位语&lt;/strong> Appositive&lt;/p>
+&lt;h3 id="简单句的组合">简单句的组合&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Compound Sentence 复合句&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Complex Sentence 复杂句&lt;/strong>（简单句套简单句套简单句……）&lt;/li>
+&lt;/ul>
+&lt;p>###主句与从句&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>主句 Main Clause&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>从句 Subordinate Clause&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h4 id="名词性从句">名词性从句&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>主语从句&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>宾语从句&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>表语从句&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>同位语从句&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h4 id="定语从句">定语从句&lt;/h4>
+&lt;blockquote>
+&lt;p>将简单句用作定语&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="状语从句">状语从句&lt;/h4>
+&lt;blockquote>
+&lt;p>将简单句用作状语&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="词类">词类&lt;/h2>
+&lt;ul>
+&lt;li>名词 Nouns&lt;/li>
+&lt;li>冠词 Articles&lt;/li>
+&lt;li>代词 Pronouns&lt;/li>
+&lt;li>形容词 Adjectives&lt;/li>
+&lt;li>数词 Numerals&lt;/li>
+&lt;li>副词 Adverbs&lt;/li>
+&lt;li>介词 Prepositions&lt;/li>
+&lt;li>叹词 Interjections&lt;/li>
+&lt;li>连词 Conjunctions&lt;/li>
+&lt;li>动词 Verbs&lt;/li>
+&lt;/ul>
+&lt;h2 id="谓语动词的三大本领">谓语动词的“三大本领”&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>表示动作的 &lt;strong>时间&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>现在&lt;/li>
+&lt;li>过去&lt;/li>
+&lt;li>将来&lt;/li>
+&lt;li>从过去的某个时间点”算将来“（过去将来）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>表示动作的 &lt;strong>状态&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>未说明（一般）&lt;/li>
+&lt;li>完成&lt;/li>
+&lt;li>进行&lt;/li>
+&lt;li>不但完成而且继续（完成进行）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>表示动作的 &lt;strong>假设、情感&lt;/strong> （语法的语气）&lt;/p>
+&lt;ul>
+&lt;li>虚拟语气&lt;/li>
+&lt;li>陈述语气&lt;/li>
+&lt;li>祈使语气&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>以上三点统称为英语的 &lt;strong>时体气&lt;/strong> Tense Aspect Mood TAM&lt;/p>
+&lt;p>&lt;strong>时间 + 状态&lt;/strong> 统称为&lt;strong>时态&lt;/strong>，（理论上）共有 4*4=16 种，即时间与状态的排列组合&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>现在&lt;/th>
+&lt;th>过去&lt;/th>
+&lt;th>将来&lt;/th>
+&lt;th>过去将来&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>一般&lt;/td>
+&lt;td>一般现在时态&lt;/td>
+&lt;td>一般过去时态&lt;/td>
+&lt;td>一般将来时态&lt;/td>
+&lt;td>一般过去将来时态&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>完成&lt;/td>
+&lt;td>现在完成时态&lt;/td>
+&lt;td>过去完成时态&lt;/td>
+&lt;td>将来完成时态&lt;/td>
+&lt;td>过去将来完成时态&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>进行&lt;/td>
+&lt;td>现在进行时态&lt;/td>
+&lt;td>过去进行时态&lt;/td>
+&lt;td>将来进行时态&lt;/td>
+&lt;td>过去将来进行时态&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>完成进行&lt;/td>
+&lt;td>现在完成进行时态&lt;/td>
+&lt;td>过去完成进行时态&lt;/td>
+&lt;td>将来完成进行时态&lt;/td>
+&lt;td>过去将来完成进行时态&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="助动词">助动词&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th align="left">表示&lt;/th>
+&lt;th align="left">助动词&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td align="left">表示完成态&lt;/td>
+&lt;td align="left">助动词 have&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">表示进行态&lt;/td>
+&lt;td align="left">助动词 be&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">表示“被”&lt;/td>
+&lt;td align="left">助动词 be&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">表示“有能力”&lt;/td>
+&lt;td align="left">助动词 can&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">表示“有可能”&lt;/td>
+&lt;td align="left">助动词 might&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">表示”有义务“&lt;/td>
+&lt;td align="left">助动词 must&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">表示”否定“&lt;/td>
+&lt;td align="left">助动词 do&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>助动词不要与实义动词混淆！！！&lt;/strong>&lt;/p>
+&lt;h2 id="非谓语动词">非谓语动词&lt;/h2>
+&lt;p>非谓语动词几乎可以&lt;strong>取代所有的从句&lt;/strong>，&lt;strong>从而简化句子&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>动词不定式 to do&lt;/li>
+&lt;li>现在分词 doing&lt;/li>
+&lt;li>动名词 doing&lt;/li>
+&lt;li>过去分词 done&lt;/li>
+&lt;/ul>
+&lt;!--&lt;span class="spoiler" > 隐藏文字 &lt;/span>-->
+&lt;!--
+&lt;div>&lt;iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > &lt;/iframe>&lt;/div>
+嵌入 BiliBili 视频 --></description></item><item><title>YDKB HHKB BLE Mod</title><link>https://hare.one/posts/ydkb-hhkb-ble-mod/</link><pubDate>Thu, 30 Jul 2020 18:07:43 +0800</pubDate><guid>https://hare.one/posts/ydkb-hhkb-ble-mod/</guid><description>&lt;h3 id="前因">前因&lt;/h3>
 &lt;p>家里的 HHKB 闲置了有一段时间，因为每次使用都要给 MacBook 插扩展坞，再连接 USB 到扩展坞上，麻烦不说，还会挡住触控板的使用，直接把 HHKB 放在 MacBook 键盘的位置吧，连线部分又会卡在屏幕上，反正就是怎么样都不爽。也考虑过用 L 型的 USB 连接线，但是桌面上还是线越少越好，所以考虑用蓝牙来解决这个问题。&lt;/p>
 &lt;h3 id="选择">选择&lt;/h3>
 &lt;p>HHKB 自己是有蓝牙版本的，叫做 HHKB BT。身边用过的朋友都说使用上很坑，原因是 Bluetooth 3.0 容易被干扰，比如说 WiFi 2.4G 信号，甚至是电脑外接 USB 3.0 都可能会造成干扰。而且电池仓换电池的供电方式也有些麻烦，所以这个选项直接 pass 掉。&lt;/p>
