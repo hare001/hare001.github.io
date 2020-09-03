@@ -333,7 +333,7 @@ DigiKeyboard.println(&lt;span style="color:#e6db74">&amp;#34;hello, world!&amp;#
 DigiKeyboard.delay(&lt;span style="color:#ae81ff">300&lt;/span>);
 }
 &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">loop&lt;/span>() {
-&lt;span style="color:#75715e">// put your main code here, to run repeatedly:
+&lt;span style="color:#75715e">// put your main code here, to run repeatedly
 &lt;/span>&lt;span style="color:#75715e">&lt;/span>}
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>点击 Verify 验证一下代码以防出错，然后就……报错了……&lt;/p>
 &lt;p>此处 Error 信息：&lt;/p>
@@ -544,7 +544,7 @@ curl -o /dev/null --silent -Iw &lt;span style="color:#e6db74">&amp;#34;%{http_co
 &lt;p>附带说一下，还有被我诉讼、判决生效后的人迄今没有履行。别忘记，我在一定的时效内可以随时申请强制执行。去执行庭填个申请表，10分钟的事儿。我什么时候想起来去填报，看我高兴。&lt;/p>
 &lt;p>5，对方只是转发我可以告TA吗？&lt;/p>
 &lt;p>可以，而转发的阅读量越大，责任越大。详见附录的第十条。&lt;/p>
-&lt;h3 id="附录">附录。&lt;/h3>
+&lt;h3 id="附录">附录&lt;/h3>
 &lt;p>最高人民法院关于审理利用信息网络侵害人身权益民事纠纷案件适用法律若干问题的规定摘要（最高人民法院审判委员会第1621次会议通过）。众所周知，最高法院的法律解释具有法律效力。&lt;/p>
 &lt;p>第一条 本规定所称的利用信息网络侵害人身权益民事纠纷案件，是指利用信息网络侵害他人姓名权、名称权、名誉权、荣誉权、肖像权、隐私权等人身权益引起的纠纷案件。&lt;/p>
 &lt;p>第二条 利用信息网络侵害人身权益提起的诉讼，由侵权行为地或者被告住所地人民法院管辖。侵权行为实施地包括实施被诉侵权行为的计算机等终端设备所在地，侵权结果发生地包括被侵权人住所地。&lt;/p>

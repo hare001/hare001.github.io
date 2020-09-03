@@ -24,7 +24,7 @@ in
   DigiKeyboard.delay(<span style=color:#ae81ff>300</span>);
 }
 <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>loop</span>() {
-  <span style=color:#75715e>// put your main code here, to run repeatedly: 
+  <span style=color:#75715e>// put your main code here, to run repeatedly
 </span><span style=color:#75715e></span>}
 </code></pre></div><p>点击 Verify 验证一下代码以防出错，然后就……报错了……</p><p>此处 Error 信息：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-plaintext data-lang=plaintext>fork/exec ~/Library/Arduino15/packages/arduino/tools/avr-gcc/4.8.1-arduino5/bin/avr-g++: bad CPU type in executable
 Error compiling for board Digispark (Default - 16.5mhz).
@@ -33,7 +33,7 @@ mv 4.8.1-arduino5 orig.4.8.1
 ln -s /Applications/Arduino.app/Contents/Java/hardware/tools/avr 4.8.1-arduino5
 </code></pre></div><p>再次验证，提示已经成功编译。</p><h3 id=烧录代码>烧录代码</h3><p>现在就可以上传代码到硬件上了，点击 <strong>Upload</strong>，在 60 秒内插入 Digispark 开发板完成上传。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>Running Digispark Uploader...
 Plug in device now... <span style=color:#f92672>(</span>will timeout in <span style=color:#ae81ff>60</span> seconds<span style=color:#f92672>)</span>
-&gt; Please plug in the device ... 
+&gt; Please plug in the device ...
 &gt; Press CTRL+C to terminate the program.
 &gt; Device is found!
 connecting: 16% complete
@@ -41,7 +41,7 @@ connecting: 22% complete
 connecting: 28% complete
 connecting: 33% complete
 &gt; Device has firmware version 2.2
-&gt; Device signature: 0x1e930b 
+&gt; Device signature: 0x1e930b
 &gt; Available space <span style=color:#66d9ef>for</span> user applications: <span style=color:#ae81ff>6522</span> bytes
 &gt; Suggested sleep time between sending pages: 7ms
 &gt; Whole page count: <span style=color:#ae81ff>102</span>  page size: <span style=color:#ae81ff>64</span>
