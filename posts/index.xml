@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on WhereIsMyMind</title><link>https://hare.one/posts/</link><description>Recent content in Posts on WhereIsMyMind</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 20 Aug 2020 20:48:53 +0800</lastBuildDate><atom:link href="https://hare.one/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>搞懂英语（一）</title><link>https://hare.one/posts/how-to-understand-english-part1/</link><pubDate>Thu, 20 Aug 2020 20:48:53 +0800</pubDate><guid>https://hare.one/posts/how-to-understand-english-part1/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on WhereIsMyMind</title><link>https://hare.one/posts/</link><description>Recent content in Posts on WhereIsMyMind</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 13 Oct 2020 16:10:22 +0800</lastBuildDate><atom:link href="https://hare.one/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux 下的文件分割与合并命令 Split &amp; Cat</title><link>https://hare.one/posts/split-and-cat/</link><pubDate>Tue, 13 Oct 2020 16:10:22 +0800</pubDate><guid>https://hare.one/posts/split-and-cat/</guid><description>&lt;p>最近的工作中，需要处理大型的文本文件，这在预览上很不方便，这种情况下，可以使用 Linux 下的 split 命令进行分割。&lt;/p>
+&lt;h2 id="按照文件的大小进行分割">按照文件的大小进行分割&lt;/h2>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ split -b 10k input_file.txt output_file -d -a &lt;span style="color:#ae81ff">3&lt;/span>
+&lt;span style="color:#75715e"># -b 值为每一输出文件的大小&lt;/span>
+&lt;span style="color:#75715e"># -d 使用数字作为后缀&lt;/span>
+&lt;span style="color:#75715e"># -a 值为后缀长度&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>将输入的文件按照 &lt;em>10k&lt;/em> 的大小进行分割，输出的分割文件以 &lt;em>output_file&lt;/em> 开头进行命名，数字作为输出的分割文件后缀，长度为 &lt;em>3&lt;/em>&lt;/p>
+&lt;h2 id="按照文件的行数进行分割">按照文件的行数进行分割&lt;/h2>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ split -l &lt;span style="color:#ae81ff">10&lt;/span> input_file.txt
+&lt;span style="color:#75715e"># -l 值为分割的行数&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>将输入的文件按照 &lt;em>10&lt;/em> 行每文件进行分割&lt;/p>
+&lt;h2 id="文件合并">文件合并&lt;/h2>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ cat output* &amp;gt; new_file.txt
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>将以 &lt;em>output&lt;/em> 开头的文件按照顺序合并，并生成 &lt;em>new_file.txt&lt;/em> 文件&lt;/p></description></item><item><title>搞懂英语（一）</title><link>https://hare.one/posts/how-to-understand-english-part1/</link><pubDate>Thu, 20 Aug 2020 20:48:53 +0800</pubDate><guid>https://hare.one/posts/how-to-understand-english-part1/</guid><description>&lt;blockquote>
 &lt;p>记录我自己的英语学习，并将学习笔记整理成 Markdown&lt;/p>
 &lt;/blockquote>
 &lt;p>虽然从小就开始学英语，但英语语法一直是比较头疼的一项，原因主要是英语的动词在句子中的功能要比汉语多很多，并且存在着 &lt;strong>时态&lt;/strong> 这种汉语里几乎不需要考虑的东西。&lt;/p>
@@ -11,9 +24,9 @@
 &lt;p>家里的 HHKB 闲置了有一段时间，因为每次使用都要给 MacBook 插扩展坞，再连接 USB 到扩展坞上，麻烦不说，还会挡住触控板的使用，直接把 HHKB 放在 MacBook 键盘的位置吧，连线部分又会卡在屏幕上，反正就是怎么样都不爽。也考虑过用 L 型的 USB 连接线，但是桌面上还是线越少越好，所以考虑用蓝牙来解决这个问题。&lt;/p>
 &lt;h3 id="选择">选择&lt;/h3>
 &lt;p>HHKB 自己是有蓝牙版本的，叫做 HHKB BT。身边用过的朋友都说使用上很坑，原因是 Bluetooth 3.0 容易被干扰，比如说 WiFi 2.4G 信号，甚至是电脑外接 USB 3.0 都可能会造成干扰。而且电池仓换电池的供电方式也有些麻烦，所以这个选项直接 pass 掉。&lt;/p>
-&lt;p>&lt;span class="spoiler" > 注1：现在已经有新款的 HHKB Hybrid Types 了，使用的 Bluetooth 4.2，同样支持蓝牙双模&lt;/span>
+&lt;p>&lt;span class="spoiler" > 注 1：现在已经有新款的 HHKB Hybrid Types 了，使用的 Bluetooth 4.2，同样支持蓝牙双模&lt;/span>
 &lt;br>
-&lt;span class="spoiler" >&lt;del> 注2：有信仰的兄弟可以冲冲冲，我继续搞我的魔改&lt;/del>&lt;/span>&lt;/p>
+&lt;span class="spoiler" >&lt;del> 注 2：有信仰的兄弟可以冲冲冲，我继续搞我的魔改&lt;/del>&lt;/span>&lt;/p>
 &lt;p>&lt;img src="\Pictures\hhkb-ble0.png" alt="hhkb-ble0" style="zoom:80%;" />&lt;/p>
 &lt;center>HHKB BT&lt;/center>
 &lt;p>直到我看到了这篇 &lt;a href="https://www.chiphell.com/thread-2026980-1-1.html">HHKB 的正确使用方式&lt;/a>，我觉得找到了我需要的解决方案。&lt;/p>
@@ -31,10 +44,10 @@ curl -s &lt;span style="color:#75715e"># --silent&lt;/span>
 curl -i &lt;span style="color:#75715e"># --include: Include the HTTP-header in the output&lt;/span>
 curl -I &lt;span style="color:#75715e"># --head: headers only&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></description></item><item><title>怎样诉讼躲在屏幕后面疯狂攻击你的人</title><link>https://hare.one/posts/how-to-sue-somebody-for-harassing/</link><pubDate>Tue, 14 Jul 2020 13:17:12 +0800</pubDate><guid>https://hare.one/posts/how-to-sue-somebody-for-harassing/</guid><description>&lt;h2 id="怎样告躲在屏幕后面疯狂攻击你的人其实很简单完全指南来了">怎样告躲在屏幕后面疯狂攻击你的人？其实很简单，完全指南来了。&lt;/h2>
-&lt;h3 id="如果你觉得微博上有人肆无忌惮地伤害您您又不知道ta是谁不知怎么告ta一步一步这样做">如果你觉得微博上有人肆无忌惮地伤害您，您又不知道TA是谁、不知怎么告TA，一步一步这样做：&lt;/h3>
-&lt;p>1，找你居住地的公证处，要求公证这些令你觉得受到伤害的帖子。通常大约1000元左右。注意，您要亲自去一下公证处。可以电话预约。保留好发票！有人最后会报销的。&lt;/p>
+&lt;h3 id="如果你觉得微博上有人肆无忌惮地伤害您您又不知道-ta-是谁不知怎么告-ta一步一步这样做">如果你觉得微博上有人肆无忌惮地伤害您，您又不知道 TA 是谁、不知怎么告 TA，一步一步这样做：&lt;/h3>
+&lt;p>1，找你居住地的公证处，要求公证这些令你觉得受到伤害的帖子。通常大约 1000 元左右。注意，您要亲自去一下公证处。可以电话预约。保留好发票！有人最后会报销的。&lt;/p>
 &lt;p>居住地的含义是你现在居住的地方而不是户籍地，只需要有暂住证或居住证。&lt;/p>
-&lt;p>2，在你居住地的法院，提交诉讼。诉讼费约50元。如果觉得写诉状头疼，可以延请你信任的任何人，甚至不一定是执业律师。诉讼制度改革后，法院目前对此类诉状基本去了就受理。&lt;/p>
+&lt;p>2，在你居住地的法院，提交诉讼。诉讼费约 50 元。如果觉得写诉状头疼，可以延请你信任的任何人，甚至不一定是执业律师。诉讼制度改革后，法院目前对此类诉状基本去了就受理。&lt;/p>
 &lt;p>律师费高低不等，不过不会白花钱的，把发票放好，最后也会有人报销。所以强烈建议找个律师并给予全面授权，他或者她会为您办很多事情，包括并不限于全权代理您出庭，您自己都可以不去。&lt;/p></description></item><item><title>Vim Cheat Sheet</title><link>https://hare.one/posts/vim-cheat-sheet/</link><pubDate>Wed, 01 Jul 2020 17:32:10 +0800</pubDate><guid>https://hare.one/posts/vim-cheat-sheet/</guid><description>&lt;h3 id="全局">全局&lt;/h3>
 &lt;pre>&lt;code class="language-wiki" data-lang="wiki">:h[elp] 关键字 - 打开关键字帮助
 :sav[eas] 文件名 - 另存为
