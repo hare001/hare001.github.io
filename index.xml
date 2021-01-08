@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WhereIsMyMind</title><link>https://hare.one/</link><atom:link href="https://hare.one/index.xml" rel="self" type="application/rss+xml"/><description>WhereIsMyMind</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en</language><lastBuildDate>Thu, 31 Dec 2020 20:42:45 +0800</lastBuildDate><item><title>回顾 2020</title><link>https://hare.one/posts/2020-year-end-summary/</link><pubDate>Thu, 31 Dec 2020 20:42:45 +0800</pubDate><guid>https://hare.one/posts/2020-year-end-summary/</guid><description>&lt;p>2020 年最后一天了，简单写个年终总结。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WhereIsMyMind</title><link>https://hare.one/</link><atom:link href="https://hare.one/index.xml" rel="self" type="application/rss+xml"/><description>WhereIsMyMind</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en</language><lastBuildDate>Fri, 08 Jan 2021 21:23:53 +0800</lastBuildDate><item><title>Linux 下的文件按照数字编号顺序排列</title><link>https://hare.one/posts/list-and-sort/</link><pubDate>Fri, 08 Jan 2021 21:23:53 +0800</pubDate><guid>https://hare.one/posts/list-and-sort/</guid><description>&lt;p>今天在终端下使用 &lt;code>ls&lt;/code> 命令的时候，发现没办法直接满足按照阿拉伯数字顺序排列的需求。&lt;/p>
+&lt;p>比如说有如下几个文件：&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plain" data-lang="plain">1_apple.txt
+12_banana.txt
+3_orange.txt
+31_mango.txt
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>这就是 &lt;code>ls&lt;/code> 命令默认的排序方式。
+而我需要的却是：&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plain" data-lang="plain">1_apple.txt
+3_orange.txt
+12_banana.txt
+31_mango.txt
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>STFW 发现可以通过管道符和 &lt;code>sort&lt;/code> 命令配合来实现。&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ls | sort -k1 -n
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>其中，&lt;code>-k1&lt;/code> 表示按照第一个区域进行排序，&lt;code>-n&lt;/code> 表示按照数值排序。
+只用 &lt;code>ls&lt;/code> 命令的时候，&lt;code>-k&lt;/code> 参数可以省略，但如果使用 &lt;code>ls -al&lt;/code> 命令的话，需要排序的就是第九个区域，就应该是 &lt;code>-k9&lt;/code> 了。
+另外，&lt;code>-t&lt;/code> 参数可以指定用来分隔区域的字符。当数字在文件名后面作为版本号的时候，可能会用上这个参数。&lt;/p>
+&lt;!--&lt;span class="spoiler" > 隐藏文字 &lt;/span>-->
+&lt;!--
+&lt;div>&lt;iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > &lt;/iframe>&lt;/div>
+嵌入 BiliBili 视频 --></description></item><item><title>回顾 2020</title><link>https://hare.one/posts/2020-year-end-summary/</link><pubDate>Thu, 31 Dec 2020 20:42:45 +0800</pubDate><guid>https://hare.one/posts/2020-year-end-summary/</guid><description>&lt;p>2020 年最后一天了，简单写个年终总结。&lt;/p>
 &lt;h3 id="关于记账">关于记账&lt;/h3>
 &lt;p>今年和以往相比最大的改变是开始坚持记账了，这也是我「&lt;strong>财务自由，提前退休&lt;/strong>」目标的一小步。&lt;/p>
 &lt;p>从 2020 年 1 月 1 日开始整一年。以前觉得记账太麻烦，花大钱不用记，花小钱没必要记。但是这一年坚持下来，才发现也就是几个数字，选个类别再保存一下，真没多麻烦。而且通过记账可以发现很多冲动消费，管住了很多次剁手。&lt;/p>
