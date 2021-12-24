@@ -5,7 +5,7 @@
 &lt;p>&lt;span class="spoiler" > 注 1：现在已经有新款的 HHKB Hybrid Types 了，使用的 Bluetooth 4.2，同样支持蓝牙双模&lt;/span>
 &lt;br>
 &lt;span class="spoiler" >&lt;del> 注 2：有信仰的兄弟可以冲冲冲，我继续搞我的魔改&lt;/del>&lt;/span>&lt;/p>
-&lt;p>&lt;img src="\Pictures\hhkb-ble0.png" alt="hhkb-ble0" style="zoom:80%;" />&lt;/p>
+&lt;img src="\Pictures\hhkb-ble0.png" alt="hhkb-ble0" style="zoom:80%;" />
 &lt;center>HHKB BT&lt;/center>
 &lt;p>直到我看到了这篇 &lt;a href="https://www.chiphell.com/thread-2026980-1-1.html">HHKB 的正确使用方式&lt;/a>，我觉得找到了我需要的解决方案。&lt;/p>
 &lt;p>这个叫做 YDKB 的解决方案是由 @yangdigi 开发的主控芯片，通过替换 HHKB 原厂的主控芯片，就可以使它变成蓝牙双模 + 有线的版本。而且 YDKB 的 &lt;a href="http://help.ydkb.io/doku.php?id=start">文档&lt;/a> 写得巨详细，我喜欢。&lt;/p></description></item></channel></rss>

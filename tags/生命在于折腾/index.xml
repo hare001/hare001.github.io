@@ -5,12 +5,12 @@
 &lt;p>&lt;span class="spoiler" > 注 1：现在已经有新款的 HHKB Hybrid Types 了，使用的 Bluetooth 4.2，同样支持蓝牙双模&lt;/span>
 &lt;br>
 &lt;span class="spoiler" >&lt;del> 注 2：有信仰的兄弟可以冲冲冲，我继续搞我的魔改&lt;/del>&lt;/span>&lt;/p>
-&lt;p>&lt;img src="\Pictures\hhkb-ble0.png" alt="hhkb-ble0" style="zoom:80%;" />&lt;/p>
+&lt;img src="\Pictures\hhkb-ble0.png" alt="hhkb-ble0" style="zoom:80%;" />
 &lt;center>HHKB BT&lt;/center>
 &lt;p>直到我看到了这篇 &lt;a href="https://www.chiphell.com/thread-2026980-1-1.html">HHKB 的正确使用方式&lt;/a>，我觉得找到了我需要的解决方案。&lt;/p>
 &lt;p>这个叫做 YDKB 的解决方案是由 @yangdigi 开发的主控芯片，通过替换 HHKB 原厂的主控芯片，就可以使它变成蓝牙双模 + 有线的版本。而且 YDKB 的 &lt;a href="http://help.ydkb.io/doku.php?id=start">文档&lt;/a> 写得巨详细，我喜欢。&lt;/p></description></item><item><title>Digispark BadUSB</title><link>https://hare.one/posts/digispark-badusb/</link><pubDate>Sun, 26 Jul 2020 22:30:29 +0800</pubDate><guid>https://hare.one/posts/digispark-badusb/</guid><description>&lt;p>最近闲着无聊，本着生命在于折腾的本质，用 Digispark 做个 BadUSB 玩玩。&lt;/p>
 &lt;p>Digispark 长这样：&lt;/p>
-&lt;p>&lt;img src="https://s3.amazonaws.com/digistump-resources/images/l/2520dcf84a0a3bf2257c2559d7a187db.jpg" alt="Digispark" style="zoom:50%;" />&lt;/p>
+&lt;img src="https://s3.amazonaws.com/digistump-resources/images/l/2520dcf84a0a3bf2257c2559d7a187db.jpg" alt="Digispark" style="zoom:50%;" />
 &lt;p>简单介绍下 Digispark 这个小玩意儿：&lt;/p>
 &lt;p>Digispark USB Development Board 是一块基于 ATTiny85 微控制器的开发板，便宜小巧携带方便，某宝上十块包邮，相比于 BadUSB 的老前辈 USB Rubber Ducky 简直是便宜到家了好吗，性价比真的超高。&lt;span class="spoiler" >&lt;del>绝不承认不买 Rubber Ducky 是没钱，哼！&lt;/del>&lt;/span>&lt;/p>
 &lt;p>关于 BadUSB，网上很多人都觉得只是含有有害程序的 U 盘，并以为可以通过格式化、禁止 U 盘自启动来阻止 BadUSB 的攻击。但其实它更像是没有按键的键盘，靠着烧录进去的程序来模拟人类输入，计算机是无法识别出 BadUSB 和人类正常输入的区别的。所以大家记得一定不要随便在自己或公司的电脑上插来历不明的 U 盘！&lt;/p></description></item></channel></rss>

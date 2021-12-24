@@ -1,21 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on WhereIsMyMind</title><link>https://hare.one/posts/</link><description>Recent content in Posts on WhereIsMyMind</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 08 Jan 2021 21:23:53 +0800</lastBuildDate><atom:link href="https://hare.one/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux 下的文件按照数字编号顺序排列</title><link>https://hare.one/posts/list-and-sort/</link><pubDate>Fri, 08 Jan 2021 21:23:53 +0800</pubDate><guid>https://hare.one/posts/list-and-sort/</guid><description>&lt;p>今天在终端下使用 &lt;code>ls&lt;/code> 命令的时候，发现没办法直接满足按照阿拉伯数字顺序排列的需求。&lt;/p></description></item><item><title>回顾 2020</title><link>https://hare.one/posts/2020-year-end-summary/</link><pubDate>Thu, 31 Dec 2020 20:42:45 +0800</pubDate><guid>https://hare.one/posts/2020-year-end-summary/</guid><description>&lt;p>2020 年最后一天了，简单写个年终总结。&lt;/p>
-&lt;h3 id="关于记账">关于记账&lt;/h3>
-&lt;p>今年和以往相比最大的改变是开始坚持记账了，这也是我「&lt;strong>财务自由，提前退休&lt;/strong>」目标的一小步。&lt;/p></description></item><item><title>关于牙齿的二三事</title><link>https://hare.one/posts/a-couple-of-things-about-my-teeth/</link><pubDate>Mon, 16 Nov 2020 21:58:18 +0800</pubDate><guid>https://hare.one/posts/a-couple-of-things-about-my-teeth/</guid><description>&lt;p>今年刚刚做完了牙齿正畸，记录一下自己这些年的牙齿治疗。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on WhereIsMyMind</title><link>https://hare.one/posts/</link><description>Recent content in Posts on WhereIsMyMind</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 08 Jan 2021 21:23:53 +0800</lastBuildDate><atom:link href="https://hare.one/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux 下的文件按照数字编号顺序排列</title><link>https://hare.one/posts/list-and-sort/</link><pubDate>Fri, 08 Jan 2021 21:23:53 +0800</pubDate><guid>https://hare.one/posts/list-and-sort/</guid><description>&lt;p>今天在终端下使用 &lt;code>ls&lt;/code> 命令的时候，发现没办法直接满足按照阿拉伯数字顺序排列的需求。&lt;/p></description></item><item><title>关于牙齿的二三事</title><link>https://hare.one/posts/a-couple-of-things-about-my-teeth/</link><pubDate>Mon, 16 Nov 2020 21:58:18 +0800</pubDate><guid>https://hare.one/posts/a-couple-of-things-about-my-teeth/</guid><description>&lt;p>今年刚刚做完了牙齿正畸，记录一下自己这些年的牙齿治疗。&lt;/p>
 &lt;p>因为家里几位长辈牙齿都有些或大或小的问题，加上自己小时候早早的龋齿，体会到了「牙疼不是病，疼起来真要命」，所以工作后就一直是牙齿有问题就立马解决。&lt;/p>
 &lt;p>先是大学被骨头崩掉茬的一颗恒牙，当时没怎么在意，后来就变成了龋齿，后面补上了。&lt;/p>
 &lt;p>接着是偶尔疼的智齿，洗牙的时候牙医说下面两颗智齿都是阻生齿，如果不拔掉可能会影响前面的恒牙，所以拔掉了两颗阻生齿和对位的智齿。拔牙过程还是有些痛苦的，阻生齿又是敲又是劈，而且拔下来会留下个坑，这个在一年左右慢慢长上了。&lt;/p></description></item><item><title>Linux 下的文件分割与合并命令 Split &amp; Cat</title><link>https://hare.one/posts/split-and-cat/</link><pubDate>Tue, 13 Oct 2020 16:10:22 +0800</pubDate><guid>https://hare.one/posts/split-and-cat/</guid><description>&lt;p>最近的工作中，需要处理大型的文本文件，这在预览上很不方便，这种情况下，可以使用 Linux 下的 split 命令进行分割。&lt;/p>
 &lt;h2 id="按照文件的大小进行分割">按照文件的大小进行分割&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ split -b 10k input_file.txt output_file -d -a &lt;span style="color:#ae81ff">3&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ split -b 10k input_file.txt output_file -d -a &lt;span style="color:#ae81ff">3&lt;/span>
 &lt;span style="color:#75715e"># -b 值为每一输出文件的大小&lt;/span>
 &lt;span style="color:#75715e"># -d 使用数字作为后缀&lt;/span>
 &lt;span style="color:#75715e"># -a 值为后缀长度&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>将输入的文件按照 &lt;em>10k&lt;/em> 的大小进行分割，输出的分割文件以 &lt;em>output_file&lt;/em> 开头进行命名，数字作为输出的分割文件后缀，长度为 &lt;em>3&lt;/em>&lt;/p>
 &lt;h2 id="按照文件的行数进行分割">按照文件的行数进行分割&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ split -l &lt;span style="color:#ae81ff">10&lt;/span> input_file.txt
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ split -l &lt;span style="color:#ae81ff">10&lt;/span> input_file.txt
 &lt;span style="color:#75715e"># -l 值为分割的行数&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>将输入的文件按照 &lt;em>10&lt;/em> 行每文件进行分割&lt;/p>
 &lt;h2 id="文件合并">文件合并&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ cat output* &amp;gt; new_file.txt
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ cat output* &amp;gt; new_file.txt
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>将以 &lt;em>output&lt;/em> 开头的文件按照顺序合并，并生成 &lt;em>new_file.txt&lt;/em> 文件&lt;/p></description></item><item><title>搞懂英语（一）</title><link>https://hare.one/posts/how-to-understand-english-part1/</link><pubDate>Thu, 20 Aug 2020 20:48:53 +0800</pubDate><guid>https://hare.one/posts/how-to-understand-english-part1/</guid><description>&lt;blockquote>
 &lt;p>记录我自己的英语学习，并将学习笔记整理成 Markdown&lt;/p>
 &lt;/blockquote>
@@ -32,12 +30,12 @@
 &lt;p>&lt;span class="spoiler" > 注 1：现在已经有新款的 HHKB Hybrid Types 了，使用的 Bluetooth 4.2，同样支持蓝牙双模&lt;/span>
 &lt;br>
 &lt;span class="spoiler" >&lt;del> 注 2：有信仰的兄弟可以冲冲冲，我继续搞我的魔改&lt;/del>&lt;/span>&lt;/p>
-&lt;p>&lt;img src="\Pictures\hhkb-ble0.png" alt="hhkb-ble0" style="zoom:80%;" />&lt;/p>
+&lt;img src="\Pictures\hhkb-ble0.png" alt="hhkb-ble0" style="zoom:80%;" />
 &lt;center>HHKB BT&lt;/center>
 &lt;p>直到我看到了这篇 &lt;a href="https://www.chiphell.com/thread-2026980-1-1.html">HHKB 的正确使用方式&lt;/a>，我觉得找到了我需要的解决方案。&lt;/p>
 &lt;p>这个叫做 YDKB 的解决方案是由 @yangdigi 开发的主控芯片，通过替换 HHKB 原厂的主控芯片，就可以使它变成蓝牙双模 + 有线的版本。而且 YDKB 的 &lt;a href="http://help.ydkb.io/doku.php?id=start">文档&lt;/a> 写得巨详细，我喜欢。&lt;/p></description></item><item><title>Digispark BadUSB</title><link>https://hare.one/posts/digispark-badusb/</link><pubDate>Sun, 26 Jul 2020 22:30:29 +0800</pubDate><guid>https://hare.one/posts/digispark-badusb/</guid><description>&lt;p>最近闲着无聊，本着生命在于折腾的本质，用 Digispark 做个 BadUSB 玩玩。&lt;/p>
 &lt;p>Digispark 长这样：&lt;/p>
-&lt;p>&lt;img src="https://s3.amazonaws.com/digistump-resources/images/l/2520dcf84a0a3bf2257c2559d7a187db.jpg" alt="Digispark" style="zoom:50%;" />&lt;/p>
+&lt;img src="https://s3.amazonaws.com/digistump-resources/images/l/2520dcf84a0a3bf2257c2559d7a187db.jpg" alt="Digispark" style="zoom:50%;" />
 &lt;p>简单介绍下 Digispark 这个小玩意儿：&lt;/p>
 &lt;p>Digispark USB Development Board 是一块基于 ATTiny85 微控制器的开发板，便宜小巧携带方便，某宝上十块包邮，相比于 BadUSB 的老前辈 USB Rubber Ducky 简直是便宜到家了好吗，性价比真的超高。&lt;span class="spoiler" >&lt;del>绝不承认不买 Rubber Ducky 是没钱，哼！&lt;/del>&lt;/span>&lt;/p>
 &lt;p>关于 BadUSB，网上很多人都觉得只是含有有害程序的 U 盘，并以为可以通过格式化、禁止 U 盘自启动来阻止 BadUSB 的攻击。但其实它更像是没有按键的键盘，靠着烧录进去的程序来模拟人类输入，计算机是无法识别出 BadUSB 和人类正常输入的区别的。所以大家记得一定不要随便在自己或公司的电脑上插来历不明的 U 盘！&lt;/p></description></item><item><title>怎样诉讼躲在屏幕后面疯狂攻击你的人</title><link>https://hare.one/posts/how-to-sue-somebody-for-harassing/</link><pubDate>Tue, 14 Jul 2020 13:17:12 +0800</pubDate><guid>https://hare.one/posts/how-to-sue-somebody-for-harassing/</guid><description>&lt;h2 id="怎样告躲在屏幕后面疯狂攻击你的人其实很简单完全指南来了">怎样告躲在屏幕后面疯狂攻击你的人？其实很简单，完全指南来了&lt;/h2>

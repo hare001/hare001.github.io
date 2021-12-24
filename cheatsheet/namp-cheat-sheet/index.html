@@ -1,14 +1,123 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta name=author content="hare"><link rel=prev href=https://hare.one/cheatsheet/reverse-shell-cheat-sheet/><link rel=next href=https://hare.one/cheatsheet/vim-cheat-sheet/><link rel=canonical href=https://hare.one/cheatsheet/namp-cheat-sheet/><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><title>Nmap Cheat Sheet | WhereIsMyMind</title><meta name=title content="Nmap Cheat Sheet | WhereIsMyMind"><link rel=stylesheet href=/css/main.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hare.one"},"articleSection":"cheatsheet","name":"Nmap Cheat Sheet","headline":"Nmap Cheat Sheet","description":"\u003ch3 id=\u0022nmap-target-selection\u0022\u003eNmap Target Selection\u003c\/h3\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e#Scan a single IP\u003c\/span\u003e\nnmap 192.168.1.1\n\u003cspan style=\u0022color:#75715e\u0022\u003e#Scan a host\u003c\/span\u003e\nnmap www.testhostname.com\n\u003cspan style=\u0022color:#75715e\u0022\u003e#Scan a range of IPs\u003c\/span\u003e\nnmap 192.168.1.1-20\n\u003cspan style=\u0022color:#75715e\u0022\u003e#Scan a subnet\u003c\/span\u003e\nnmap 192.168.1.0\/24\n\u003cspan style=\u0022color:#75715e\u0022\u003e#Scan targets from a text file\u003c\/span\u003e\nnmap -iL list-of-ips.txt\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e","inLanguage":"en","author":"hare","creator":"hare","publisher":"hare","accountablePerson":"hare","copyrightHolder":"hare","copyrightYear":"2020","datePublished":"2020-07-01 17:27:34 \u002b0800 \u002b0800","dateModified":"2020-07-01 17:27:34 \u002b0800 \u002b0800","url":"https:\/\/hare.one\/cheatsheet\/namp-cheat-sheet\/","wordCount":"301","keywords":["Nmap","CheatSheet","Tools","WhereIsMyMind"]}</script></head><body><div class=wrapper><nav class=navbar><progress class=content_progress max=0 value=0></progress><div class=container><div class="navbar-header header-back2home-logo"><span class=logo_mark>#</span>
-<a href=https://hare.one><span class=logo_text>cd /home/</span>
-<span class=logo_cursor></span></a></div><div class=navbar-right><span class=menu><a class=menu-item href=/posts/><span>Blog</span></a>
-<a class=menu-item href=/cheatsheet/><span>CheatSheet</span></a>
-<a class=menu-item href=/categories/><span>Category</span></a>
-<a class=menu-item href=/tags/><span>Tag</span></a>
-<a class=menu-item href=/index.xml><i class="fa fa-rss"></i><span></span></a><span class=divide></span><a href=javascript:void(0); class=theme-switch><i class="fa fa-adjust"></i></a></span></div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none><progress class=content_progress max=0 value=0></progress><div class=container><div class=navbar><div class="navbar-header header-logo"><a href=https://hare.one>WhereIsMyMind</a></div><div class=navbar-right><div class=menu-toggle><span></span><span></span><span></span></div></div></div><div class=menu id=mobile-menu><nav class=mb-md><a class=menu-item href=/posts/><h3>Blog</h3><div class=menu-active></div></a><a class=menu-item href=/cheatsheet/><h3>CheatSheet</h3><div class=menu-active></div></a><a class=menu-item href=/categories/><h3>Category</h3><div class=menu-active></div></a><a class=menu-item href=/tags/><h3>Tag</h3><div class=menu-active></div></a><a class=menu-item href=/index.xml><h3></h3><div class=menu-active></div></a></nav></div></div></nav><main class=main><div class=container><article class=post-warp itemscope itemtype=http://schema.org/Article><header class=post-header><h1 class=post-title itemprop="name headline">Nmap Cheat Sheet</h1><div class=post-meta>Written by <a itemprop=name href=https://hare.one rel=author>hare</a>
-<span class=post-time>on <time datetime=2020-07-01 itemprop=datePublished>July 1, 2020</time></span>
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="chrome=1">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=robots content="noodp">
+<meta name=author content="hare">
+<link rel=prev href=https://hare.one/cheatsheet/reverse-shell-cheat-sheet/>
+<link rel=next href=https://hare.one/cheatsheet/vim-cheat-sheet/>
+<link rel=canonical href=https://hare.one/cheatsheet/namp-cheat-sheet/>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest href=/site.webmanifest>
+<link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5>
+<meta name=msapplication-TileColor content="#da532c">
+<meta name=theme-color content="#ffffff">
+<title>
+Nmap Cheat Sheet | WhereIsMyMind
+</title>
+<meta name=title content="Nmap Cheat Sheet | WhereIsMyMind">
+<link rel=stylesheet href=/css/main.min.css>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hare.one"},"articleSection":"cheatsheet","name":"Nmap Cheat Sheet","headline":"Nmap Cheat Sheet","description":"\u003ch3 id=\u0022nmap-target-selection\u0022\u003eNmap Target Selection\u003c\/h3\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e#Scan a single IP\u003c\/span\u003e\nnmap 192.168.1.1\n\u003cspan style=\u0022color:#75715e\u0022\u003e#Scan a host\u003c\/span\u003e\nnmap www.testhostname.com\n\u003cspan style=\u0022color:#75715e\u0022\u003e#Scan a range of IPs\u003c\/span\u003e\nnmap 192.168.1.1-20\n\u003cspan style=\u0022color:#75715e\u0022\u003e#Scan a subnet\u003c\/span\u003e\nnmap 192.168.1.0\/24\n\u003cspan style=\u0022color:#75715e\u0022\u003e#Scan targets from a text file\u003c\/span\u003e\nnmap -iL list-of-ips.txt\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e","inLanguage":"en","author":"hare","creator":"hare","publisher":"hare","accountablePerson":"hare","copyrightHolder":"hare","copyrightYear":"2020","datePublished":"2020-07-01 17:27:34 \u002b0800 \u002b0800","dateModified":"2020-07-01 17:27:34 \u002b0800 \u002b0800","url":"https:\/\/hare.one\/cheatsheet\/namp-cheat-sheet\/","wordCount":"301","keywords":["Nmap","CheatSheet","Tools","WhereIsMyMind"]}</script>
+</head>
+<body>
+<div class=wrapper>
+<nav class=navbar>
+<progress class=content_progress max=0 value=0></progress>
+<div class=container>
+<div class="navbar-header header-back2home-logo">
+<span class=logo_mark>#</span>
+<a href=https://hare.one>
+<span class=logo_text>cd /home/</span>
+<span class=logo_cursor></span>
+</a>
+</div>
+<div class=navbar-right>
+<span class=menu>
+<a class=menu-item href=/posts/ title>
+<span>Blog</span>
+</a>
+<a class=menu-item href=/cheatsheet/ title>
+<span>CheatSheet</span>
+</a>
+<a class=menu-item href=/categories/ title>
+<span>Category</span>
+</a>
+<a class=menu-item href=/tags/ title>
+<span>Tag</span>
+</a>
+<a class=menu-item href=/index.xml title>
+<i class="fa fa-rss"></i>
+<span></span>
+</a>
+<span class=divide></span>
+<a href=javascript:void(0); class=theme-switch><i class="fa fa-adjust"></i></a>
+</span>
+</div>
+</div>
+</nav>
+<nav class=navbar-mobile id=nav-mobile style=display:none>
+<progress class=content_progress max=0 value=0></progress>
+<div class=container>
+<div class=navbar>
+<div class="navbar-header header-logo">
+<a href=https://hare.one>WhereIsMyMind</a>
+</div>
+<div class=navbar-right>
+<div class=menu-toggle>
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+<div class=menu id=mobile-menu>
+<nav class=mb-md>
+<a class=menu-item href=/posts/ title>
+<h3>Blog</h3>
+<div class=menu-active></div>
+</a>
+<a class=menu-item href=/cheatsheet/ title>
+<h3>CheatSheet</h3>
+<div class=menu-active></div>
+</a>
+<a class=menu-item href=/categories/ title>
+<h3>Category</h3>
+<div class=menu-active></div>
+</a>
+<a class=menu-item href=/tags/ title>
+<h3>Tag</h3>
+<div class=menu-active></div>
+</a>
+<a class=menu-item href=/index.xml title>
+<h3></h3>
+<div class=menu-active></div>
+</a>
+</nav>
+</div>
+</div>
+</nav>
+<main class=main>
+<div class=container>
+<article class=post-warp itemscope itemtype=http://schema.org/Article>
+<header class=post-header>
+<h1 class=post-title itemprop="name headline">Nmap Cheat Sheet</h1>
+<div class=post-meta>
+Written by <a itemprop=name href=https://hare.one rel=author>hare</a>
+<span class=post-time>
+on <time datetime=2020-07-01 itemprop=datePublished>July 1, 2020</time>
+</span>
 in
-<i class="fa fa-folder"></i><span class=post-category><a href=https://hare.one/categories/cheatsheet/>CheatSheet,</a></span>
-<span class=post-word-count>301 words</span></div></header><div class=post-content><h3 id=nmap-target-selection>Nmap Target Selection</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Scan a single IP</span>
+<i class="fa fa-folder"></i>
+<span class=post-category>
+<a href=https://hare.one/categories/cheatsheet/> CheatSheet, </a>
+</span>
+<span class=post-word-count>301 words</span>
+</div>
+</header>
+<div class=post-content>
+<h3 id=nmap-target-selection>Nmap Target Selection</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Scan a single IP</span>
 nmap 192.168.1.1
 <span style=color:#75715e>#Scan a host</span>
 nmap www.testhostname.com
@@ -18,7 +127,8 @@ nmap 192.168.1.1-20
 nmap 192.168.1.0/24
 <span style=color:#75715e>#Scan targets from a text file</span>
 nmap -iL list-of-ips.txt
-</code></pre></div><h3 id=nmap-port-selection>Nmap Port Selection</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Scan a single Port</span>
+</code></pre></div><h3 id=nmap-port-selection>Nmap Port Selection</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Scan a single Port</span>
 nmap -p <span style=color:#ae81ff>22</span> 192.168.1.1
 <span style=color:#75715e>#Scan a range of ports</span>
 nmap -p 1-100 192.168.1.1
@@ -26,7 +136,8 @@ nmap -p 1-100 192.168.1.1
 nmap -F 192.168.1.1
 <span style=color:#75715e>#Scan all 65535 ports</span>
 nmap -p- 192.168.1.1
-</code></pre></div><h3 id=nmap-port-scan-types>Nmap Port Scan types</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Scan using TCP connect</span>
+</code></pre></div><h3 id=nmap-port-scan-types>Nmap Port Scan types</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Scan using TCP connect</span>
 nmap -sT 192.168.1.1
 <span style=color:#75715e>#Scan using TCP SYN scan (default)</span>
 nmap -sS 192.168.1.1
@@ -34,7 +145,8 @@ nmap -sS 192.168.1.1
 nmap -sU -p 123,161,162 192.168.1.1
 <span style=color:#75715e>#Scan selected ports - ignore discovery</span>
 nmap -Pn -F 192.168.1.1
-</code></pre></div><h3 id=service-and-os-detection>Service and OS Detection</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Detect OS and Services</span>
+</code></pre></div><h3 id=service-and-os-detection>Service and OS Detection</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Detect OS and Services</span>
 nmap -A 192.168.1.1
 <span style=color:#75715e>#Standard service detection</span>
 nmap -sV 192.168.1.1
@@ -42,7 +154,8 @@ nmap -sV 192.168.1.1
 nmap -sV --version-intensity <span style=color:#ae81ff>5</span> 192.168.1.1
 <span style=color:#75715e>#Lighter banner grabbing detection</span>
 nmap -sV --version-intensity <span style=color:#ae81ff>0</span> 192.168.1.1
-</code></pre></div><h3 id=nmap-output-formats>Nmap Output Formats</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Save default output to file</span>
+</code></pre></div><h3 id=nmap-output-formats>Nmap Output Formats</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Save default output to file</span>
 nmap -oN outputfile.txt 192.168.1.1
 <span style=color:#75715e>#Save results as XML</span>
 nmap -oX outputfile.xml 192.168.1.1
@@ -50,7 +163,8 @@ nmap -oX outputfile.xml 192.168.1.1
 nmap -oG outputfile.txt 192.168.1.1
 <span style=color:#75715e>#Save in all formats</span>
 nmap -oA outputfile 192.168.1.1
-</code></pre></div><h3 id=digging-deeper-with-nse-scripts>Digging deeper with NSE Scripts</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Scan using default safe scripts</span>
+</code></pre></div><h3 id=digging-deeper-with-nse-scripts>Digging deeper with NSE Scripts</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Scan using default safe scripts</span>
 nmap -sV -sC 192.168.1.1
 <span style=color:#75715e>#Get help for a script</span>
 nmap --script-help<span style=color:#f92672>=</span>ssl-heartbleed
@@ -58,26 +172,72 @@ nmap --script-help<span style=color:#f92672>=</span>ssl-heartbleed
 nmap -sV -p <span style=color:#ae81ff>443</span> –script<span style=color:#f92672>=</span>ssl-heartbleed.nse 192.168.1.1
 <span style=color:#75715e>#Scan with a set of scripts</span>
 nmap -sV --script<span style=color:#f92672>=</span>smb* 192.168.1.1
-</code></pre></div><h3 id=a-scan-to-search-for-ddos-reflection-udp-services>A scan to search for DDOS reflection UDP services</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Scan for UDP DDOS reflectors</span>
+</code></pre></div><h3 id=a-scan-to-search-for-ddos-reflection-udp-services>A scan to search for DDOS reflection UDP services</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Scan for UDP DDOS reflectors</span>
 nmap –sU –A –PN –n –pU:19,53,123,161 –script<span style=color:#f92672>=</span>ntp-monlist,dns-recursion,snmp-sysdescr 192.168.1.0/24
-</code></pre></div><h3 id=http-service-information>HTTP Service Information</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Gather page titles from HTTP services</span>
+</code></pre></div><h3 id=http-service-information>HTTP Service Information</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Gather page titles from HTTP services</span>
 nmap --script<span style=color:#f92672>=</span>http-title 192.168.1.0/24
 <span style=color:#75715e>#Get HTTP headers of web services</span>
 nmap --script<span style=color:#f92672>=</span>http-headers 192.168.1.0/24
 <span style=color:#75715e>#Find web apps from known paths</span>
 nmap --script<span style=color:#f92672>=</span>http-enum 192.168.1.0/24
-</code></pre></div><h3 id=detect-heartbleed-ssl-vulnerability>Detect Heartbleed SSL Vulnerability</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Heartbleed Testing</span>
+</code></pre></div><h3 id=detect-heartbleed-ssl-vulnerability>Detect Heartbleed SSL Vulnerability</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Heartbleed Testing</span>
 nmap -sV -p <span style=color:#ae81ff>443</span> --script<span style=color:#f92672>=</span>ssl-heartbleed 192.168.1.0/24
-</code></pre></div><h3 id=ip-address-information>IP Address information</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Find Information about IP address</span>
+</code></pre></div><h3 id=ip-address-information>IP Address information</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Find Information about IP address</span>
 nmap --script<span style=color:#f92672>=</span>asn-query,whois,ip-geolocation-maxmind 192.168.1.0/24
-</code></pre></div></div><div class=post-copyright><p class=copyright-item><span>Author:</span>
-<span>hare</span></p><p class=copyright-item><span>Link:</span>
-<a href=https://hare.one/cheatsheet/namp-cheat-sheet/>https://hare.one/cheatsheet/namp-cheat-sheet/</span></p><p class="copyright-item lincese">本文采用<a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p></div><div class=post-tags><section><i class="fa fa-bookmark"></i>Tag(s):
-<span class=tag><a href=https://hare.one/tags/nmap/>#Nmap</a></span>
-<span class=tag><a href=https://hare.one/tags/cheatsheet/>#CheatSheet</a></span>
-<span class=tag><a href=https://hare.one/tags/tools/>#Tools</a></span></section><section><a href=javascript:window.history.back();>back</a></span> ·
-<span><a href=https://hare.one>home</a></span></section></div><div class=post-nav><a href=https://hare.one/cheatsheet/reverse-shell-cheat-sheet/ class=prev rel=prev title="Reverse Shell Cheat Sheet"><i class="fa fa-chevron-left"></i>&nbsp;Reverse Shell Cheat Sheet</a>
-<a href=https://hare.one/cheatsheet/vim-cheat-sheet/ class=next rel=next title="Vim Cheat Sheet">Vim Cheat Sheet&nbsp;<i class="fa fa-chevron-right"></i></a></div><div class=post-comment></div></article></div></main><footer class=footer><div class=copyright>&copy;
+</code></pre></div>
+</div>
+<div class=post-copyright>
+<p class=copyright-item>
+<span>Author:</span>
+<span>hare </span>
+</p>
+<p class=copyright-item>
+<span>Link:</span>
+<a href=https://hare.one/cheatsheet/namp-cheat-sheet/>https://hare.one/cheatsheet/namp-cheat-sheet/</span>
+</p>
+<p class="copyright-item lincese">
+本文采用<a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+</p>
+</div>
+<div class=post-tags>
+<section>
+<i class="fa fa-bookmark"></i>Tag(s):
+<span class=tag><a href=https://hare.one/tags/nmap/>
+#Nmap</a></span>
+<span class=tag><a href=https://hare.one/tags/cheatsheet/>
+#CheatSheet</a></span>
+<span class=tag><a href=https://hare.one/tags/tools/>
+#Tools</a></span>
+</section>
+<section>
+<a href=javascript:window.history.back();>back</a></span> ·
+<span><a href=https://hare.one>home</a></span>
+</section>
+</div>
+<div class=post-nav>
+<a href=https://hare.one/cheatsheet/reverse-shell-cheat-sheet/ class=prev rel=prev title="Reverse Shell Cheat Sheet"><i class="fa fa-chevron-left"></i>&nbsp;Reverse Shell Cheat Sheet</a>
+<a href=https://hare.one/cheatsheet/vim-cheat-sheet/ class=next rel=next title="Vim Cheat Sheet">Vim Cheat Sheet&nbsp;<i class="fa fa-chevron-right"></i></a>
+</div>
+<div class=post-comment>
+</div>
+</article>
+</div>
+</main>
+<footer class=footer>
+<div class=copyright>
+&copy;
 <span itemprop=copyrightYear>2020 - 2021</span>
-<span class=author itemprop=copyrightHolder><a href=https://hare.one>hare</a> |</span>
-<span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/Mogeko/Mogege target=_blank rel="external nofollow">Mogege</a></span></div></footer><script defer src=/js/vendor_main.min.js></script><script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script><script>pangu.spacingPage();</script></div></body></html>
+<span class=author itemprop=copyrightHolder><a href=https://hare.one>hare</a> | </span>
+<span>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow">Hugo</a> & <a href=https://github.com/Mogeko/Mogege target=_blank rel="external nofollow">Mogege</a></span>
+</div>
+</footer>
+<script defer src=/js/vendor_main.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin=anonymous></script>
+<script>pangu.spacingPage()</script>
+</div>
+</body>
+</html>

