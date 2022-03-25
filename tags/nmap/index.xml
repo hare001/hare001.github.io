@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nmap on WhereIsMyMind</title><link>https://hare.one/tags/nmap/</link><description>Recent content in Nmap on WhereIsMyMind</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jul 2020 17:27:34 +0800</lastBuildDate><atom:link href="https://hare.one/tags/nmap/index.xml" rel="self" type="application/rss+xml"/><item><title>Nmap Cheat Sheet</title><link>https://hare.one/cheatsheet/namp-cheat-sheet/</link><pubDate>Wed, 01 Jul 2020 17:27:34 +0800</pubDate><guid>https://hare.one/cheatsheet/namp-cheat-sheet/</guid><description>&lt;h3 id="nmap-target-selection">Nmap Target Selection&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#Scan a single IP&lt;/span>
-nmap 192.168.1.1
-&lt;span style="color:#75715e">#Scan a host&lt;/span>
-nmap www.testhostname.com
-&lt;span style="color:#75715e">#Scan a range of IPs&lt;/span>
-nmap 192.168.1.1-20
-&lt;span style="color:#75715e">#Scan a subnet&lt;/span>
-nmap 192.168.1.0/24
-&lt;span style="color:#75715e">#Scan targets from a text file&lt;/span>
-nmap -iL list-of-ips.txt
-&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan a single IP&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap 192.168.1.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan a host&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap www.testhostname.com
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan a range of IPs&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap 192.168.1.1-20
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan a subnet&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap 192.168.1.0/24
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Scan targets from a text file&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nmap -iL list-of-ips.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
